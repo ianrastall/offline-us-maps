@@ -352,6 +352,10 @@ Completed 14 November 2026: the second part of stage W2 of the [worldwide plan](
 - **Overview.** 540 outlines, 15.6 MB.
 - **Tests.** 77 core (new: a package starting above its minimum zoom is accepted, a gap is not; a reef's layers are accepted, OpenMapTiles' are not), 2 HTTP, 7 ABI and 9 interop tests.
 
+Verified with the installed 0.14.0 on Ian's machine (upgraded over 0.13.0 and started from Start; the map folder and Ian's 11 regions kept, no error). Map > Regions: "11 of 540 regions installed"; continents North America, Africa, Asia, Australia and Oceania, Central America, Europe, South America; Anhui (built) shows the script note, its sizes (map 84 MB, extract 44 MB, terrain 440 MB) and the `regions` release as its map's source. On the map, with the page's map object exposed for the test only, pointing at places highlighted the right region: Costa Rica `cr`, Berlin `de-berlin` and Potsdam `de-brandenburg` (the smaller region where outlines overlap), Hefei `cn-anhui`, Guangzhou `cn-guangdong`, Hong Kong `cn-hong-kong`, Suva `fj-w`, Lakeba in the Lau Islands `fj-e`, the Chatham Islands `nz-e`, Andorra `ad`, Rutland `gb-rutland`; Indianapolis, in installed Indiana, none. Clicking Costa Rica offered "Download the Costa Rica map (50 MB)" and "Show Costa Rica in Regions…" beside the pointer; Show opened Costa Rica in the Regions window. Nothing was downloaded; the shipped page and Ian's settings were put back.
+
+Released 14 November 2026 as [v0.14.0](https://github.com/ianrastall/offline-maps/releases/tag/v0.14.0), built from 5d5bb07; the installer's SHA-256 (4bc6c8e1…e25809cd) matches GitHub's digest.
+
 ## 0.13.0: Regions worldwide, and indexes built off the map drive
 
 Completed 14 November 2026: the first part of stage W2 of the [worldwide plan](worldwide.md).
