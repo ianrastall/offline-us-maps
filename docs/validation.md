@@ -341,6 +341,24 @@ Completed 9 November 2026. The labels with missing letters were public-land name
 
 Verified: at zoom 12 over Evanston, "Lighthouse Landing", "Leahy Park", "Maple Park", "Philbrick Park" and "Lunt Park" draw whole where 0.7.0 cut them, in the development build and in the installed 0.7.1 started from Start. Released as [v0.7.1](https://github.com/ianrastall/offline-north-american-maps/releases/tag/v0.7.1), built from 8748bff; the installer's SHA-256 (06906734…e6d0581) matches GitHub's digest, and Settings > Apps lists 0.7.1.
 
+## 0.15.0: Search for Latin-script Europe
+
+Completed 14 November 2026: stage W3 of the [worldwide plan](worldwide.md), chosen by Ian.
+
+- **Letters the tokenizer keeps.** SQLite's `unicode61` tokenizer with `remove_diacritics 2` folds most accents (Ștefan, Hà Nội) but not ł, ß, æ, ø, œ, þ, ð or đ (checked with SQLite 3.49: "lodz" did not find Łódź, "strasse" not Straße). The core folds them itself (ł l, ß ss, æ ae, ø o, œ oe, þ th, ð and đ d, and ș, ț, ħ, ŧ).
+- **Spellings people type.** The index also holds German ä, ö, ü as ae, oe, ue and Danish and Norwegian ø and å as oe and aa ("muenchen", "koebenhavn", "aalesund"), and the result ranking compares a query with that spelling too, so "nuernberg" puts the city first rather than points named "nuernberg.de".
+- **Streets.** German and Dutch compounds match written short or in full ("konigstr" finds Königstraße, "kerkstraat" Kerkstr.); separate street words and their abbreviations for German, Dutch, Polish, Czech, Italian and Portuguese (Straße/Str., Platz/Pl., ulica/ul., náměstí/nám., piazza/p.za, viale/v.le, praça/pça); a leading "ul." or "ulica" is dropped, since OpenStreetMap names Polish streets without it.
+- **House numbers after the street**, as most of Europe writes them ("Königstraße 3"): found when the number is listed, and shown in that order. An unlisted number after a name is not taken for an address, so "route 66" still finds the route; the nearest-listed-number offer stays with a number before the street.
+- **Category words** (fuel, charging, shelters, drinking water, campgrounds, toilets, hospitals, clinics, pharmacies, police, fire stations) in German, Dutch, Italian, Portuguese, Polish, Czech, Slovak, Swedish, Norwegian, Danish, Finnish, Romanian, Hungarian and Turkish besides English, Spanish and French.
+- **Region names.** Geofabrik writes 21 names on two lines ("Vestlandet<br />(Western Norway)"), which 0.13.0 and 0.14.0 showed with the tag; they are now one line ("Vestlandet (Western Norway)").
+- **Search format 3.** Installed regions' search indexes are rebuilt at the next start (stations and addresses from their stored data; nothing is downloaded).
+- **Tests.** 81 core (new: folding of the letters the tokenizer keeps, the spellings indexed, category words in the new languages, the Polish prefix; house numbers after the street), 2 HTTP, 7 ABI and 9 interop tests.
+
+Checked with real data, downloaded through the core into a separate store with `offline-maps-dev download --region` and searched with `offline-maps-dev search --region` (new):
+- Mittelfranken, near Nürnberg: "nuernberg" and "nurnberg" find Nürnberg first; "fuerth" Fürth; "konigstr" Königstraße; "koenigstrasse 3" Königstraße 3 in Nürnberg, Fürth and Schwabach; "tankstelle" fuel stations; "apotheke" pharmacies.
+- Łódź Voivodeship: "lodz" finds Łódź; "piotrkowska 100" and "ul. Piotrkowska 100" the address; "ul piotrkowska" the street (before the prefix was dropped, fire hydrants named "ul. Piotrkowska 24"); "apteka" pharmacies; "stacja paliw" fuel stations.
+- Denmark, near Copenhagen: "kobenhavn" and "koebenhavn" find København; "norrebrogade 10" Nørrebrogade 10; "aarhus" Aarhus first at 156 km; "apotek" pharmacies.
+
 ## 0.14.0: Regions built for the rest of the world
 
 Completed 14 November 2026: the second part of stage W2 of the [worldwide plan](worldwide.md).

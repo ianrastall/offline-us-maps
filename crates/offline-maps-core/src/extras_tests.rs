@@ -448,8 +448,24 @@ fn finds_house_numbers_and_nearest_listed_numbers() {
         Some("Chicago")
     );
 
+    // The number after the street, as most of Europe writes it: listed numbers only,
+    // written in that order.
+    let after = search("main 101");
+    assert_eq!(after[0].name, "North Main Street 101");
+    assert_eq!(after[0].kind, crate::search::EntryKind::Address);
+    assert_eq!(
+        search("north main street, 105")[0].name,
+        "North Main Street 105"
+    );
+    // An unlisted number after a name is not taken for an address ("route 66").
+    assert!(
+        search("main 103")
+            .iter()
+            .all(|r| r.kind != crate::search::EntryKind::Address)
+    );
+
     // Not address-shaped: ordinals and lone numbers use ordinary search.
-    for q in ["1st street", "101", "main 101"] {
+    for q in ["1st street", "101"] {
         assert!(
             search(q)
                 .iter()

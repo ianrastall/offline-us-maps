@@ -92,6 +92,8 @@ The package total is inflated by regions that cross the 180th meridian. Geofabri
 
 Europe, Central and South America, Africa outside the Arabic-script countries, Oceania. Search gains street words for the main languages (German, Portuguese, Italian, Dutch, Polish and so on) and the accent folding that Spanish already uses.
 
+**Done in 0.15.0 (14 November 2026).** Letters SQLite's tokenizer does not fold (ł, ß, æ, ø, œ, þ, ð, đ) are folded by the core, and the index also holds the spellings people type without them (ä, ö, ü as ae, oe, ue; Danish and Norwegian ø and å as oe and aa); German and Dutch compound streets match written short or in full; street abbreviations for German, Dutch, Polish, Czech, Italian and Portuguese; category words (fuel, charging, shelters, drinking water, campgrounds, toilets, hospitals, clinics, pharmacies, police, fire stations) in 17 European languages; house numbers after the street, as most of Europe writes them, when the number is listed. Geofabrik's two-line region names ("Vestlandet<br />(Western Norway)") are written on one line.
+
 ### W4. Other scripts
 
 - Bundle the full glyph ranges (about 76 MB more in the installer), or download a script's ranges with the first region that needs them.

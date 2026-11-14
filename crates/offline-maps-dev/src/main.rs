@@ -9,7 +9,7 @@
 //!   offline-maps-dev download-extras <store-dir> [--url U] [--stop-after BYTES]
 //!   offline-maps-dev probe [url]      (HEAD request only; downloads nothing)
 //!   offline-maps-dev index <package.mbtiles> <search.sqlite>
-//!   offline-maps-dev search <store-dir> <query> [--near LAT,LON] [--limit N]
+//!   offline-maps-dev search <store-dir> <query> [--near LAT,LON] [--limit N] [--region ID]
 //!       [--extras FILE]   (builds the active package's search index first if
 //!       it is missing; uses the store's active extras unless --extras is given)
 //!   offline-maps-dev extract <file.osm.pbf> <extras.sqlite>
@@ -173,7 +173,7 @@ fn search(args: &[String]) -> Result<(), String> {
     use offline_maps_core::store::PackageStore;
     let [store_dir, query, rest @ ..] = args else {
         return Err(
-            "usage: search <store-dir> <query> [--near LAT,LON] [--limit N] [--extras FILE]".into(),
+            "usage: search <store-dir> <query> [--near LAT,LON] [--limit N] [--extras FILE] [--region ID]".into(),
         );
     };
     let (_, options) = parse(
@@ -198,10 +198,11 @@ fn search(args: &[String]) -> Result<(), String> {
         .get("limit")
         .map_or(Ok(10), |v| v.parse())
         .map_err(|_| "--limit")?;
+    let region = options.get("region").map_or(ILLINOIS.id, String::as_str);
     let active = PackageStore::new(store_dir)
-        .active(ILLINOIS.id)
+        .active(region)
         .map_err(|e| e.to_string())?
-        .ok_or("the store has no active Illinois package")?;
+        .ok_or(format!("the store has no active package for {region}"))?;
     let opening = std::time::Instant::now();
     let built = !active.search_index_path().exists();
     let mut index =
@@ -209,11 +210,9 @@ fn search(args: &[String]) -> Result<(), String> {
             .map_err(|e| e.to_string())?;
     let extras = match options.get("extras") {
         Some(path) => Some(PathBuf::from(path)),
-        None => {
-            offline_maps_core::extras::active_extras(&PackageStore::new(store_dir), ILLINOIS.id)
-                .map_err(|e| e.to_string())?
-                .map(|a| a.path)
-        }
+        None => offline_maps_core::extras::active_extras(&PackageStore::new(store_dir), region)
+            .map_err(|e| e.to_string())?
+            .map(|a| a.path),
     };
     if let Some(path) = &extras {
         index.attach_extras(path).map_err(|e| e.to_string())?;

@@ -8797,7 +8797,7 @@ pub const IT_NORD_EST: Region = Region {
 
 pub const NO_NORD_NORGE: Region = Region {
     id: "no-nord-norge",
-    name: "Nord-Norge<br />(Northern Norway)",
+    name: "Nord-Norge (Northern Norway)",
     source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
     package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-nord-norge-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/norway/nord-norge-latest.osm.pbf",
@@ -12633,7 +12633,7 @@ pub const SY: Region = Region {
 
 pub const NO_SORLANDET: Region = Region {
     id: "no-sorlandet",
-    name: "Sørlandet<br />(Southern Norway)",
+    name: "Sørlandet (Southern Norway)",
     source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
     package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-sorlandet-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/norway/sorlandet-latest.osm.pbf",
@@ -13109,7 +13109,7 @@ pub const TO: Region = Region {
 
 pub const NO_TRONDELAG: Region = Region {
     id: "no-trondelag",
-    name: "Trøndelag<br />(Central Norway)",
+    name: "Trøndelag (Central Norway)",
     source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
     package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-trondelag-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/norway/trondelag-latest.osm.pbf",
@@ -13697,7 +13697,7 @@ pub const US_VT: Region = Region {
 
 pub const NO_VESTLANDET: Region = Region {
     id: "no-vestlandet",
-    name: "Vestlandet<br />(Western Norway)",
+    name: "Vestlandet (Western Norway)",
     source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
     package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-vestlandet-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/norway/vestlandet-latest.osm.pbf",
@@ -14173,7 +14173,7 @@ pub const US_WI: Region = Region {
 
 pub const PL_DOLNOSLASKIE: Region = Region {
     id: "pl-dolnoslaskie",
-    name: "Województwo dolnośląskie<br />(Lower Silesian Voivodeship)",
+    name: "Województwo dolnośląskie (Lower Silesian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/dolnoslaskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/dolnoslaskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/dolnoslaskie-latest.osm.pbf",
@@ -14201,7 +14201,7 @@ pub const PL_DOLNOSLASKIE: Region = Region {
 
 pub const PL_KUJAWSKO_POMORSKIE: Region = Region {
     id: "pl-kujawsko-pomorskie",
-    name: "Województwo kujawsko-pomorskie<br />(Kuyavian-Pomeranian Voivodeship)",
+    name: "Województwo kujawsko-pomorskie (Kuyavian-Pomeranian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/kujawsko-pomorskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/kujawsko-pomorskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/kujawsko-pomorskie-latest.osm.pbf",
@@ -14229,7 +14229,7 @@ pub const PL_KUJAWSKO_POMORSKIE: Region = Region {
 
 pub const PL_LUBELSKIE: Region = Region {
     id: "pl-lubelskie",
-    name: "Województwo lubelskie<br />(Lublin Voivodeship)",
+    name: "Województwo lubelskie (Lublin Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/lubelskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/lubelskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/lubelskie-latest.osm.pbf",
@@ -14257,7 +14257,7 @@ pub const PL_LUBELSKIE: Region = Region {
 
 pub const PL_LUBUSKIE: Region = Region {
     id: "pl-lubuskie",
-    name: "Województwo lubuskie<br />(Lubusz Voivodeship)",
+    name: "Województwo lubuskie (Lubusz Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/lubuskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/lubuskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/lubuskie-latest.osm.pbf",
@@ -14285,7 +14285,7 @@ pub const PL_LUBUSKIE: Region = Region {
 
 pub const PL_MAZOWIECKIE: Region = Region {
     id: "pl-mazowieckie",
-    name: "Województwo mazowieckie<br />(Mazovian Voivodeship)",
+    name: "Województwo mazowieckie (Mazovian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/mazowieckie.html",
     package_url: "https://download.geofabrik.de/europe/poland/mazowieckie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/mazowieckie-latest.osm.pbf",
@@ -14313,7 +14313,7 @@ pub const PL_MAZOWIECKIE: Region = Region {
 
 pub const PL_MALOPOLSKIE: Region = Region {
     id: "pl-malopolskie",
-    name: "Województwo małopolskie<br />(Lesser Poland Voivodeship)",
+    name: "Województwo małopolskie (Lesser Poland Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/malopolskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/malopolskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/malopolskie-latest.osm.pbf",
@@ -14341,7 +14341,7 @@ pub const PL_MALOPOLSKIE: Region = Region {
 
 pub const PL_OPOLSKIE: Region = Region {
     id: "pl-opolskie",
-    name: "Województwo opolskie<br />(Opole Voivodeship)",
+    name: "Województwo opolskie (Opole Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/opolskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/opolskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/opolskie-latest.osm.pbf",
@@ -14369,7 +14369,7 @@ pub const PL_OPOLSKIE: Region = Region {
 
 pub const PL_PODKARPACKIE: Region = Region {
     id: "pl-podkarpackie",
-    name: "Województwo podkarpackie<br />(Subcarpathian Voivodeship)",
+    name: "Województwo podkarpackie (Subcarpathian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/podkarpackie.html",
     package_url: "https://download.geofabrik.de/europe/poland/podkarpackie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/podkarpackie-latest.osm.pbf",
@@ -14397,7 +14397,7 @@ pub const PL_PODKARPACKIE: Region = Region {
 
 pub const PL_PODLASKIE: Region = Region {
     id: "pl-podlaskie",
-    name: "Województwo podlaskie<br />(Podlaskie Voivodeship)",
+    name: "Województwo podlaskie (Podlaskie Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/podlaskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/podlaskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/podlaskie-latest.osm.pbf",
@@ -14425,7 +14425,7 @@ pub const PL_PODLASKIE: Region = Region {
 
 pub const PL_POMORSKIE: Region = Region {
     id: "pl-pomorskie",
-    name: "Województwo pomorskie<br />(Pomeranian Voivodeship)",
+    name: "Województwo pomorskie (Pomeranian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/pomorskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/pomorskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/pomorskie-latest.osm.pbf",
@@ -14453,7 +14453,7 @@ pub const PL_POMORSKIE: Region = Region {
 
 pub const PL_WARMINSKO_MAZURSKIE: Region = Region {
     id: "pl-warminsko-mazurskie",
-    name: "Województwo warmińsko-mazurskie<br />(Warmian-Masurian Voivodeship)",
+    name: "Województwo warmińsko-mazurskie (Warmian-Masurian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/warminsko-mazurskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/warminsko-mazurskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/warminsko-mazurskie-latest.osm.pbf",
@@ -14481,7 +14481,7 @@ pub const PL_WARMINSKO_MAZURSKIE: Region = Region {
 
 pub const PL_WIELKOPOLSKIE: Region = Region {
     id: "pl-wielkopolskie",
-    name: "Województwo wielkopolskie<br />(Greater Poland Voivodeship)",
+    name: "Województwo wielkopolskie (Greater Poland Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/wielkopolskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/wielkopolskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/wielkopolskie-latest.osm.pbf",
@@ -14509,7 +14509,7 @@ pub const PL_WIELKOPOLSKIE: Region = Region {
 
 pub const PL_ZACHODNIOPOMORSKIE: Region = Region {
     id: "pl-zachodniopomorskie",
-    name: "Województwo zachodniopomorskie<br />(West Pomeranian Voivodeship)",
+    name: "Województwo zachodniopomorskie (West Pomeranian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/zachodniopomorskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/zachodniopomorskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/zachodniopomorskie-latest.osm.pbf",
@@ -14537,7 +14537,7 @@ pub const PL_ZACHODNIOPOMORSKIE: Region = Region {
 
 pub const PL_LODZKIE: Region = Region {
     id: "pl-lodzkie",
-    name: "Województwo łódzkie<br />(Łódź Voivodeship)",
+    name: "Województwo łódzkie (Łódź Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/lodzkie.html",
     package_url: "https://download.geofabrik.de/europe/poland/lodzkie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/lodzkie-latest.osm.pbf",
@@ -14565,7 +14565,7 @@ pub const PL_LODZKIE: Region = Region {
 
 pub const PL_SLASKIE: Region = Region {
     id: "pl-slaskie",
-    name: "Województwo śląskie<br />(Silesian Voivodeship)",
+    name: "Województwo śląskie (Silesian Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/slaskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/slaskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/slaskie-latest.osm.pbf",
@@ -14593,7 +14593,7 @@ pub const PL_SLASKIE: Region = Region {
 
 pub const PL_SWIETOKRZYSKIE: Region = Region {
     id: "pl-swietokrzyskie",
-    name: "Województwo świętokrzyskie<br />(Świętokrzyskie Voivodeship)",
+    name: "Województwo świętokrzyskie (Świętokrzyskie Voivodeship)",
     source_page: "https://download.geofabrik.de/europe/poland/swietokrzyskie.html",
     package_url: "https://download.geofabrik.de/europe/poland/swietokrzyskie-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/poland/swietokrzyskie-latest.osm.pbf",
@@ -15041,7 +15041,7 @@ pub const PF_ILE_DE_CLIPPERTON: Region = Region {
 
 pub const NO_OSTLANDET: Region = Region {
     id: "no-ostlandet",
-    name: "Østlandet<br />(Eastern Norway)",
+    name: "Østlandet (Eastern Norway)",
     source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
     package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-ostlandet-shortbread-1.0.mbtiles",
     extras_url: "https://download.geofabrik.de/europe/norway/ostlandet-latest.osm.pbf",

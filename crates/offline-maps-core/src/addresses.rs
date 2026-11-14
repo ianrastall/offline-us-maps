@@ -304,27 +304,39 @@ impl Found {
     }
 }
 
-/// Address results for a query that starts with a house number, or `None`
-/// when the query is not shaped like an address. Exact numbers are returned
-/// when any street has one; otherwise the nearest listed number on each
-/// matching street, marked in `detail`.
+/// The house number and the rest of a query shaped like an address: the number first
+/// ("222 paseo de la reforma") or last ("hauptstrasse 5", as most of Europe writes it),
+/// with whether it came last.
+fn split_address(query: &str) -> Option<(&str, &str, bool)> {
+    let is_number = |word: &str| {
+        word.starts_with(|c: char| c.is_ascii_digit()) && is_house_number(&number_key(word))
+    };
+    let (first, rest) = query.split_once(char::is_whitespace)?;
+    if is_number(first) && !tokens(rest).is_empty() {
+        return Some((first, rest.trim(), false));
+    }
+    let (rest, last) = query.rsplit_once(char::is_whitespace)?;
+    let rest = rest.trim().trim_end_matches(',').trim();
+    (is_number(last) && !tokens(rest).is_empty()).then_some((last, rest, true))
+}
+
+/// Address results for a query with a house number before or after the street, or
+/// `None` when the query is not shaped like an address. Exact numbers are returned when
+/// any street has one; otherwise, for a number before the street, the nearest listed
+/// number on each matching street, marked in `detail`. A number after the street finds
+/// only listed numbers, so "route 66" still finds the route rather than a street called
+/// Route.
 pub(crate) fn search_ranked(
     db: &Connection,
     query: &str,
     near: Option<Coordinates>,
 ) -> Result<Option<Found>, PackageError> {
     let query = query.trim();
-    let (first, rest) = query
-        .split_once(char::is_whitespace)
-        .map_or((query, ""), |(a, b)| (a, b.trim()));
+    let Some((first, rest, trailing)) = split_address(query) else {
+        return Ok(None);
+    };
     let key = number_key(first);
     let words: Vec<String> = tokens(rest).into_iter().take(8).collect();
-    if !first.starts_with(|c: char| c.is_ascii_digit())
-        || !is_house_number(&key)
-        || words.is_empty()
-    {
-        return Ok(None);
-    }
     let wanted = leading_number(&key).unwrap_or(0);
     let rest_canonical = canonical(rest);
     let (lat0, lon0) = near.map_or((0.0, 0.0), |c| (c.latitude(), c.longitude()));
@@ -370,7 +382,11 @@ pub(crate) fn search_ranked(
         let result = |number: String, lat: i64, lon: i64, detail: Option<String>| {
             let (lat, lon) = (lat as f64 / 1e6, lon as f64 / 1e6);
             SearchResult {
-                name: format!("{number} {name}"),
+                name: if trailing {
+                    format!("{name} {number}")
+                } else {
+                    format!("{number} {name}")
+                },
                 kind: EntryKind::Address,
                 category: "address".into(),
                 near: (!town.is_empty()).then(|| town.clone()),
@@ -388,6 +404,7 @@ pub(crate) fn search_ranked(
             let r = result(number, lat, lon, None);
             exact.push((strength, r.distance_km.unwrap_or(0.0), r));
         } else if exact.is_empty()
+            && !trailing
             && let Some((number, lat, lon)) = nearest_lookup
                 .query_row(params![id, wanted], |r| {
                     Ok((r.get::<_, String>(0)?, r.get(1)?, r.get(2)?))

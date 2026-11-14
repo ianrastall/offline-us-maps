@@ -39,6 +39,7 @@ Usage: python -I tools/world-regions.py data/catalog/world [--no-fetch]
 """
 import importlib.util
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -143,7 +144,8 @@ def main():
         iso = p.get("iso3166-2") or p.get("iso3166-1:alpha2") or []
         points = coords(f["geometry"])
         whole = [min(x for x, _ in points), min(y for _, y in points), max(x for x, _ in points), max(y for _, y in points)]
-        name = p["name"]
+        # Geofabrik writes some names on two lines: "Vestlandet<br />(Western Norway)".
+        name = re.sub(r"\s*<br\s*/?>\s*", " ", p["name"]).strip()
         if suffix:
             name += " west of 180°" if suffix == "w" else " east of 180°"
         return {

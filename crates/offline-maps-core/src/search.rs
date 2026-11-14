@@ -21,7 +21,7 @@ use crate::Coordinates;
 use crate::mbtiles::{PackageError, TilePackage};
 use crate::mvt::{Feature, decode_tile, tile_point_to_lon_lat};
 
-pub const SEARCH_SCHEMA: u32 = 2;
+pub const SEARCH_SCHEMA: u32 = 3;
 pub const SEARCH_FILE: &str = "search.sqlite";
 const LAYERS: [&str; 6] = [
     "place_labels",
@@ -171,25 +171,70 @@ pub(crate) const EMERGENCY: [&str; 10] = [
     "charging_station",
 ];
 
-/// Words a category is found by: its own words plus common synonyms, in
-/// English, Spanish and French (without accents, as queries are compared).
+/// Words a category is found by: its own words plus common synonyms, in English,
+/// Spanish, French, German, Dutch, Italian, Portuguese, Polish, Czech, Slovak, Swedish,
+/// Norwegian, Danish, Finnish, Romanian, Hungarian and Turkish (without accents, as
+/// queries are compared).
 fn category_words(category: &str) -> String {
     match category {
-        "fuel" => "fuel gas station petrol gasolinera essence station service".into(),
-        "charging_station" => {
-            "charging station ev charger electric vehicle estacion de carga".into()
-        }
-        "shelter" => "shelter hut refugio albergue abri refuge".into(),
-        "drinking_water" => {
-            "drinking water fountain tap spring agua potable bebedero eau potable".into()
-        }
-        "camp_site" => "campground camping camp site rv park campamento".into(),
-        "toilets" => "toilets toilet restroom restrooms bathroom banos sanitarios toilettes".into(),
-        "hospital" => "hospital hopital".into(),
-        "clinic" => "clinic clinica clinique".into(),
-        "pharmacy" => "pharmacy farmacia pharmacie".into(),
-        "police" => "police policia".into(),
-        "fire_station" => "fire station bomberos pompiers caserne".into(),
+        "fuel" => concat!(
+            "fuel gas station petrol gasolinera essence station service tankstelle ",
+            "tankstation benzinestation benzinaio distributore carburante posto combustivel ",
+            "gasolina bomba stacja paliw cerpaci stanice benzinova pumpa bensinstation mack ",
+            "bensinstasjon tankstation huoltoasema bensiiniasema benzinarie peco benzinkut ",
+            "benzin istasyonu akaryakit"
+        )
+        .into(),
+        "charging_station" => concat!(
+            "charging station ev charger electric vehicle estacion de carga borne recharge ",
+            "ladestation ladesaule laadpaal laadstation colonnina ricarica posto carregamento ",
+            "stacja ladowania nabijeci stanice nabijecka laddstation laddstolpe ladestasjon ",
+            "ladestander latausasema statie incarcare tolto sarj istasyonu"
+        )
+        .into(),
+        "shelter" => concat!(
+            "shelter hut refugio albergue abri refuge schutzhutte hutte unterstand schuilhut ",
+            "rifugio bivacco abrigo schronisko wiata utulna utulek vindskydd stuga gapahuk ",
+            "koie hytte laavu kota adapost menedekhaz siginak"
+        )
+        .into(),
+        "drinking_water" => concat!(
+            "drinking water fountain tap spring agua potable bebedero eau potable fontaine ",
+            "trinkwasser brunnen drinkwater acqua potabile fontanella agua potavel chafariz ",
+            "woda pitna zdroj pitna voda dricksvatten drikkevann drikkevand juomavesi ",
+            "apa potabila ivovíz ivoviz icme suyu cesme"
+        )
+        .into(),
+        "camp_site" => concat!(
+            "campground camping camp site rv park campamento campingplatz zeltplatz kampeerterrein ",
+            "campeggio parque de campismo pole namiotowe kemping autokemp campingplats ",
+            "leirplass campingplads leirintaalue kamp alani"
+        )
+        .into(),
+        "toilets" => concat!(
+            "toilets toilet restroom restrooms bathroom banos sanitarios toilettes wc toiletten ",
+            "bagni servizi igienici casa de banho toaleta toalety zachod toalett toiletter ",
+            "vessa wc toaleta mosdo tuvalet"
+        )
+        .into(),
+        "hospital" => concat!(
+            "hospital hopital krankenhaus klinikum spital ziekenhuis ospedale szpital ",
+            "nemocnica nemocnice sjukhus sykehus sygehus sairaala korhaz hastane"
+        )
+        .into(),
+        "clinic" => "clinic clinica clinique klinik kliniek przychodnia poliklinika vardcentral legevakt laegehus terveyskeskus rendelo saglik ocagi".into(),
+        "pharmacy" => concat!(
+            "pharmacy farmacia pharmacie apotheke apotheek farmacie apteka lekarna lekaren ",
+            "apotek apoteket apteekki gyogyszertar patika eczane"
+        )
+        .into(),
+        "police" => "police policia polizei politie polizia carabinieri policja policie polisen politi poliisi politia rendorseg polis jandarma".into(),
+        "fire_station" => concat!(
+            "fire station bomberos pompiers caserne feuerwehr brandweer vigili del fuoco ",
+            "bombeiros straz pozarna hasici hasicska zbrojnica brandstation brannstasjon ",
+            "paloasema pompieri tuzoltosag itfaiye"
+        )
+        .into(),
         other => other.replace('_', " "),
     }
 }
@@ -615,7 +660,7 @@ fn write_index(
 }
 
 /// Word pairs treated as equivalent in names and queries (full, short).
-const ABBREVIATIONS: [(&str, &str); 45] = [
+const ABBREVIATIONS: [(&str, &str); 58] = [
     ("street", "st"),
     ("avenue", "ave"),
     ("road", "rd"),
@@ -663,7 +708,68 @@ const ABBREVIATIONS: [(&str, &str); 45] = [
     ("chemin", "ch"),
     ("sainte", "ste"),
     ("boul", "blvd"),
+    // German and Dutch, as separate words ("Berliner Straße"); compounds are handled
+    // by `suffix_variants`.
+    ("strasse", "str"),
+    ("straat", "str"),
+    ("platz", "pl"),
+    ("plein", "pl"),
+    // Polish and Czech.
+    ("ulica", "ul"),
+    ("ulice", "ul"),
+    ("aleja", "al"),
+    ("plac", "pl"),
+    ("namesti", "nam"),
+    // Italian and Portuguese.
+    ("piazza", "pza"),
+    ("viale", "vle"),
+    ("largo", "lgo"),
+    ("praca", "pca"),
 ];
+
+/// Compound suffixes with a short form: German and Swiss "Hauptstraße" is also written
+/// "Hauptstr.", Dutch "Kerkstraat" "Kerkstr.".
+const SUFFIXES: [(&str, &str); 2] = [("strasse", "str"), ("straat", "str")];
+
+/// A folded token's other forms with a compound suffix written short or in full
+/// ("hauptstrasse" -> "hauptstr"; "hauptstr" -> "hauptstrasse", "hauptstraat").
+fn suffix_variants(token: &str) -> Vec<String> {
+    let mut out = Vec::new();
+    for (full, short) in SUFFIXES {
+        if let Some(stem) = token.strip_suffix(full).filter(|s| s.len() >= 2) {
+            out.push(format!("{stem}{short}"));
+        }
+    }
+    if let Some(stem) = token.strip_suffix("str").filter(|s| s.len() >= 2) {
+        for (full, _) in SUFFIXES {
+            out.push(format!("{stem}{full}"));
+        }
+    }
+    out
+}
+
+/// The spelling people type when a keyboard lacks a letter, where it differs from
+/// dropping the accent: German ä, ö, ü as ae, oe, ue ("muenchen"), Danish and Norwegian
+/// ø and å as oe and aa ("koebenhavn", "aalesund").
+fn transliteration(raw: &str) -> Option<String> {
+    if !raw
+        .chars()
+        .any(|c| matches!(c, 'ä' | 'ö' | 'ü' | 'ø' | 'å'))
+    {
+        return None;
+    }
+    let mut out = String::new();
+    for c in raw.chars() {
+        match c {
+            'ä' => out.push_str("ae"),
+            'ö' | 'ø' => out.push_str("oe"),
+            'ü' => out.push_str("ue"),
+            'å' => out.push_str("aa"),
+            other => out.push_str(&fold(&other.to_string())),
+        }
+    }
+    Some(out)
+}
 
 /// Lower-case alphanumeric tokens without accents, the way the FTS tokenizer
 /// (`remove_diacritics 2`) splits and compares text.
@@ -675,27 +781,46 @@ pub(crate) fn tokens(text: &str) -> Vec<String> {
 }
 
 /// Lower-case text with the accents of Latin letters removed ("querétaro" ->
-/// "queretaro", "peñón" -> "penon"), for comparing names typed without them.
+/// "queretaro", "peñón" -> "penon"), for comparing names typed without them. Letters
+/// SQLite's tokenizer keeps as they are become their plain spelling: ł l, ß ss, æ ae,
+/// ø o, œ oe, þ th, ð and đ d ("łódź" -> "lodz", "straße" -> "strasse").
 pub(crate) fn fold(text: &str) -> String {
-    text.chars()
-        .map(|c| match c {
-            'à' | 'á' | 'â' | 'ã' | 'ä' | 'å' | 'ā' | 'ă' | 'ą' => 'a',
-            'ç' | 'ć' | 'č' | 'ĉ' | 'ċ' => 'c',
-            'ď' | 'đ' => 'd',
-            'è' | 'é' | 'ê' | 'ë' | 'ē' | 'ė' | 'ę' | 'ě' => 'e',
-            'ğ' | 'ĝ' | 'ġ' | 'ģ' => 'g',
-            'ì' | 'í' | 'î' | 'ï' | 'ĩ' | 'ī' | 'į' | 'ı' => 'i',
-            'ñ' | 'ń' | 'ň' | 'ņ' => 'n',
-            'ò' | 'ó' | 'ô' | 'õ' | 'ö' | 'ø' | 'ō' | 'ő' => 'o',
-            'ŕ' | 'ř' => 'r',
-            'ś' | 'š' | 'ş' | 'ŝ' => 's',
-            'ť' | 'ţ' => 't',
-            'ù' | 'ú' | 'û' | 'ü' | 'ũ' | 'ū' | 'ů' | 'ű' | 'ų' => 'u',
-            'ý' | 'ÿ' => 'y',
-            'ź' | 'ż' | 'ž' => 'z',
-            other => other,
-        })
-        .collect()
+    let mut out = String::with_capacity(text.len());
+    for c in text.chars() {
+        match c {
+            'ß' => out.push_str("ss"),
+            'æ' => out.push_str("ae"),
+            'œ' => out.push_str("oe"),
+            'þ' => out.push_str("th"),
+            'ł' | 'ŀ' => out.push('l'),
+            'ð' | 'đ' => out.push('d'),
+            'ħ' => out.push('h'),
+            'ŧ' | 'ț' | 'ţ' => out.push('t'),
+            'ș' => out.push('s'),
+            other => out.push(fold_letter(other)),
+        }
+    }
+    out
+}
+
+fn fold_letter(c: char) -> char {
+    match c {
+        'à' | 'á' | 'â' | 'ã' | 'ä' | 'å' | 'ā' | 'ă' | 'ą' => 'a',
+        'ç' | 'ć' | 'č' | 'ĉ' | 'ċ' => 'c',
+        'ď' | 'đ' => 'd',
+        'è' | 'é' | 'ê' | 'ë' | 'ē' | 'ė' | 'ę' | 'ě' => 'e',
+        'ğ' | 'ĝ' | 'ġ' | 'ģ' => 'g',
+        'ì' | 'í' | 'î' | 'ï' | 'ĩ' | 'ī' | 'į' | 'ı' => 'i',
+        'ñ' | 'ń' | 'ň' | 'ņ' => 'n',
+        'ò' | 'ó' | 'ô' | 'õ' | 'ö' | 'ø' | 'ō' | 'ő' => 'o',
+        'ŕ' | 'ř' => 'r',
+        'ś' | 'š' | 'ş' | 'ŝ' => 's',
+        'ť' | 'ţ' => 't',
+        'ù' | 'ú' | 'û' | 'ü' | 'ũ' | 'ū' | 'ů' | 'ű' | 'ų' => 'u',
+        'ý' | 'ÿ' => 'y',
+        'ź' | 'ż' | 'ž' => 'z',
+        other => other,
+    }
 }
 
 fn alternatives(token: &str) -> Vec<&'static str> {
@@ -713,15 +838,47 @@ fn alternatives(token: &str) -> Vec<&'static str> {
         .collect()
 }
 
-/// Index text: every token plus its abbreviation partner.
+/// Index text: every token plus its abbreviation partner, the spelling typed without
+/// the letter (München also as "muenchen") and a compound suffix's other form
+/// (Hauptstraße also as "hauptstr").
 pub(crate) fn expand(text: &str) -> String {
     let mut out = Vec::new();
-    for token in tokens(text) {
+    for raw in text
+        .split(|c: char| !c.is_alphanumeric())
+        .filter(|t| !t.is_empty())
+    {
+        let raw = raw.to_lowercase();
+        let token = fold(&raw);
         let alts = alternatives(&token);
+        let variants = suffix_variants(&token);
+        if let Some(t) = transliteration(&raw).filter(|t| *t != token) {
+            out.extend(suffix_variants(&t));
+            out.push(t);
+        }
         out.push(token);
         out.extend(alts.into_iter().map(str::to_owned));
+        out.extend(variants);
     }
     out.join(" ")
+}
+
+/// The comparison form with German and Scandinavian letters spelled the way they are
+/// typed without them ("München" -> "muenchen"), or `None` when that is no different.
+pub(crate) fn canonical_typed(text: &str) -> Option<String> {
+    let words: Vec<String> = text
+        .split(|c: char| !c.is_alphanumeric())
+        .filter(|t| !t.is_empty())
+        .map(|raw| {
+            let raw = raw.to_lowercase();
+            let t = transliteration(&raw).unwrap_or_else(|| fold(&raw));
+            ABBREVIATIONS
+                .iter()
+                .find(|(full, _)| *full == t)
+                .map_or(t, |(_, short)| (*short).to_owned())
+        })
+        .collect();
+    let typed = words.join(" ");
+    (typed != canonical(text)).then_some(typed)
 }
 
 /// Comparison form: tokens with full words replaced by their short forms.
@@ -880,12 +1037,30 @@ impl SearchIndex {
 /// rest, with `near`, by distance, otherwise by place size and population.
 ///
 /// Things mapped in two neighbouring regions' data appear once.
+/// The query without a leading Polish "ul." or "ulica": OpenStreetMap names Polish
+/// streets without it ("Piotrkowska"), but people type it ("ul. Piotrkowska 100").
+fn without_street_prefix(query: &str) -> &str {
+    let trimmed = query.trim_start();
+    for prefix in ["ul.", "ul ", "ulica "] {
+        if let Some(rest) = trimmed
+            .get(..prefix.len())
+            .filter(|p| p.eq_ignore_ascii_case(prefix))
+            .map(|_| trimmed[prefix.len()..].trim_start())
+            .filter(|rest| !rest.is_empty())
+        {
+            return rest;
+        }
+    }
+    query
+}
+
 pub fn search_all(
     indexes: &[&SearchIndex],
     query: &str,
     near: Option<Coordinates>,
     limit: usize,
 ) -> Result<Vec<SearchResult>, PackageError> {
+    let query = without_street_prefix(query);
     let words: Vec<String> = tokens(query).into_iter().take(8).collect();
     if words.is_empty() {
         return Ok(Vec::new());
@@ -1004,7 +1179,14 @@ fn collect_candidates(
         );
         // "West Main Street" is a strong match for "main street".
         let core_name = without_compass_words(&match_name);
-        let exact = match_name == query_canonical || core_name == query_canonical;
+        // München matches "muenchen" as strongly as "munchen".
+        let typed = canonical_typed(&row.get::<_, String>(0)?).unwrap_or_default();
+        let typed_core = without_compass_words(&typed);
+        let typed_matches =
+            |f: &dyn Fn(&str) -> bool| !typed.is_empty() && (f(&typed) || f(typed_core));
+        let exact = match_name == query_canonical
+            || core_name == query_canonical
+            || typed_matches(&|t| t == query_canonical);
         // "gas station" is a strong match for the category "fuel".
         let category_words = canonical(&category_words(&category));
         // A city with every word of the query is a strong match too: "queretaro"
@@ -1014,12 +1196,16 @@ fn collect_candidates(
             || (major_settlement && words_in(&match_name))
             || match_name.starts_with(query_canonical)
             || core_name.starts_with(query_canonical)
+            || typed_matches(&|t| t.starts_with(query_canonical))
+            || (major_settlement && typed_matches(&|t| words_in(t)))
             || (!match_ref.is_empty() && match_ref.starts_with(query_canonical))
             || (!category_words.is_empty()
                 && format!(" {category_words}").contains(&format!(" {query_canonical}")));
         let class = if strong {
             0
-        } else if words_in(&format!("{match_name} {match_ref} {category_words}")) {
+        } else if words_in(&format!(
+            "{match_name} {typed} {match_ref} {category_words}"
+        )) {
             1
         } else {
             2

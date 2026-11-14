@@ -3785,7 +3785,7 @@
  },
  {
   "id": "no-nord-norge",
-  "name": "Nord-Norge<br />(Northern Norway)",
+  "name": "Nord-Norge (Northern Norway)",
   "slug": "w:nord-norge",
   "bbox": [
    7.8402,
@@ -5402,7 +5402,7 @@
  },
  {
   "id": "no-sorlandet",
-  "name": "S\u00f8rlandet<br />(Southern Norway)",
+  "name": "S\u00f8rlandet (Southern Norway)",
   "slug": "w:sorlandet",
   "bbox": [
    5.69866,
@@ -5601,7 +5601,7 @@
  },
  {
   "id": "no-trondelag",
-  "name": "Tr\u00f8ndelag<br />(Central Norway)",
+  "name": "Tr\u00f8ndelag (Central Norway)",
   "slug": "w:trondelag",
   "bbox": [
    5.79087,
@@ -5855,7 +5855,7 @@
  },
  {
   "id": "no-vestlandet",
-  "name": "Vestlandet<br />(Western Norway)",
+  "name": "Vestlandet (Western Norway)",
   "slug": "w:vestlandet",
   "bbox": [
    2.32908,
@@ -6055,7 +6055,7 @@
  },
  {
   "id": "pl-dolnoslaskie",
-  "name": "Wojew\u00f3dztwo dolno\u015bl\u0105skie<br />(Lower Silesian Voivodeship)",
+  "name": "Wojew\u00f3dztwo dolno\u015bl\u0105skie (Lower Silesian Voivodeship)",
   "slug": "w:dolnoslaskie",
   "bbox": [
    14.80839,
@@ -6067,7 +6067,7 @@
  },
  {
   "id": "pl-kujawsko-pomorskie",
-  "name": "Wojew\u00f3dztwo kujawsko-pomorskie<br />(Kuyavian-Pomeranian Voivodeship)",
+  "name": "Wojew\u00f3dztwo kujawsko-pomorskie (Kuyavian-Pomeranian Voivodeship)",
   "slug": "w:kujawsko-pomorskie",
   "bbox": [
    17.23935,
@@ -6079,7 +6079,7 @@
  },
  {
   "id": "pl-lubelskie",
-  "name": "Wojew\u00f3dztwo lubelskie<br />(Lublin Voivodeship)",
+  "name": "Wojew\u00f3dztwo lubelskie (Lublin Voivodeship)",
   "slug": "w:lubelskie",
   "bbox": [
    21.60285,
@@ -6091,7 +6091,7 @@
  },
  {
   "id": "pl-lubuskie",
-  "name": "Wojew\u00f3dztwo lubuskie<br />(Lubusz Voivodeship)",
+  "name": "Wojew\u00f3dztwo lubuskie (Lubusz Voivodeship)",
   "slug": "w:lubuskie",
   "bbox": [
    14.49548,
@@ -6103,7 +6103,7 @@
  },
  {
   "id": "pl-mazowieckie",
-  "name": "Wojew\u00f3dztwo mazowieckie<br />(Mazovian Voivodeship)",
+  "name": "Wojew\u00f3dztwo mazowieckie (Mazovian Voivodeship)",
   "slug": "w:mazowieckie",
   "bbox": [
    19.23355,
@@ -6115,7 +6115,7 @@
  },
  {
   "id": "pl-malopolskie",
-  "name": "Wojew\u00f3dztwo ma\u0142opolskie<br />(Lesser Poland Voivodeship)",
+  "name": "Wojew\u00f3dztwo ma\u0142opolskie (Lesser Poland Voivodeship)",
   "slug": "w:malopolskie",
   "bbox": [
    19.07492,
@@ -6127,7 +6127,7 @@
  },
  {
   "id": "pl-opolskie",
-  "name": "Wojew\u00f3dztwo opolskie<br />(Opole Voivodeship)",
+  "name": "Wojew\u00f3dztwo opolskie (Opole Voivodeship)",
   "slug": "w:opolskie",
   "bbox": [
    16.9015,
@@ -6139,7 +6139,7 @@
  },
  {
   "id": "pl-podkarpackie",
-  "name": "Wojew\u00f3dztwo podkarpackie<br />(Subcarpathian Voivodeship)",
+  "name": "Wojew\u00f3dztwo podkarpackie (Subcarpathian Voivodeship)",
   "slug": "w:podkarpackie",
   "bbox": [
    21.13433,
@@ -6151,7 +6151,7 @@
  },
  {
   "id": "pl-podlaskie",
-  "name": "Wojew\u00f3dztwo podlaskie<br />(Podlaskie Voivodeship)",
+  "name": "Wojew\u00f3dztwo podlaskie (Podlaskie Voivodeship)",
   "slug": "w:podlaskie",
   "bbox": [
    21.58465,
@@ -6163,7 +6163,7 @@
  },
  {
   "id": "pl-pomorskie",
-  "name": "Wojew\u00f3dztwo pomorskie<br />(Pomeranian Voivodeship)",
+  "name": "Wojew\u00f3dztwo pomorskie (Pomeranian Voivodeship)",
   "slug": "w:pomorskie",
   "bbox": [
    16.68699,
@@ -6175,7 +6175,7 @@
  },
  {
   "id": "pl-warminsko-mazurskie",
-  "name": "Wojew\u00f3dztwo warmi\u0144sko-mazurskie<br />(Warmian-Masurian Voivodeship)",
+  "name": "Wojew\u00f3dztwo warmi\u0144sko-mazurskie (Warmian-Masurian Voivodeship)",
   "slug": "w:warminsko-mazurskie",
   "bbox": [
    19.11666,
@@ -6187,7 +6187,7 @@
  },
  {
   "id": "pl-wielkopolskie",
-  "name": "Wojew\u00f3dztwo wielkopolskie<br />(Greater Poland Voivodeship)",
+  "name": "Wojew\u00f3dztwo wielkopolskie (Greater Poland Voivodeship)",
   "slug": "w:wielkopolskie",
   "bbox": [
    15.76036,
@@ -6199,7 +6199,7 @@
  },
  {
   "id": "pl-zachodniopomorskie",
-  "name": "Wojew\u00f3dztwo zachodniopomorskie<br />(West Pomeranian Voivodeship)",
+  "name": "Wojew\u00f3dztwo zachodniopomorskie (West Pomeranian Voivodeship)",
   "slug": "w:zachodniopomorskie",
   "bbox": [
    13.99022,
@@ -6211,7 +6211,7 @@
  },
  {
   "id": "pl-lodzkie",
-  "name": "Wojew\u00f3dztwo \u0142\u00f3dzkie<br />(\u0141\u00f3d\u017a Voivodeship)",
+  "name": "Wojew\u00f3dztwo \u0142\u00f3dzkie (\u0141\u00f3d\u017a Voivodeship)",
   "slug": "w:lodzkie",
   "bbox": [
    18.06227,
@@ -6223,7 +6223,7 @@
  },
  {
   "id": "pl-slaskie",
-  "name": "Wojew\u00f3dztwo \u015bl\u0105skie<br />(Silesian Voivodeship)",
+  "name": "Wojew\u00f3dztwo \u015bl\u0105skie (Silesian Voivodeship)",
   "slug": "w:slaskie",
   "bbox": [
    18.02213,
@@ -6235,7 +6235,7 @@
  },
  {
   "id": "pl-swietokrzyskie",
-  "name": "Wojew\u00f3dztwo \u015bwi\u0119tokrzyskie<br />(\u015awi\u0119tokrzyskie Voivodeship)",
+  "name": "Wojew\u00f3dztwo \u015bwi\u0119tokrzyskie (\u015awi\u0119tokrzyskie Voivodeship)",
   "slug": "w:swietokrzyskie",
   "bbox": [
    19.69901,
@@ -6423,7 +6423,7 @@
  },
  {
   "id": "no-ostlandet",
-  "name": "\u00d8stlandet<br />(Eastern Norway)",
+  "name": "\u00d8stlandet (Eastern Norway)",
   "slug": "w:ostlandet",
   "bbox": [
    7.09539,

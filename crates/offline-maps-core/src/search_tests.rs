@@ -381,3 +381,83 @@ fn accents_and_spanish_street_words() {
     );
     assert!(category_words("fuel").split(' ').any(|w| w == "essence"));
 }
+
+#[test]
+fn folds_letters_the_tokenizer_keeps() {
+    // SQLite's unicode61 tokenizer removes accents but keeps these letters.
+    for (text, folded) in [
+        ("Łódź", "lodz"),
+        ("Straße", "strasse"),
+        ("Ærøskøbing", "aeroskobing"),
+        ("Þingvellir", "thingvellir"),
+        ("Ðakovo", "dakovo"),
+        ("Œuvre", "oeuvre"),
+        ("Ștefan cel Mare", "stefan cel mare"),
+        ("Querétaro", "queretaro"),
+    ] {
+        assert_eq!(tokens(text).join(" "), folded, "{text}");
+    }
+}
+
+#[test]
+fn indexes_the_spellings_people_type() {
+    let terms =
+        |text: &str| -> Vec<String> { expand(text).split(' ').map(str::to_owned).collect() };
+    for (name, wanted) in [
+        // Umlauts and Scandinavian letters typed without them, both ways.
+        ("München", &["munchen", "muenchen"][..]),
+        ("København", &["kobenhavn", "koebenhavn"]),
+        ("Ålesund", &["alesund", "aalesund"]),
+        // German and Dutch compound streets, written short or in full.
+        ("Hauptstraße", &["hauptstrasse", "hauptstr"]),
+        ("Kerkstr.", &["kerkstr", "kerkstraat", "kerkstrasse"]),
+        ("Kerkstraat", &["kerkstraat", "kerkstr"]),
+        // Separate street words and their abbreviations.
+        ("ul. Marszałkowska", &["ul", "ulica", "marszalkowska"]),
+        ("Berliner Straße", &["strasse", "str"]),
+        ("Piazza Navona", &["piazza", "pza"]),
+    ] {
+        let t = terms(name);
+        for w in wanted {
+            assert!(t.iter().any(|x| x == w), "{name}: {w} not in {t:?}");
+        }
+    }
+}
+
+#[test]
+fn categories_are_found_in_more_languages() {
+    for (category, word) in [
+        ("fuel", "tankstelle"),
+        ("fuel", "benzinaio"),
+        ("fuel", "paliw"),
+        ("pharmacy", "apotheke"),
+        ("pharmacy", "apteka"),
+        ("hospital", "ziekenhuis"),
+        ("hospital", "sykehus"),
+        ("police", "polizei"),
+        ("fire_station", "feuerwehr"),
+        ("drinking_water", "trinkwasser"),
+        ("toilets", "wc"),
+        ("charging_station", "ladestation"),
+    ] {
+        assert!(
+            expand(&category_words(category))
+                .split(' ')
+                .any(|t| t == word),
+            "{category}: {word}"
+        );
+    }
+}
+
+#[test]
+fn drops_a_typed_polish_street_prefix() {
+    assert_eq!(
+        without_street_prefix("ul. Piotrkowska 100"),
+        "Piotrkowska 100"
+    );
+    assert_eq!(without_street_prefix("UL Piotrkowska"), "Piotrkowska");
+    assert_eq!(without_street_prefix("ulica Piotrkowska"), "Piotrkowska");
+    // Not a prefix: a name starting with the letters, or "ul" alone.
+    assert_eq!(without_street_prefix("Ulm"), "Ulm");
+    assert_eq!(without_street_prefix("ul."), "ul.");
+}
