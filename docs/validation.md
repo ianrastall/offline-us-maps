@@ -360,6 +360,10 @@ Checked with real data, downloaded through the core into a separate store with `
 - Łódź Voivodeship: "lodz" finds Łódź; "piotrkowska 100" and "ul. Piotrkowska 100" the address; "ul piotrkowska" the street (before the prefix was dropped, fire hydrants named "ul. Piotrkowska 24"); "apteka" pharmacies; "stacja paliw" fuel stations.
 - Denmark, near Copenhagen: "kobenhavn" and "koebenhavn" find København; "norrebrogade 10" Nørrebrogade 10; "aarhus" Aarhus first at 156 km; "apotek" pharmacies.
 
+Installed over 0.14.0 on Ian's machine and started from Start: the 11 installed regions' search indexes were rebuilt for format 3 without a prompt (Illinois first, Wisconsin last), reaching "Search is ready" after 289 seconds on the USB drive G:, with no error.
+
+Released 14 November 2026 as [v0.15.0](https://github.com/ianrastall/offline-maps/releases/tag/v0.15.0), built from bd5d200; the installer's SHA-256 (033c7f8b…87a2b3a7) matches GitHub's digest.
+
 ## 0.14.0: Regions built for the rest of the world
 
 Completed 14 November 2026: the second part of stage W2 of the [worldwide plan](worldwide.md).
