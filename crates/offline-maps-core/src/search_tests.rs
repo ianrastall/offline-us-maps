@@ -461,3 +461,11 @@ fn drops_a_typed_polish_street_prefix() {
     assert_eq!(without_street_prefix("Ulm"), "Ulm");
     assert_eq!(without_street_prefix("ul."), "ul.");
 }
+
+#[test]
+fn scratch_files_are_unique_within_a_process() {
+    let out = std::path::Path::new("x").join("search.sqlite");
+    let names: std::collections::HashSet<_> = (0..1000).filter_map(|_| scratch_for(&out)).collect();
+    // Either the temporary folder lacks the room (none) or every name differs.
+    assert!(names.is_empty() || names.len() == 1000);
+}

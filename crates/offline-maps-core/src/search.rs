@@ -583,13 +583,17 @@ fn scratch_for(out: &Path) -> Option<std::path::PathBuf> {
     if !fs4::available_space(&folder).is_ok_and(|free| free >= SCRATCH_SPACE) {
         return None;
     }
+    // Unique within the process too: several regions' databases can be built at once
+    // (rebuilding after a search format change), within the clock's resolution.
+    static NEXT: std::sync::atomic::AtomicU64 = std::sync::atomic::AtomicU64::new(0);
+    let serial = NEXT.fetch_add(1, std::sync::atomic::Ordering::Relaxed);
     let stamp = std::time::SystemTime::now()
         .duration_since(std::time::UNIX_EPOCH)
         .map(|d| d.as_nanos())
         .unwrap_or(0);
     let name = out.file_name()?.to_string_lossy().into_owned();
     Some(folder.join(format!(
-        "offline-maps-{}-{stamp}-{name}",
+        "offline-maps-{}-{stamp}-{serial}-{name}",
         std::process::id()
     )))
 }
