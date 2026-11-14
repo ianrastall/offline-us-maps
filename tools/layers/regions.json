@@ -103,6 +103,42 @@
   "geofabrik": "alsace"
  },
  {
+  "id": "american-oceania-e",
+  "name": "American Oceania east of 180\u00b0",
+  "slug": "w:american-oceania@e",
+  "bbox": [
+   -180.0,
+   -17.644,
+   -160.2799,
+   6.1872
+  ],
+  "geofabrik": "american-oceania",
+  "clip": [
+   -180.0,
+   -17.644,
+   -160.2799,
+   6.1872
+  ]
+ },
+ {
+  "id": "american-oceania-w",
+  "name": "American Oceania west of 180\u00b0",
+  "slug": "w:american-oceania@w",
+  "bbox": [
+   141.6357,
+   9.904,
+   180.0,
+   22.0246
+  ],
+  "geofabrik": "american-oceania",
+  "clip": [
+   141.6357,
+   9.904,
+   180.0,
+   22.0246
+  ]
+ },
+ {
   "id": "es-andalucia",
   "name": "Andaluc\u00eda",
   "slug": "w:andalucia",
@@ -137,6 +173,18 @@
    -4.32792
   ],
   "geofabrik": "angola"
+ },
+ {
+  "id": "cn-anhui",
+  "name": "Anhui",
+  "slug": "w:anhui",
+  "bbox": [
+   114.8693,
+   29.38816,
+   119.6566,
+   34.65496
+  ],
+  "geofabrik": "anhui"
  },
  {
   "id": "fr-aquitaine",
@@ -209,6 +257,18 @@
   "geofabrik": "armenia"
  },
  {
+  "id": "au-ashmore-cartier",
+  "name": "Ashmore and Cartier Islands",
+  "slug": "w:ashmore-cartier",
+  "bbox": [
+   122.5681,
+   -12.8482,
+   124.0416,
+   -11.89266
+  ],
+  "geofabrik": "ashmore-cartier"
+ },
+ {
   "id": "es-asturias",
   "name": "Asturias",
   "slug": "w:asturias",
@@ -219,6 +279,18 @@
    44.01101
   ],
   "geofabrik": "asturias"
+ },
+ {
+  "id": "au-act",
+  "name": "Australian Capital Territory",
+  "slug": "w:act",
+  "bbox": [
+   148.7583,
+   -35.92548,
+   149.4018,
+   -35.12093
+  ],
+  "geofabrik": "act"
  },
  {
   "id": "at",
@@ -269,6 +341,18 @@
   "geofabrik": "azores"
  },
  {
+  "id": "bs",
+  "name": "Bahamas",
+  "slug": "w:bahamas",
+  "bbox": [
+   -81.51857,
+   20.27251,
+   -71.86673,
+   27.97497
+  ],
+  "geofabrik": "bahamas"
+ },
+ {
   "id": "mx-bcn",
   "name": "Baja California",
   "slug": "mx-bcn",
@@ -315,6 +399,30 @@
   "geofabrik": "basse-normandie"
  },
  {
+  "id": "gb-bedfordshire",
+  "name": "Bedfordshire",
+  "slug": "w:bedfordshire",
+  "bbox": [
+   -0.70409,
+   51.8036,
+   -0.14202,
+   52.32483
+  ],
+  "geofabrik": "bedfordshire"
+ },
+ {
+  "id": "cn-beijing",
+  "name": "Beijing",
+  "slug": "w:beijing",
+  "bbox": [
+   115.4155,
+   39.44083,
+   117.5095,
+   41.06382
+  ],
+  "geofabrik": "beijing"
+ },
+ {
   "id": "by",
   "name": "Belarus",
   "slug": "w:belarus",
@@ -339,6 +447,18 @@
   "geofabrik": "belgium"
  },
  {
+  "id": "bz",
+  "name": "Belize",
+  "slug": "w:belize",
+  "bbox": [
+   -89.22892,
+   15.88308,
+   -86.85983,
+   18.4984
+  ],
+  "geofabrik": "belize"
+ },
+ {
   "id": "bj",
   "name": "Benin",
   "slug": "w:benin",
@@ -351,6 +471,18 @@
   "geofabrik": "benin"
  },
  {
+  "id": "gb-berkshire",
+  "name": "Berkshire",
+  "slug": "w:berkshire",
+  "bbox": [
+   -1.58907,
+   51.32802,
+   -0.48912,
+   51.57873
+  ],
+  "geofabrik": "berkshire"
+ },
+ {
   "id": "de-berlin",
   "name": "Berlin",
   "slug": "w:berlin",
@@ -361,6 +493,18 @@
    52.6783
   ],
   "geofabrik": "berlin"
+ },
+ {
+  "id": "gb-bermuda",
+  "name": "Bermuda",
+  "slug": "w:bermuda",
+  "bbox": [
+   -65.2005,
+   32.02158,
+   -64.39406,
+   32.62324
+  ],
+  "geofabrik": "bermuda"
  },
  {
   "id": "bt",
@@ -459,6 +603,18 @@
   "geofabrik": "bretagne"
  },
  {
+  "id": "gb-bristol",
+  "name": "Bristol",
+  "slug": "w:bristol",
+  "bbox": [
+   -2.73467,
+   51.39611,
+   -2.50953,
+   51.54562
+  ],
+  "geofabrik": "bristol"
+ },
+ {
   "id": "ca-bc",
   "name": "British Columbia",
   "slug": "ca-bc",
@@ -468,6 +624,18 @@
    -114.049,
    60.00678
   ]
+ },
+ {
+  "id": "gb-buckinghamshire",
+  "name": "Buckinghamshire",
+  "slug": "w:buckinghamshire",
+  "bbox": [
+   -1.14079,
+   51.48571,
+   -0.48271,
+   52.19561
+  ],
+  "geofabrik": "buckinghamshire"
  },
  {
   "id": "bg",
@@ -527,6 +695,18 @@
    14.71875
   ],
   "geofabrik": "cambodia"
+ },
+ {
+  "id": "gb-cambridgeshire",
+  "name": "Cambridgeshire",
+  "slug": "w:cambridgeshire",
+  "bbox": [
+   -0.50213,
+   52.00517,
+   0.51619,
+   52.74155
+  ],
+  "geofabrik": "cambridgeshire"
  },
  {
   "id": "cm",
@@ -732,6 +912,18 @@
   "geofabrik": "champagne-ardenne"
  },
  {
+  "id": "gb-cheshire",
+  "name": "Cheshire",
+  "slug": "w:cheshire",
+  "bbox": [
+   -3.12977,
+   52.94553,
+   -1.97314,
+   53.48263
+  ],
+  "geofabrik": "cheshire"
+ },
+ {
   "id": "mx-chp",
   "name": "Chiapas",
   "slug": "mx-chp",
@@ -764,6 +956,30 @@
    -17.45743
   ],
   "geofabrik": "chile"
+ },
+ {
+  "id": "cn-chongqing",
+  "name": "Chongqing",
+  "slug": "w:chongqing",
+  "bbox": [
+   105.283,
+   28.15132,
+   110.2004,
+   32.20641
+  ],
+  "geofabrik": "chongqing"
+ },
+ {
+  "id": "au-christmas-island",
+  "name": "Christmas Island",
+  "slug": "w:christmas-island",
+  "bbox": [
+   105.2993,
+   -10.82656,
+   105.9946,
+   -10.171
+  ],
+  "geofabrik": "christmas-island"
  },
  {
   "id": "jp-chubu",
@@ -799,6 +1015,18 @@
    -99.84288,
    29.88003
   ]
+ },
+ {
+  "id": "au-cocos-islands",
+  "name": "Cocos (Keeling) Islands",
+  "slug": "w:cocos-islands",
+  "bbox": [
+   96.45345,
+   -12.5527,
+   97.24842,
+   -11.54681
+  ],
+  "geofabrik": "cocos-islands"
  },
  {
   "id": "mx-col",
@@ -894,6 +1122,30 @@
   "geofabrik": "cook-islands"
  },
  {
+  "id": "au-coral-sea-islands",
+  "name": "Coral Sea Islands",
+  "slug": "w:coral-sea-islands",
+  "bbox": [
+   146.8651,
+   -30.57831,
+   160.4218,
+   -14.98146
+  ],
+  "geofabrik": "coral-sea-islands"
+ },
+ {
+  "id": "gb-cornwall",
+  "name": "Cornwall",
+  "slug": "w:cornwall",
+  "bbox": [
+   -6.82042,
+   49.57808,
+   -4.14663,
+   50.93213
+  ],
+  "geofabrik": "cornwall"
+ },
+ {
   "id": "fr-corse",
   "name": "Corse",
   "slug": "w:corse",
@@ -904,6 +1156,18 @@
    43.16589
   ],
   "geofabrik": "corse"
+ },
+ {
+  "id": "cr",
+  "name": "Costa Rica",
+  "slug": "w:costa-rica",
+  "bbox": [
+   -87.82473,
+   4.93775,
+   -82.34952,
+   11.2237
+  ],
+  "geofabrik": "costa-rica"
  },
  {
   "id": "ua-43",
@@ -928,6 +1192,30 @@
    46.55756
   ],
   "geofabrik": "croatia"
+ },
+ {
+  "id": "cu",
+  "name": "Cuba",
+  "slug": "w:cuba",
+  "bbox": [
+   -85.4242,
+   19.2533,
+   -73.70831,
+   23.60427
+  ],
+  "geofabrik": "cuba"
+ },
+ {
+  "id": "gb-cumbria",
+  "name": "Cumbria",
+  "slug": "w:cumbria",
+  "bbox": [
+   -3.90747,
+   53.90063,
+   -2.15959,
+   55.18863
+  ],
+  "geofabrik": "cumbria"
  },
  {
   "id": "cy",
@@ -965,6 +1253,30 @@
   "geofabrik": "denmark"
  },
  {
+  "id": "gb-derbyshire",
+  "name": "Derbyshire",
+  "slug": "w:derbyshire",
+  "bbox": [
+   -2.03576,
+   52.6955,
+   -1.16479,
+   53.54172
+  ],
+  "geofabrik": "derbyshire"
+ },
+ {
+  "id": "gb-devon",
+  "name": "Devon",
+  "slug": "w:devon",
+  "bbox": [
+   -4.75234,
+   50.11104,
+   -2.8816,
+   51.30895
+  ],
+  "geofabrik": "devon"
+ },
+ {
   "id": "us-dc",
   "name": "District of Columbia",
   "slug": "district-of-columbia",
@@ -986,6 +1298,18 @@
    12.82615
   ],
   "geofabrik": "djibouti"
+ },
+ {
+  "id": "gb-dorset",
+  "name": "Dorset",
+  "slug": "w:dorset",
+  "bbox": [
+   -2.96297,
+   50.49829,
+   -1.68004,
+   51.0827
+  ],
+  "geofabrik": "dorset"
  },
  {
   "id": "nl-drenthe",
@@ -1011,6 +1335,30 @@
   ]
  },
  {
+  "id": "gb-durham",
+  "name": "Durham",
+  "slug": "w:durham",
+  "bbox": [
+   -2.35668,
+   54.4502,
+   -1.10158,
+   54.91986
+  ],
+  "geofabrik": "durham"
+ },
+ {
+  "id": "gb-east-sussex",
+  "name": "East Sussex",
+  "slug": "w:east-sussex",
+  "bbox": [
+   -0.13679,
+   50.69996,
+   0.86947,
+   51.14781
+  ],
+  "geofabrik": "east-sussex"
+ },
+ {
   "id": "tl",
   "name": "East Timor",
   "slug": "w:east-timor",
@@ -1021,6 +1369,18 @@
    -8.05787
   ],
   "geofabrik": "east-timor"
+ },
+ {
+  "id": "gb-east-yorkshire-with-hull",
+  "name": "East Yorkshire with Hull",
+  "slug": "w:east-yorkshire-with-hull",
+  "bbox": [
+   -1.10517,
+   53.55447,
+   0.48944,
+   54.21045
+  ],
+  "geofabrik": "east-yorkshire-with-hull"
  },
  {
   "id": "in-eastern-zone",
@@ -1059,6 +1419,18 @@
   "geofabrik": "egypt"
  },
  {
+  "id": "sv",
+  "name": "El Salvador",
+  "slug": "w:el-salvador",
+  "bbox": [
+   -90.50091,
+   12.03598,
+   -87.58438,
+   14.45762
+  ],
+  "geofabrik": "el-salvador"
+ },
+ {
   "id": "gq",
   "name": "Equatorial Guinea",
   "slug": "w:equatorial-guinea",
@@ -1081,6 +1453,18 @@
    18.32962
   ],
   "geofabrik": "eritrea"
+ },
+ {
+  "id": "gb-essex",
+  "name": "Essex",
+  "slug": "w:essex",
+  "bbox": [
+   -0.01965,
+   51.45008,
+   1.30725,
+   52.09464
+  ],
+  "geofabrik": "essex"
  },
  {
   "id": "ee",
@@ -1119,6 +1503,54 @@
   "geofabrik": "extremadura"
  },
  {
+  "id": "gb-falklands",
+  "name": "Falkland Islands",
+  "slug": "w:falklands",
+  "bbox": [
+   -62.20142,
+   -53.40604,
+   -56.44453,
+   -50.67405
+  ],
+  "geofabrik": "falklands"
+ },
+ {
+  "id": "far-eastern-fed-district-e",
+  "name": "Far Eastern Federal District east of 180\u00b0",
+  "slug": "w:far-eastern-fed-district@e",
+  "bbox": [
+   -180.0,
+   62.2613,
+   -168.6841,
+   72.2393
+  ],
+  "geofabrik": "far-eastern-fed-district",
+  "clip": [
+   -180.0,
+   62.2613,
+   -168.6841,
+   72.2393
+  ]
+ },
+ {
+  "id": "far-eastern-fed-district-w",
+  "name": "Far Eastern Federal District west of 180\u00b0",
+  "slug": "w:far-eastern-fed-district@w",
+  "bbox": [
+   105.4219,
+   37.3466,
+   180.0,
+   82.0002
+  ],
+  "geofabrik": "far-eastern-fed-district",
+  "clip": [
+   105.4219,
+   37.3466,
+   180.0,
+   82.0002
+  ]
+ },
+ {
   "id": "fo",
   "name": "Faroe Islands",
   "slug": "w:faroe-islands",
@@ -1129,6 +1561,42 @@
    62.90523
   ],
   "geofabrik": "faroe-islands"
+ },
+ {
+  "id": "fj-e",
+  "name": "Fiji east of 180\u00b0",
+  "slug": "w:fiji@e",
+  "bbox": [
+   -180.0,
+   -24.382,
+   -176.2675,
+   -13.9086
+  ],
+  "geofabrik": "fiji",
+  "clip": [
+   -180.0,
+   -24.382,
+   -176.2675,
+   -13.9086
+  ]
+ },
+ {
+  "id": "fj-w",
+  "name": "Fiji west of 180\u00b0",
+  "slug": "w:fiji@w",
+  "bbox": [
+   172.7647,
+   -25.0813,
+   180.0,
+   -9.7833
+  ],
+  "geofabrik": "fiji",
+  "clip": [
+   172.7647,
+   -25.0813,
+   180.0,
+   -9.7833
+  ]
  },
  {
   "id": "fi",
@@ -1190,6 +1658,18 @@
   "geofabrik": "friesland"
  },
  {
+  "id": "cn-fujian",
+  "name": "Fujian",
+  "slug": "w:fujian",
+  "bbox": [
+   115.8409,
+   23.18252,
+   121.6277,
+   28.32237
+  ],
+  "geofabrik": "fujian"
+ },
+ {
   "id": "gcc-states",
   "name": "GCC States",
   "slug": "w:gcc-states",
@@ -1224,6 +1704,18 @@
    44.14855
   ],
   "geofabrik": "galicia"
+ },
+ {
+  "id": "cn-gansu",
+  "name": "Gansu",
+  "slug": "w:gansu",
+  "bbox": [
+   92.29907,
+   32.58438,
+   108.7193,
+   42.81354
+  ],
+  "geofabrik": "gansu"
  },
  {
   "id": "nl-gelderland",
@@ -1271,6 +1763,42 @@
    11.17772
   ],
   "geofabrik": "ghana"
+ },
+ {
+  "id": "gb-gloucestershire",
+  "name": "Gloucestershire",
+  "slug": "w:gloucestershire",
+  "bbox": [
+   -2.71191,
+   51.41465,
+   -1.61261,
+   52.11556
+  ],
+  "geofabrik": "gloucestershire"
+ },
+ {
+  "id": "gb-greater-london",
+  "name": "Greater London",
+  "slug": "w:greater-london",
+  "bbox": [
+   -0.51148,
+   51.28554,
+   0.33544,
+   51.69344
+  ],
+  "geofabrik": "greater-london"
+ },
+ {
+  "id": "gb-greater-manchester",
+  "name": "Greater Manchester",
+  "slug": "w:greater-manchester",
+  "bbox": [
+   -2.7321,
+   53.32613,
+   -1.90804,
+   53.68742
+  ],
+  "geofabrik": "greater-manchester"
  },
  {
   "id": "gr",
@@ -1332,6 +1860,42 @@
   ]
  },
  {
+  "id": "cn-guangdong",
+  "name": "Guangdong (with Hong Kong and Macau)",
+  "slug": "w:guangdong",
+  "bbox": [
+   109.3565,
+   20.05851,
+   117.665,
+   25.52432
+  ],
+  "geofabrik": "guangdong"
+ },
+ {
+  "id": "cn-guangxi",
+  "name": "Guangxi",
+  "slug": "w:guangxi",
+  "bbox": [
+   104.4419,
+   20.74224,
+   112.0654,
+   26.39648
+  ],
+  "geofabrik": "guangxi"
+ },
+ {
+  "id": "gt",
+  "name": "Guatemala",
+  "slug": "w:guatemala",
+  "bbox": [
+   -92.73303,
+   12.74168,
+   -87.95177,
+   17.83533
+  ],
+  "geofabrik": "guatemala"
+ },
+ {
   "id": "guernsey-jersey",
   "name": "Guernsey and Jersey",
   "slug": "w:guernsey-jersey",
@@ -1379,6 +1943,18 @@
   "geofabrik": "guinea-bissau"
  },
  {
+  "id": "cn-guizhou",
+  "name": "Guizhou",
+  "slug": "w:guizhou",
+  "bbox": [
+   103.5982,
+   24.61706,
+   109.5594,
+   29.23204
+  ],
+  "geofabrik": "guizhou"
+ },
+ {
   "id": "gy",
   "name": "Guyana",
   "slug": "w:guyana",
@@ -1403,6 +1979,30 @@
   "geofabrik": "guyane"
  },
  {
+  "id": "cn-hainan",
+  "name": "Hainan",
+  "slug": "w:hainan",
+  "bbox": [
+   108.3153,
+   14.29739,
+   118.4373,
+   20.40385
+  ],
+  "geofabrik": "hainan"
+ },
+ {
+  "id": "haiti-and-domrep",
+  "name": "Haiti and Dominican Republic",
+  "slug": "w:haiti-and-domrep",
+  "bbox": [
+   -74.82529,
+   16.99901,
+   -68.05482,
+   21.45307
+  ],
+  "geofabrik": "haiti-and-domrep"
+ },
+ {
   "id": "de-hamburg",
   "name": "Hamburg",
   "slug": "w:hamburg",
@@ -1413,6 +2013,18 @@
    54.06261
   ],
   "geofabrik": "hamburg"
+ },
+ {
+  "id": "gb-hampshire",
+  "name": "Hampshire",
+  "slug": "w:hampshire",
+  "bbox": [
+   -1.9591,
+   50.69041,
+   -0.72631,
+   51.38712
+  ],
+  "geofabrik": "hampshire"
  },
  {
   "id": "fr-haute-normandie",
@@ -1436,6 +2048,78 @@
    -142.6511,
    29.02109
   ]
+ },
+ {
+  "id": "au-heard-mcdonald",
+  "name": "Heard Island and McDonald Islands",
+  "slug": "w:heard-mcdonald",
+  "bbox": [
+   71.99912,
+   -53.54549,
+   74.45294,
+   -52.66308
+  ],
+  "geofabrik": "heard-mcdonald"
+ },
+ {
+  "id": "cn-hebei",
+  "name": "Hebei (with Beijing and Tianjin)",
+  "slug": "w:hebei",
+  "bbox": [
+   113.451,
+   36.04299,
+   119.9982,
+   42.62487
+  ],
+  "geofabrik": "hebei"
+ },
+ {
+  "id": "cn-heilongjiang",
+  "name": "Heilongjiang",
+  "slug": "w:heilongjiang",
+  "bbox": [
+   121.15,
+   43.41078,
+   134.8036,
+   53.65559
+  ],
+  "geofabrik": "heilongjiang"
+ },
+ {
+  "id": "cn-henan",
+  "name": "Henan",
+  "slug": "w:henan",
+  "bbox": [
+   110.3458,
+   31.37805,
+   116.647,
+   36.36801
+  ],
+  "geofabrik": "henan"
+ },
+ {
+  "id": "gb-herefordshire",
+  "name": "Herefordshire",
+  "slug": "w:herefordshire",
+  "bbox": [
+   -3.14289,
+   51.82618,
+   -2.33843,
+   52.39531
+  ],
+  "geofabrik": "herefordshire"
+ },
+ {
+  "id": "gb-hertfordshire",
+  "name": "Hertfordshire",
+  "slug": "w:hertfordshire",
+  "bbox": [
+   -0.74683,
+   51.59798,
+   0.1971,
+   52.08224
+  ],
+  "geofabrik": "hertfordshire"
  },
  {
   "id": "de-hessen",
@@ -1471,6 +2155,54 @@
    45.8154
   ],
   "geofabrik": "hokkaido"
+ },
+ {
+  "id": "hn",
+  "name": "Honduras",
+  "slug": "w:honduras",
+  "bbox": [
+   -89.36005,
+   12.96943,
+   -81.66138,
+   17.93171
+  ],
+  "geofabrik": "honduras"
+ },
+ {
+  "id": "cn-hong-kong",
+  "name": "Hong Kong",
+  "slug": "w:hong-kong",
+  "bbox": [
+   113.813,
+   22.13041,
+   114.506,
+   22.56904
+  ],
+  "geofabrik": "hong-kong"
+ },
+ {
+  "id": "cn-hubei",
+  "name": "Hubei",
+  "slug": "w:hubei",
+  "bbox": [
+   108.3597,
+   29.03006,
+   116.1361,
+   33.27343
+  ],
+  "geofabrik": "hubei"
+ },
+ {
+  "id": "cn-hunan",
+  "name": "Hunan",
+  "slug": "w:hunan",
+  "bbox": [
+   108.7792,
+   24.63266,
+   114.2585,
+   30.138
+  ],
+  "geofabrik": "hunan"
  },
  {
   "id": "hu",
@@ -1540,6 +2272,18 @@
    -84.78042,
    41.76301
   ]
+ },
+ {
+  "id": "cn-inner-mongolia",
+  "name": "Inner Mongolia",
+  "slug": "w:inner-mongolia",
+  "bbox": [
+   97.14328,
+   37.39962,
+   126.0767,
+   53.44515
+  ],
+  "geofabrik": "inner-mongolia"
  },
  {
   "id": "us-ia",
@@ -1613,6 +2357,18 @@
   "geofabrik": "isle-of-man"
  },
  {
+  "id": "gb-isle-of-wight",
+  "name": "Isle of Wight",
+  "slug": "w:isle-of-wight",
+  "bbox": [
+   -1.65907,
+   50.50555,
+   -1.03137,
+   50.80102
+  ],
+  "geofabrik": "isle-of-wight"
+ },
+ {
   "id": "it-isole",
   "name": "Isole",
   "slug": "w:isole",
@@ -1660,6 +2416,18 @@
   ]
  },
  {
+  "id": "jm",
+  "name": "Jamaica",
+  "slug": "w:jamaica",
+  "bbox": [
+   -78.85,
+   16.35,
+   -75.51,
+   19.16
+  ],
+  "geofabrik": "jamaica"
+ },
+ {
   "id": "id-java",
   "name": "Java",
   "slug": "w:java",
@@ -1670,6 +2438,66 @@
    -3.95194
   ],
   "geofabrik": "java"
+ },
+ {
+  "id": "cn-jiangsu",
+  "name": "Jiangsu",
+  "slug": "w:jiangsu",
+  "bbox": [
+   116.3538,
+   30.75899,
+   122.9453,
+   35.55507
+  ],
+  "geofabrik": "jiangsu"
+ },
+ {
+  "id": "cn-jiangxi",
+  "name": "Jiangxi",
+  "slug": "w:jiangxi",
+  "bbox": [
+   113.5688,
+   24.47809,
+   118.4865,
+   30.08841
+  ],
+  "geofabrik": "jiangxi"
+ },
+ {
+  "id": "cz-jihomoravsky",
+  "name": "Jihomoravsk\u00fd kraj",
+  "slug": "w:jihomoravsky",
+  "bbox": [
+   15.54023,
+   48.61008,
+   17.64952,
+   49.63471
+  ],
+  "geofabrik": "jihomoravsky"
+ },
+ {
+  "id": "cz-jihocesky",
+  "name": "Jiho\u010desk\u00fd kraj",
+  "slug": "w:jihocesky",
+  "bbox": [
+   13.53386,
+   48.54292,
+   15.60644,
+   49.62122
+  ],
+  "geofabrik": "jihocesky"
+ },
+ {
+  "id": "cn-jilin",
+  "name": "Jilin",
+  "slug": "w:jilin",
+  "bbox": [
+   121.6276,
+   40.78952,
+   131.3514,
+   46.31469
+  ],
+  "geofabrik": "jilin"
  },
  {
   "id": "jo",
@@ -1743,6 +2571,18 @@
   "geofabrik": "kanto"
  },
  {
+  "id": "cz-karlovarsky",
+  "name": "Karlovarsk\u00fd kraj",
+  "slug": "w:karlovarsky",
+  "bbox": [
+   12.08477,
+   49.88988,
+   13.30247,
+   50.47322
+  ],
+  "geofabrik": "karlovarsky"
+ },
+ {
   "id": "kz",
   "name": "Kazakhstan",
   "slug": "w:kazakhstan",
@@ -1753,6 +2593,18 @@
    55.50799
   ],
   "geofabrik": "kazakhstan"
+ },
+ {
+  "id": "gb-kent",
+  "name": "Kent",
+  "slug": "w:kent",
+  "bbox": [
+   0.03055,
+   50.81013,
+   1.52126,
+   51.49664
+  ],
+  "geofabrik": "kent"
  },
  {
   "id": "us-ky",
@@ -1778,6 +2630,42 @@
   "geofabrik": "kenya"
  },
  {
+  "id": "ki-e",
+  "name": "Kiribati east of 180\u00b0",
+  "slug": "w:kiribati@e",
+  "bbox": [
+   -180.0,
+   -13.8383,
+   -147.0336,
+   6.4723
+  ],
+  "geofabrik": "kiribati",
+  "clip": [
+   -180.0,
+   -13.8383,
+   -147.0336,
+   6.4723
+  ]
+ },
+ {
+  "id": "ki-w",
+  "name": "Kiribati west of 180\u00b0",
+  "slug": "w:kiribati@w",
+  "bbox": [
+   167.8684,
+   -3.7707,
+   180.0,
+   5.6171
+  ],
+  "geofabrik": "kiribati",
+  "clip": [
+   167.8684,
+   -3.7707,
+   180.0,
+   5.6171
+  ]
+ },
+ {
   "id": "rs-km",
   "name": "Kosovo",
   "slug": "w:kosovo",
@@ -1788,6 +2676,30 @@
    43.27753
   ],
   "geofabrik": "kosovo"
+ },
+ {
+  "id": "cz-vysocina",
+  "name": "Kraj Vyso\u010dina",
+  "slug": "w:vysocina",
+  "bbox": [
+   14.88686,
+   48.9362,
+   16.41962,
+   49.8613
+  ],
+  "geofabrik": "vysocina"
+ },
+ {
+  "id": "cz-kralovehradecky",
+  "name": "Kr\u00e1lov\u00e9hradeck\u00fd kraj",
+  "slug": "w:kralovehradecky",
+  "bbox": [
+   15.10268,
+   50.03735,
+   16.59925,
+   50.78739
+  ],
+  "geofabrik": "kralovehradecky"
  },
  {
   "id": "kg",
@@ -1824,6 +2736,18 @@
    42.64621
   ],
   "geofabrik": "la-rioja"
+ },
+ {
+  "id": "gb-lancashire",
+  "name": "Lancashire",
+  "slug": "w:lancashire",
+  "bbox": [
+   -3.09216,
+   53.47507,
+   -2.0395,
+   54.24645
+  ],
+  "geofabrik": "lancashire"
  },
  {
   "id": "fr-languedoc-roussillon",
@@ -1874,6 +2798,18 @@
   "geofabrik": "lebanon"
  },
  {
+  "id": "gb-leicestershire",
+  "name": "Leicestershire",
+  "slug": "w:leicestershire",
+  "bbox": [
+   -1.59639,
+   52.3936,
+   -0.66393,
+   52.9776
+  ],
+  "geofabrik": "leicestershire"
+ },
+ {
   "id": "ls",
   "name": "Lesotho",
   "slug": "w:lesotho",
@@ -1884,6 +2820,30 @@
    -28.56734
   ],
   "geofabrik": "lesotho"
+ },
+ {
+  "id": "cn-liaoning",
+  "name": "Liaoning",
+  "slug": "w:liaoning",
+  "bbox": [
+   118.8305,
+   38.26191,
+   125.7959,
+   43.49303
+  ],
+  "geofabrik": "liaoning"
+ },
+ {
+  "id": "cz-liberecky",
+  "name": "Libereck\u00fd kraj",
+  "slug": "w:liberecky",
+  "bbox": [
+   14.34201,
+   50.47113,
+   15.63443,
+   51.03171
+  ],
+  "geofabrik": "liberecky"
  },
  {
   "id": "lr",
@@ -1946,6 +2906,18 @@
   "geofabrik": "limousin"
  },
  {
+  "id": "gb-lincolnshire",
+  "name": "Lincolnshire",
+  "slug": "w:lincolnshire",
+  "bbox": [
+   -0.95092,
+   52.63954,
+   0.49438,
+   53.73003
+  ],
+  "geofabrik": "lincolnshire"
+ },
+ {
   "id": "lt",
   "name": "Lithuania",
   "slug": "w:lithuania",
@@ -1991,6 +2963,18 @@
    50.18496
   ],
   "geofabrik": "luxembourg"
+ },
+ {
+  "id": "cn-macau",
+  "name": "Macau",
+  "slug": "w:macau",
+  "bbox": [
+   113.5272,
+   22.07546,
+   113.6325,
+   22.21708
+  ],
+  "geofabrik": "macau"
  },
  {
   "id": "mk",
@@ -2229,6 +3213,18 @@
   "geofabrik": "melilla"
  },
  {
+  "id": "gb-merseyside",
+  "name": "Merseyside",
+  "slug": "w:merseyside",
+  "bbox": [
+   -3.34278,
+   53.2854,
+   -2.57569,
+   53.70528
+  ],
+  "geofabrik": "merseyside"
+ },
+ {
   "id": "mx-cmx",
   "name": "Mexico City",
   "slug": "mx-cmx",
@@ -2319,6 +3315,18 @@
   ]
  },
  {
+  "id": "de-mittelfranken",
+  "name": "Mittelfranken",
+  "slug": "w:mittelfranken",
+  "bbox": [
+   10.06565,
+   48.85325,
+   11.60553,
+   49.79103
+  ],
+  "geofabrik": "mittelfranken"
+ },
+ {
   "id": "md",
   "name": "Moldova",
   "slug": "w:moldova",
@@ -2376,6 +3384,18 @@
    43.56217
   ],
   "geofabrik": "montenegro"
+ },
+ {
+  "id": "cz-moravskoslezky",
+  "name": "Moravskoslezsk\u00fd kraj",
+  "slug": "w:moravskoslezky",
+  "bbox": [
+   17.14468,
+   49.37126,
+   18.86321,
+   50.3303
+  ],
+  "geofabrik": "moravskoslezky"
  },
  {
   "id": "mx-mor",
@@ -2574,6 +3594,18 @@
   ]
  },
  {
+  "id": "au-new-south-wales",
+  "name": "New South Wales (with ACT and JBT)",
+  "slug": "w:new-south-wales",
+  "bbox": [
+   140.9948,
+   -37.75984,
+   160.0747,
+   -28.13898
+  ],
+  "geofabrik": "new-south-wales"
+ },
+ {
   "id": "us-ny",
   "name": "New York",
   "slug": "new-york",
@@ -2582,6 +3614,42 @@
    40.43922,
    -71.6608,
    45.01766
+  ]
+ },
+ {
+  "id": "nz-e",
+  "name": "New Zealand east of 180\u00b0",
+  "slug": "w:new-zealand@e",
+  "bbox": [
+   -180.0,
+   -45.5833,
+   -173.5849,
+   -28.488
+  ],
+  "geofabrik": "new-zealand",
+  "clip": [
+   -180.0,
+   -45.5833,
+   -173.5849,
+   -28.488
+  ]
+ },
+ {
+  "id": "nz-w",
+  "name": "New Zealand west of 180\u00b0",
+  "slug": "w:new-zealand@w",
+  "bbox": [
+   162.096,
+   -56.7527,
+   180.0,
+   -32.667
+  ],
+  "geofabrik": "new-zealand",
+  "clip": [
+   162.096,
+   -56.7527,
+   180.0,
+   -32.667
   ]
  },
  {
@@ -2594,6 +3662,30 @@
    -42.58305,
    60.50864
   ]
+ },
+ {
+  "id": "ni",
+  "name": "Nicaragua",
+  "slug": "w:nicaragua",
+  "bbox": [
+   -87.9774,
+   10.70177,
+   -82.37865,
+   15.1119
+  ],
+  "geofabrik": "nicaragua"
+ },
+ {
+  "id": "de-niederbayern",
+  "name": "Niederbayern",
+  "slug": "w:niederbayern",
+  "bbox": [
+   11.59302,
+   48.20179,
+   13.84947,
+   49.17605
+  ],
+  "geofabrik": "niederbayern"
  },
  {
   "id": "de-niedersachsen",
@@ -2630,6 +3722,18 @@
    13.89874
   ],
   "geofabrik": "nigeria"
+ },
+ {
+  "id": "cn-ningxia",
+  "name": "Ningxia",
+  "slug": "w:ningxia",
+  "bbox": [
+   104.275,
+   35.23272,
+   107.6571,
+   39.38606
+  ],
+  "geofabrik": "ningxia"
  },
  {
   "id": "nu",
@@ -2680,6 +3784,18 @@
   "geofabrik": "nord-est"
  },
  {
+  "id": "no-nord-norge",
+  "name": "Nord-Norge<br />(Northern Norway)",
+  "slug": "w:nord-norge",
+  "bbox": [
+   7.8402,
+   64.93917,
+   33.63965,
+   72.4056
+  ],
+  "geofabrik": "nord-norge"
+ },
+ {
   "id": "it-nord-ovest",
   "name": "Nord-Ovest",
   "slug": "w:nord-ovest",
@@ -2714,6 +3830,30 @@
    2.67301
   ],
   "geofabrik": "nordeste"
+ },
+ {
+  "id": "gb-norfolk",
+  "name": "Norfolk",
+  "slug": "w:norfolk",
+  "bbox": [
+   0.15447,
+   52.35478,
+   1.99279,
+   53.35573
+  ],
+  "geofabrik": "norfolk"
+ },
+ {
+  "id": "au-norfolk-island",
+  "name": "Norfolk Island",
+  "slug": "w:norfolk-island",
+  "bbox": [
+   167.6245,
+   -29.46068,
+   168.3456,
+   -28.75781
+  ],
+  "geofabrik": "norfolk-island"
  },
  {
   "id": "br-norte",
@@ -2774,6 +3914,18 @@
   "geofabrik": "north-korea"
  },
  {
+  "id": "gb-north-yorkshire",
+  "name": "North Yorkshire",
+  "slug": "w:north-yorkshire",
+  "bbox": [
+   -2.56718,
+   53.61999,
+   -0.04061,
+   54.70222
+  ],
+  "geofabrik": "north-yorkshire"
+ },
+ {
   "id": "in-north-eastern-zone",
   "name": "North-Eastern Zone",
   "slug": "w:north-eastern-zone",
@@ -2786,6 +3938,30 @@
   "geofabrik": "north-eastern-zone"
  },
  {
+  "id": "gb-northamptonshire",
+  "name": "Northamptonshire",
+  "slug": "w:northamptonshire",
+  "bbox": [
+   -1.33403,
+   51.9765,
+   -0.34068,
+   52.64459
+  ],
+  "geofabrik": "northamptonshire"
+ },
+ {
+  "id": "au-northern-territory",
+  "name": "Northern Territory",
+  "slug": "w:northern-territory",
+  "bbox": [
+   128.6705,
+   -26.00085,
+   140.4241,
+   -9.97193
+  ],
+  "geofabrik": "northern-territory"
+ },
+ {
   "id": "in-northern-zone",
   "name": "Northern Zone",
   "slug": "w:northern-zone",
@@ -2796,6 +3972,18 @@
    35.73091
   ],
   "geofabrik": "northern-zone"
+ },
+ {
+  "id": "gb-northumberland",
+  "name": "Northumberland",
+  "slug": "w:northumberland",
+  "bbox": [
+   -2.69072,
+   54.78162,
+   -1.22329,
+   55.84866
+  ],
+  "geofabrik": "northumberland"
  },
  {
   "id": "ca-nt",
@@ -2819,6 +4007,18 @@
    82.54561
   ],
   "geofabrik": "northwestern-fed-district"
+ },
+ {
+  "id": "gb-nottinghamshire",
+  "name": "Nottinghamshire",
+  "slug": "w:nottinghamshire",
+  "bbox": [
+   -1.34448,
+   52.78153,
+   -0.66665,
+   53.50315
+  ],
+  "geofabrik": "nottinghamshire"
  },
  {
   "id": "ca-ns",
@@ -2888,6 +4088,42 @@
   ]
  },
  {
+  "id": "de-oberbayern",
+  "name": "Oberbayern",
+  "slug": "w:oberbayern",
+  "bbox": [
+   10.71268,
+   47.3913,
+   13.10973,
+   49.09052
+  ],
+  "geofabrik": "oberbayern"
+ },
+ {
+  "id": "de-oberfranken",
+  "name": "Oberfranken",
+  "slug": "w:oberfranken",
+  "bbox": [
+   10.43816,
+   49.5854,
+   12.27356,
+   50.52571
+  ],
+  "geofabrik": "oberfranken"
+ },
+ {
+  "id": "de-oberpfalz",
+  "name": "Oberpfalz",
+  "slug": "w:oberpfalz",
+  "bbox": [
+   11.18231,
+   48.76243,
+   13.17628,
+   50.08323
+  ],
+  "geofabrik": "oberpfalz"
+ },
+ {
   "id": "us-oh",
   "name": "Ohio",
   "slug": "ohio",
@@ -2908,6 +4144,18 @@
    -94.42989,
    37.00529
   ]
+ },
+ {
+  "id": "cz-olomoucky",
+  "name": "Olomouck\u00fd kraj",
+  "slug": "w:olomoucky",
+  "bbox": [
+   16.70909,
+   49.26735,
+   17.92035,
+   50.45234
+  ],
+  "geofabrik": "olomoucky"
  },
  {
   "id": "ca-on",
@@ -2944,6 +4192,18 @@
   "geofabrik": "overijssel"
  },
  {
+  "id": "gb-oxfordshire",
+  "name": "Oxfordshire",
+  "slug": "w:oxfordshire",
+  "bbox": [
+   -1.71953,
+   51.46057,
+   -0.86985,
+   52.16807
+  ],
+  "geofabrik": "oxfordshire"
+ },
+ {
   "id": "pk",
   "name": "Pakistan",
   "slug": "w:pakistan",
@@ -2966,6 +4226,18 @@
    11.48818
   ],
   "geofabrik": "palau"
+ },
+ {
+  "id": "pa",
+  "name": "Panama",
+  "slug": "w:panama",
+  "bbox": [
+   -83.46462,
+   6.64403,
+   -77.08126,
+   11.20708
+  ],
+  "geofabrik": "panama"
  },
  {
   "id": "id-papua",
@@ -3002,6 +4274,18 @@
    -19.24012
   ],
   "geofabrik": "paraguay"
+ },
+ {
+  "id": "cz-pardubicky",
+  "name": "Pardubick\u00fd kraj",
+  "slug": "w:pardubicky",
+  "bbox": [
+   15.3626,
+   49.57176,
+   16.86804,
+   50.21306
+  ],
+  "geofabrik": "pardubicky"
  },
  {
   "id": "fr-pays-de-la-loire",
@@ -3087,6 +4371,18 @@
   "geofabrik": "pitcairn-islands"
  },
  {
+  "id": "cz-plzensky",
+  "name": "Plze\u0148sk\u00fd kraj",
+  "slug": "w:plzensky",
+  "bbox": [
+   12.38887,
+   48.93387,
+   13.84247,
+   50.10566
+  ],
+  "geofabrik": "plzensky"
+ },
+ {
   "id": "fr-poitou-charentes",
   "name": "Poitou-Charentes",
   "slug": "w:poitou-charentes",
@@ -3121,6 +4417,18 @@
    42.1639
   ],
   "geofabrik": "portugal"
+ },
+ {
+  "id": "cz-praha",
+  "name": "Praha",
+  "slug": "w:praha",
+  "bbox": [
+   14.22365,
+   49.94151,
+   14.70695,
+   50.17756
+  ],
+  "geofabrik": "praha"
  },
  {
   "id": "ca-pe",
@@ -3168,6 +4476,18 @@
   ]
  },
  {
+  "id": "cn-qinghai",
+  "name": "Qinghai",
+  "slug": "w:qinghai",
+  "bbox": [
+   89.39,
+   31.58673,
+   103.0727,
+   39.22162
+  ],
+  "geofabrik": "qinghai"
+ },
+ {
   "id": "ca-qc",
   "name": "Quebec",
   "slug": "ca-qc",
@@ -3177,6 +4497,18 @@
    -57.08908,
    62.6262
   ]
+ },
+ {
+  "id": "au-queensland",
+  "name": "Queensland",
+  "slug": "w:queensland",
+  "bbox": [
+   137.9902,
+   -29.1831,
+   154.2005,
+   -8.84163
+  ],
+  "geofabrik": "queensland"
  },
  {
   "id": "mx-que",
@@ -3199,6 +4531,114 @@
    -86.71065,
    21.6055
   ]
+ },
+ {
+  "id": "de-arnsberg-regbez",
+  "name": "Regierungsbezirk Arnsberg",
+  "slug": "w:arnsberg-regbez",
+  "bbox": [
+   7.09963,
+   50.67897,
+   8.97253,
+   51.74709
+  ],
+  "geofabrik": "arnsberg-regbez"
+ },
+ {
+  "id": "de-detmold-regbez",
+  "name": "Regierungsbezirk Detmold",
+  "slug": "w:detmold-regbez",
+  "bbox": [
+   8.07405,
+   51.4369,
+   9.46831,
+   52.53345
+  ],
+  "geofabrik": "detmold-regbez"
+ },
+ {
+  "id": "de-duesseldorf-regbez",
+  "name": "Regierungsbezirk D\u00fcsseldorf",
+  "slug": "w:duesseldorf-regbez",
+  "bbox": [
+   5.94147,
+   51.01422,
+   7.31431,
+   51.90781
+  ],
+  "geofabrik": "duesseldorf-regbez"
+ },
+ {
+  "id": "de-freiburg-regbez",
+  "name": "Regierungsbezirk Freiburg",
+  "slug": "w:freiburg-regbez",
+  "bbox": [
+   7.50649,
+   47.53076,
+   9.24696,
+   48.72373
+  ],
+  "geofabrik": "freiburg-regbez"
+ },
+ {
+  "id": "de-karlsruhe-regbez",
+  "name": "Regierungsbezirk Karlsruhe",
+  "slug": "w:karlsruhe-regbez",
+  "bbox": [
+   7.94995,
+   48.29792,
+   9.60553,
+   49.736
+  ],
+  "geofabrik": "karlsruhe-regbez"
+ },
+ {
+  "id": "de-koeln-regbez",
+  "name": "Regierungsbezirk K\u00f6ln",
+  "slug": "w:koeln-regbez",
+  "bbox": [
+   5.86442,
+   50.32088,
+   7.79441,
+   51.253
+  ],
+  "geofabrik": "koeln-regbez"
+ },
+ {
+  "id": "de-muenster-regbez",
+  "name": "Regierungsbezirk M\u00fcnster",
+  "slug": "w:muenster-regbez",
+  "bbox": [
+   6.38588,
+   51.47971,
+   8.32118,
+   52.47682
+  ],
+  "geofabrik": "muenster-regbez"
+ },
+ {
+  "id": "de-stuttgart-regbez",
+  "name": "Regierungsbezirk Stuttgart",
+  "slug": "w:stuttgart-regbez",
+  "bbox": [
+   8.74147,
+   48.49386,
+   10.51495,
+   49.79456
+  ],
+  "geofabrik": "stuttgart-regbez"
+ },
+ {
+  "id": "de-tuebingen-regbez",
+  "name": "Regierungsbezirk T\u00fcbingen",
+  "slug": "w:tuebingen-regbez",
+  "bbox": [
+   8.64559,
+   47.53246,
+   10.27309,
+   48.6348
+  ],
+  "geofabrik": "tuebingen-regbez"
  },
  {
   "id": "fr-reunion",
@@ -3258,6 +4698,18 @@
    48.26948
   ],
   "geofabrik": "romania"
+ },
+ {
+  "id": "gb-rutland",
+  "name": "Rutland",
+  "slug": "w:rutland",
+  "bbox": [
+   -0.82293,
+   52.52355,
+   -0.42765,
+   52.76109
+  ],
+  "geofabrik": "rutland"
  },
  {
   "id": "rw",
@@ -3378,6 +4830,18 @@
   "geofabrik": "schleswig-holstein"
  },
  {
+  "id": "de-schwaben",
+  "name": "Schwaben",
+  "slug": "w:schwaben",
+  "bbox": [
+   9.51246,
+   47.26543,
+   11.31348,
+   49.0366
+  ],
+  "geofabrik": "schwaben"
+ },
+ {
   "id": "gb-scotland",
   "name": "Scotland",
   "slug": "w:scotland",
@@ -3426,6 +4890,54 @@
   "geofabrik": "seychelles"
  },
  {
+  "id": "cn-shaanxi",
+  "name": "Shaanxi",
+  "slug": "w:shaanxi",
+  "bbox": [
+   105.4801,
+   31.695,
+   111.2479,
+   39.58902
+  ],
+  "geofabrik": "shaanxi"
+ },
+ {
+  "id": "cn-shandong",
+  "name": "Shandong",
+  "slug": "w:shandong",
+  "bbox": [
+   114.8133,
+   34.37575,
+   123.5632,
+   38.44
+  ],
+  "geofabrik": "shandong"
+ },
+ {
+  "id": "cn-shanghai",
+  "name": "Shanghai",
+  "slug": "w:shanghai",
+  "bbox": [
+   120.847,
+   30.6391,
+   123.679,
+   31.88455
+  ],
+  "geofabrik": "shanghai"
+ },
+ {
+  "id": "cn-shanxi",
+  "name": "Shanxi",
+  "slug": "w:shanxi",
+  "bbox": [
+   110.2,
+   34.57895,
+   114.57,
+   40.75116
+  ],
+  "geofabrik": "shanxi"
+ },
+ {
   "id": "jp-shikoku",
   "name": "Shikoku",
   "slug": "w:shikoku",
@@ -3438,6 +4950,18 @@
   "geofabrik": "shikoku"
  },
  {
+  "id": "gb-shropshire",
+  "name": "Shropshire",
+  "slug": "w:shropshire",
+  "bbox": [
+   -3.23558,
+   52.30616,
+   -2.23354,
+   52.99693
+  ],
+  "geofabrik": "shropshire"
+ },
+ {
   "id": "siberian-fed-district",
   "name": "Siberian Federal District",
   "slug": "w:siberian-fed-district",
@@ -3448,6 +4972,18 @@
    81.88747
   ],
   "geofabrik": "siberian-fed-district"
+ },
+ {
+  "id": "cn-sichuan",
+  "name": "Sichuan",
+  "slug": "w:sichuan",
+  "bbox": [
+   97.31277,
+   26.04599,
+   108.5508,
+   34.33153
+  ],
+  "geofabrik": "sichuan"
  },
  {
   "id": "sl",
@@ -3521,6 +5057,18 @@
   "geofabrik": "somalia"
  },
  {
+  "id": "gb-somerset",
+  "name": "Somerset",
+  "slug": "w:somerset",
+  "bbox": [
+   -3.84094,
+   50.81995,
+   -2.2433,
+   51.50392
+  ],
+  "geofabrik": "somerset"
+ },
+ {
   "id": "mx-son",
   "name": "Sonora",
   "slug": "mx-son",
@@ -3542,6 +5090,18 @@
    -22.11736
   ],
   "geofabrik": "south-africa-and-lesotho"
+ },
+ {
+  "id": "au-south-australia",
+  "name": "South Australia",
+  "slug": "w:south-australia",
+  "bbox": [
+   128.9993,
+   -39.83156,
+   141.0073,
+   -25.99303
+  ],
+  "geofabrik": "south-australia"
  },
  {
   "id": "us-sc",
@@ -3602,6 +5162,18 @@
   "geofabrik": "south-sudan"
  },
  {
+  "id": "gb-south-yorkshire",
+  "name": "South Yorkshire",
+  "slug": "w:south-yorkshire",
+  "bbox": [
+   -1.82587,
+   53.29889,
+   -0.85289,
+   53.66326
+  ],
+  "geofabrik": "south-yorkshire"
+ },
+ {
   "id": "in-southern-zone",
   "name": "Southern Zone",
   "slug": "w:southern-zone",
@@ -3626,6 +5198,18 @@
   "geofabrik": "sri-lanka"
  },
  {
+  "id": "gb-staffordshire",
+  "name": "Staffordshire",
+  "slug": "w:staffordshire",
+  "bbox": [
+   -2.47182,
+   52.42202,
+   -1.58449,
+   53.22743
+  ],
+  "geofabrik": "staffordshire"
+ },
+ {
   "id": "mx-mex",
   "name": "State of Mexico",
   "slug": "mx-mex",
@@ -3635,6 +5219,18 @@
    -98.59687,
    20.28587
   ]
+ },
+ {
+  "id": "cz-stredocesky",
+  "name": "St\u0159edo\u010desk\u00fd kraj (with Praha)",
+  "slug": "w:stredocesky",
+  "bbox": [
+   13.39579,
+   49.50088,
+   15.53613,
+   50.61926
+  ],
+  "geofabrik": "stredocesky"
  },
  {
   "id": "it-sud",
@@ -3671,6 +5267,18 @@
    -14.22445
   ],
   "geofabrik": "sudeste"
+ },
+ {
+  "id": "gb-suffolk",
+  "name": "Suffolk",
+  "slug": "w:suffolk",
+  "bbox": [
+   0.33956,
+   51.93285,
+   1.76368,
+   52.55013
+  ],
+  "geofabrik": "suffolk"
  },
  {
   "id": "br-sul",
@@ -3721,6 +5329,30 @@
   "geofabrik": "suriname"
  },
  {
+  "id": "gb-surrey",
+  "name": "Surrey",
+  "slug": "w:surrey",
+  "bbox": [
+   -0.85059,
+   51.0715,
+   0.0599,
+   51.47288
+  ],
+  "geofabrik": "surrey"
+ },
+ {
+  "id": "no-svalbard-janmayen",
+  "name": "Svalbard and Jan Mayen",
+  "slug": "w:svalbard-janmayen",
+  "bbox": [
+   -10.49539,
+   70.26127,
+   35.34074,
+   81.05183
+  ],
+  "geofabrik": "svalbard-janmayen"
+ },
+ {
   "id": "sz",
   "name": "Swaziland",
   "slug": "w:swaziland",
@@ -3767,6 +5399,18 @@
    37.32239
   ],
   "geofabrik": "syria"
+ },
+ {
+  "id": "no-sorlandet",
+  "name": "S\u00f8rlandet<br />(Southern Norway)",
+  "slug": "w:sorlandet",
+  "bbox": [
+   5.69866,
+   57.58445,
+   10.10434,
+   59.67468
+  ],
+  "geofabrik": "sorlandet"
  },
  {
   "id": "mx-tab",
@@ -3827,6 +5471,18 @@
   "geofabrik": "tanzania"
  },
  {
+  "id": "au-tasmania",
+  "name": "Tasmania",
+  "slug": "w:tasmania",
+  "bbox": [
+   143.4704,
+   -56.86236,
+   161.6707,
+   -39.19687
+  ],
+  "geofabrik": "tasmania"
+ },
+ {
   "id": "us-tn",
   "name": "Tennessee",
   "slug": "tennessee",
@@ -3871,6 +5527,30 @@
    51.65237
   ],
   "geofabrik": "thueringen"
+ },
+ {
+  "id": "cn-tianjin",
+  "name": "Tianjin",
+  "slug": "w:tianjin",
+  "bbox": [
+   116.6944,
+   38.55327,
+   118.063,
+   40.25307
+  ],
+  "geofabrik": "tianjin"
+ },
+ {
+  "id": "cn-tibet",
+  "name": "Tibet",
+  "slug": "w:tibet",
+  "bbox": [
+   78.29403,
+   27.19968,
+   99.12552,
+   36.53
+  ],
+  "geofabrik": "tibet"
  },
  {
   "id": "mx-tla",
@@ -3920,6 +5600,18 @@
   "geofabrik": "tonga"
  },
  {
+  "id": "no-trondelag",
+  "name": "Tr\u00f8ndelag<br />(Central Norway)",
+  "slug": "w:trondelag",
+  "bbox": [
+   5.79087,
+   62.25533,
+   14.33543,
+   65.94955
+  ],
+  "geofabrik": "trondelag"
+ },
+ {
   "id": "tn",
   "name": "Tunisia",
   "slug": "w:tunisia",
@@ -3954,6 +5646,36 @@
    42.81253
   ],
   "geofabrik": "turkmenistan"
+ },
+ {
+  "id": "tv-w",
+  "name": "Tuvalu west of 180\u00b0",
+  "slug": "w:tuvalu@w",
+  "bbox": [
+   172.9953,
+   -13.2404,
+   180.0,
+   -4.0616
+  ],
+  "geofabrik": "tuvalu",
+  "clip": [
+   172.9953,
+   -13.2404,
+   180.0,
+   -4.0616
+  ]
+ },
+ {
+  "id": "gb-tyne-and-wear",
+  "name": "Tyne and Wear",
+  "slug": "w:tyne-and-wear",
+  "bbox": [
+   -1.85388,
+   54.79775,
+   -1.26259,
+   55.10949
+  ],
+  "geofabrik": "tyne-and-wear"
  },
  {
   "id": "jp-tohoku",
@@ -4001,6 +5723,18 @@
    52.3865
   ],
   "geofabrik": "ukraine"
+ },
+ {
+  "id": "de-unterfranken",
+  "name": "Unterfranken",
+  "slug": "w:unterfranken",
+  "bbox": [
+   8.97519,
+   49.47911,
+   10.88719,
+   50.56623
+  ],
+  "geofabrik": "unterfranken"
  },
  {
   "id": "ural-fed-district",
@@ -4120,6 +5854,30 @@
   ]
  },
  {
+  "id": "no-vestlandet",
+  "name": "Vestlandet<br />(Western Norway)",
+  "slug": "w:vestlandet",
+  "bbox": [
+   2.32908,
+   57.63122,
+   9.37466,
+   65.12362
+  ],
+  "geofabrik": "vestlandet"
+ },
+ {
+  "id": "au-victoria",
+  "name": "Victoria",
+  "slug": "w:victoria",
+  "bbox": [
+   140.9574,
+   -39.23224,
+   150.4683,
+   -33.97931
+  ],
+  "geofabrik": "victoria"
+ },
+ {
   "id": "vn",
   "name": "Vietnam",
   "slug": "w:vietnam",
@@ -4179,6 +5937,18 @@
   "geofabrik": "wallis-et-futuna"
  },
  {
+  "id": "gb-warwickshire",
+  "name": "Warwickshire",
+  "slug": "w:warwickshire",
+  "bbox": [
+   -1.963,
+   51.95471,
+   -1.17115,
+   52.68823
+  ],
+  "geofabrik": "warwickshire"
+ },
+ {
   "id": "us-wa",
   "name": "Washington",
   "slug": "washington",
@@ -4188,6 +5958,30 @@
    -116.9115,
    49.00708
   ]
+ },
+ {
+  "id": "gb-west-midlands",
+  "name": "West Midlands",
+  "slug": "w:west-midlands",
+  "bbox": [
+   -2.20821,
+   52.3457,
+   -1.42252,
+   52.6643
+  ],
+  "geofabrik": "west-midlands"
+ },
+ {
+  "id": "gb-west-sussex",
+  "name": "West Sussex",
+  "slug": "w:west-sussex",
+  "bbox": [
+   -0.95624,
+   50.70685,
+   0.04134,
+   51.169
+  ],
+  "geofabrik": "west-sussex"
  },
  {
   "id": "us-wv",
@@ -4201,6 +5995,30 @@
   ]
  },
  {
+  "id": "gb-west-yorkshire",
+  "name": "West Yorkshire",
+  "slug": "w:west-yorkshire",
+  "bbox": [
+   -2.17555,
+   53.51822,
+   -1.196,
+   53.96491
+  ],
+  "geofabrik": "west-yorkshire"
+ },
+ {
+  "id": "au-western-australia",
+  "name": "Western Australia",
+  "slug": "w:western-australia",
+  "bbox": [
+   109.9281,
+   -41.16427,
+   130.32,
+   -12.83116
+  ],
+  "geofabrik": "western-australia"
+ },
+ {
   "id": "in-western-zone",
   "name": "Western Zone",
   "slug": "w:western-zone",
@@ -4211,6 +6029,18 @@
    24.71756
   ],
   "geofabrik": "western-zone"
+ },
+ {
+  "id": "gb-wiltshire",
+  "name": "Wiltshire",
+  "slug": "w:wiltshire",
+  "bbox": [
+   -2.36325,
+   50.9465,
+   -1.48881,
+   51.70637
+  ],
+  "geofabrik": "wiltshire"
  },
  {
   "id": "us-wi",
@@ -4416,6 +6246,18 @@
   "geofabrik": "swietokrzyskie"
  },
  {
+  "id": "gb-worcestershire",
+  "name": "Worcestershire",
+  "slug": "w:worcestershire",
+  "bbox": [
+   -2.66399,
+   51.9654,
+   -1.7565,
+   52.4565
+  ],
+  "geofabrik": "worcestershire"
+ },
+ {
   "id": "us-wy",
   "name": "Wyoming",
   "slug": "wyoming",
@@ -4425,6 +6267,18 @@
    -103.9413,
    45.01216
   ]
+ },
+ {
+  "id": "cn-xinjiang",
+  "name": "Xinjiang",
+  "slug": "w:xinjiang",
+  "bbox": [
+   73.41788,
+   34.26775,
+   96.43,
+   49.26201
+  ],
+  "geofabrik": "xinjiang"
  },
  {
   "id": "ye",
@@ -4459,6 +6313,18 @@
    -123.8021,
    70.16906
   ]
+ },
+ {
+  "id": "cn-yunnan",
+  "name": "Yunnan",
+  "slug": "w:yunnan",
+  "bbox": [
+   97.42851,
+   21.04476,
+   106.215,
+   29.23518
+  ],
+  "geofabrik": "yunnan"
  },
  {
   "id": "mx-zac",
@@ -4496,6 +6362,18 @@
   "geofabrik": "zeeland"
  },
  {
+  "id": "cn-zhejiang",
+  "name": "Zhejiang",
+  "slug": "w:zhejiang",
+  "bbox": [
+   118.0206,
+   26.69164,
+   123.8379,
+   31.19078
+  ],
+  "geofabrik": "zhejiang"
+ },
+ {
   "id": "zw",
   "name": "Zimbabwe",
   "slug": "w:zimbabwe",
@@ -4506,6 +6384,18 @@
    -15.58707
   ],
   "geofabrik": "zimbabwe"
+ },
+ {
+  "id": "cz-zlinsky",
+  "name": "Zl\u00ednsk\u00fd kraj",
+  "slug": "w:zlinsky",
+  "bbox": [
+   17.10807,
+   48.8374,
+   18.45055,
+   49.54122
+  ],
+  "geofabrik": "zlinsky"
  },
  {
   "id": "nl-zuid-holland",
@@ -4530,5 +6420,29 @@
    11.15685
   ],
   "geofabrik": "ile-de-clipperton"
+ },
+ {
+  "id": "no-ostlandet",
+  "name": "\u00d8stlandet<br />(Eastern Norway)",
+  "slug": "w:ostlandet",
+  "bbox": [
+   7.09539,
+   58.5968,
+   12.88071,
+   62.69734
+  ],
+  "geofabrik": "ostlandet"
+ },
+ {
+  "id": "cz-ustecky",
+  "name": "\u00dasteck\u00fd kraj",
+  "slug": "w:ustecky",
+  "bbox": [
+   12.93716,
+   50.07552,
+   14.66589,
+   51.06426
+  ],
+  "geofabrik": "ustecky"
  }
 ]

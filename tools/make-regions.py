@@ -21,14 +21,14 @@ Inputs (downloaded separately; nothing here touches the network):
                   extras_bytes, terrain_bytes}; boxes are [west, south, east, north]
   world folder    (optional, --world) the output of tools/world-regions.py: selected.json and
                   that folder's sizes.txt, pbf-sizes.txt, terrain-sizes.txt and extract-boxes.txt
+  built-world.json (optional, --world-built) packages built from to-build.json in that folder by
+                  tools/regions-build/build_shortbread.py --world, published in the regions release
 
-Usage: python -I tools/make-regions.py index-v1.json sizes.txt pbf-sizes.txt terrain-sizes.txt extract-boxes.txt <date YYYY-MM-DD> [overlays-summary.json] [--built built.json] [--world folder]
+Usage: python -I tools/make-regions.py index-v1.json sizes.txt pbf-sizes.txt terrain-sizes.txt extract-boxes.txt <date YYYY-MM-DD> [overlays-summary.json] [--built built.json] [--world folder [--world-built built-world.json]]
        then cargo fmt
 
 IDs: ISO 3166-2 for US states, Canadian provinces and Mexican states (us-il, ca-on, mx-que),
-ISO 3166-1 for Mexico as a whole (mx). Elsewhere a region's single ISO 3166-2 or 3166-1 code
-from Geofabrik's index (de-hh, fr), else its country's code and Geofabrik's ID (in-central-zone),
-else Geofabrik's ID (gcc-states). A code already taken falls back to the next form.
+ISO 3166-1 for Mexico as a whole (mx). Elsewhere tools/world-regions.py assigns them.
 
 Each region's coverage check is its outline's bounding box (Geofabrik's package
 bounds equal it): the package must lie within the box widened by OUTER_MARGIN
@@ -47,6 +47,8 @@ OUTER_MARGIN = 0.5
 SKIP = {"alaska"}
 HANDWRITTEN = {"illinois": "crate::package::ILLINOIS"}
 BASE = "https://download.geofabrik.de/north-america/us"
+RELEASE = "https://github.com/ianrastall/offline-maps/releases/download/regions"
+RELEASE_PAGE = "https://github.com/ianrastall/offline-maps/releases/tag/regions"
 # Countries outside the US, by Geofabrik ID: (base URL, catalog ID, name).
 COUNTRIES = {"mexico": ("https://download.geofabrik.de/north-america", "mx", "All of Mexico")}
 # Countries (ISO 3166-1) whose names are mostly written in scripts the map cannot draw yet
@@ -111,6 +113,11 @@ def main():
         i = args.index("--world")
         world_dir = Path(args[i + 1])
         del args[i:i + 2]
+    world_built = {}
+    if "--world-built" in args:
+        i = args.index("--world-built")
+        world_built = json.loads(Path(args[i + 1]).read_text(encoding="utf-8"))
+        del args[i:i + 2]
     index_path, shortbread_path, pbf_path, terrain_path, boxes_path, date = args[:6]
     extract_boxes = {}
     for line in Path(boxes_path).read_text(encoding="utf-8").splitlines():
@@ -146,26 +153,48 @@ def main():
         extract_boxes[b["id"]] = tuple(b["extract_box"])
     # Regions elsewhere, from tools/world-regions.py.
     world = {}
+    outline_source = {}
     if world_dir:
         # Keyed "w:<Geofabrik ID>": the country Georgia and the US state are both "georgia".
         for target, name in ((shortbread, "sizes.txt"), (pbf, "pbf-sizes.txt"), (terrain, "terrain-sizes.txt")):
             target.update({f"w:{k}": v for k, v in sizes(world_dir / name).items()})
+        geofabrik_boxes = {}
         for line in (world_dir / "extract-boxes.txt").read_text(encoding="utf-8").splitlines():
-            slug, *values = line.split()
-            extract_boxes[f"w:{slug}"] = tuple(float(v) for v in values)
+            gid, *values = line.split()
+            geofabrik_boxes[gid] = tuple(float(v) for v in values)
         taken = {code for _, _, code, _, _ in regions}
-        for w in json.loads((world_dir / "selected.json").read_text(encoding="utf-8")):
-            country_iso = w["country_iso"].lower()
-            candidates = [w["iso"].lower()] if w["iso"] else []
-            candidates += [f"{country_iso}-{w['id']}"] if country_iso else []
-            candidates.append(w["id"])
-            code = next(c for c in candidates if c and c not in taken)
+
+        def add(w, base):
+            slug = f"w:{w['key']}"
+            code = w["catalog_id"]
+            if code in taken:
+                raise RuntimeError(f"catalog ID {code} is taken twice")
             taken.add(code)
             continent = CONTINENTS.get(w["continent"], w["continent"])
             country = "Russia" if w["continent"] == "Russian Federation" else w["country"]
-            non_latin = w["country_iso"] in NON_LATIN or w["id"] in NON_LATIN_IDS
-            world[f"w:{w['id']}"] = (country, continent, NOTE if non_latin else "")
-            regions.append((w["name"], f"w:{w['id']}", code, w["url_base"].rsplit("/", 1)[0], tuple(w["box"])))
+            non_latin = w["country_iso"] in NON_LATIN or w["geofabrik"] in NON_LATIN_IDS
+            world[slug] = (country, continent, NOTE if non_latin else "")
+            outline_source[slug] = {"geofabrik": w["geofabrik"], **({"clip": w["clip"]} if w["clip"] else {})}
+            extract_boxes[slug] = geofabrik_boxes[w["geofabrik"]]
+            regions.append((w["name"], slug, code, base, tuple(w["box"])))
+            return slug
+
+        for w in json.loads((world_dir / "selected.json").read_text(encoding="utf-8")):
+            add(w, w["url_base"].rsplit("/", 1)[0])
+        # Built for the app and published in the regions release; stations and addresses
+        # still come from Geofabrik's raw extract (of the whole region, for a part).
+        for w in json.loads((world_dir / "to-build.json").read_text(encoding="utf-8")):
+            record = world_built.get(w["catalog_id"])
+            if not record:
+                continue
+            slug = add(w, None)
+            shortbread[slug] = record["package_bytes"]
+            built_by_id[slug] = {
+                "source_page": RELEASE_PAGE,
+                "package_url": f"{RELEASE}/{w['catalog_id']}-shortbread-1.0.mbtiles",
+                "extras_url": w["url_base"] + "-latest.osm.pbf",
+                "package_box": [float(v) for v in record["bounds"].split(",")],
+            }
     regions.sort()
 
     lines = [
@@ -230,7 +259,7 @@ def main():
     # The same list for the overlay build (tools/layers), with outline boxes.
     listing = [
         {"id": code, "name": name, "slug": slug, "bbox": [round(v, 5) for v in box],
-         **({"geofabrik": slug.removeprefix("w:")} if slug in world else {})}
+         **outline_source.get(slug, {})}
         for name, slug, code, _, box in regions
     ]
     (Path(__file__).resolve().parent / "layers" / "regions.json").write_text(

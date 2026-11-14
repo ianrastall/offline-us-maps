@@ -76,6 +76,8 @@ The package total is inflated by regions that cross the 180th meridian. Geofabri
 
 **First part done in 0.13.0 (14 November 2026)**: the 286 regions Geofabrik publishes a Shortbread package for (outside North America, Greenland included), with their country and continent, the Regions window's continent filter and country groups, and their outlines in the overview; regions in other scripts are offered with a note (Ian's choice: offer them now). Left for the rest of W2: the regions with no package (China's provinces, Central America, Australia's states, England's counties and others, 177 in all), the seven that cross the 180th meridian (Fiji, Kiribati, New Zealand, Tuvalu, American Oceania, Antarctica, Russia's Far East) and stage 5's publishing.
 
+**Second part done in 0.14.0 (14 November 2026)**: 154 regions built from Geofabrik's raw extracts with the existing Planetiler pipeline (10.8 GB of extracts; the measured cost was about 30 seconds per small region) and published in the `regions` release. Of the 177 without a package, 140 are real regions; the rest are groupings (`dach`, `alps`, `britain-and-ireland`, `great-britain`, `sea`), North American ones already covered, and South Africa, which South Africa and Lesotho already holds. The six regions crossing the 180th meridian are split there (11 parts; Tuvalu's eastern part is open sea); Antarctica is left out. The VersaTiles planet was not needed: the regions to build came to 10.8 GB of extracts, not the 60 GB first estimated, which counted the groupings. Stage 5's publishing of Geofabrik's own packages remains.
+
 - Generate the catalog from Geofabrik's index for all regions with no subregions, skipping the grouping regions. Use ISO 3166 identifiers where they exist (`de-by`, `jp`) and Geofabrik's otherwise.
 - Choose one source for map tiles, after measuring a few countries both ways:
   - cut from the VersaTiles planet (one 66.6 GB download, one schema), or
@@ -109,7 +111,7 @@ No separate work: the Android stages (6–9 of the North America plan) take regi
 
 1. The new name and repository name (W1): decided 14 November 2026, Offline Maps, repository `offline-maps`.
 2. Order: W1 before or after the Android foundation (stage 6 of the North America plan). W1 is independent of it; W2 depends on stage 5.
-3. The tile source for regions without a Geofabrik package: the VersaTiles planet, or builds from raw extracts (decided after measuring, W2).
+3. The tile source for regions without a Geofabrik package: the VersaTiles planet, or builds from raw extracts (decided after measuring, W2): builds from raw extracts, the existing pipeline, once the regions to build proved to be 10.8 GB of extracts.
 4. Fonts: bundled in the installer, or downloaded per script (W4).
 5. Whether regions whose labels cannot draw properly (complex scripts) are offered with a note, or held back: decided 14 November 2026, offered with a note.
 6. Rebuild frequency for several hundred regions (stage 5 proposes monthly).

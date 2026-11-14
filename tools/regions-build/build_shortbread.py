@@ -1,6 +1,8 @@
 """Builds Shortbread map packages for regions Geofabrik publishes no package for: the
-Canadian provinces and territories, and Alaska. For publishing with the app's releases
-(tag `regions`) as <id>-shortbread-1.0.mbtiles.
+Canadian provinces and territories, and Alaska; and, with --world, the regions elsewhere listed
+in to-build.json by tools/world-regions.py (China's provinces, Central America, Australia's
+states, England's counties and others, and the parts of regions crossing the 180th meridian).
+For publishing with the app's releases (tag `regions`) as <id>-shortbread-1.0.mbtiles.
 
 Each package is made from Geofabrik's raw extract of the region with VersaTiles' Planetiler
 Shortbread profile (versatiles-org/planetiler-shortbread v1.0.0-pre1, Apache-2.0; the release
@@ -16,6 +18,8 @@ extracts directly, so only the map packages are built here.
 The data is (c) OpenStreetMap contributors, ODbL 1.0.
 
 Usage: data/layer-build/venv/Scripts/python tools/regions-build/build_shortbread.py <out-dir> [id ...]
+       data/layer-build/venv/Scripts/python tools/regions-build/build_shortbread.py <out-dir> --world <to-build.json> [catalog-id ...]
+       (writes built.json, or built-world.json with --world, in <out-dir>)
 """
 from __future__ import annotations
 
@@ -81,10 +85,15 @@ def download(url: str, target: Path) -> None:
 
 def build(region_id: str, out: Path) -> dict:
     name, path, clip = REGIONS[region_id]
+    return build_from(region_id, name, f"{GEOFABRIK}/{path}-latest.osm.pbf", clip, out, path)
+
+
+def build_from(region_id: str, name: str, pbf_url: str, clip, out: Path, source: str, keep_source: bool = True) -> dict:
     sources = WORK / "sources"
     sources.mkdir(parents=True, exist_ok=True)
-    pbf = sources / f"{Path(path).name}-latest.osm.pbf"
-    download(f"{GEOFABRIK}/{path}-latest.osm.pbf", pbf)
+    # Geofabrik's file names are unique except across continents' ID spaces; keep its path.
+    pbf = sources / pbf_url.removeprefix("https://download.geofabrik.de/").replace("/", "_")
+    download(pbf_url, pbf)
     target = out / f"{region_id}-shortbread-1.0.mbtiles"
     args = [
         "java", "-Xmx24g", "-jar", str(PLANETILER),
@@ -114,17 +123,39 @@ def build(region_id: str, out: Path) -> dict:
     db.close()
     size = target.stat().st_size
     log(f"  {target.name}: {tiles:,} tiles, {size / 1e6:.0f} MB, {time.time() - started:.0f} s, bounds {meta.get('bounds')}")
-    return {"id": region_id, "name": name, "geofabrik": path, "bounds": meta.get("bounds"),
-            "package_bytes": size, "tiles": tiles, "pbf_bytes": pbf.stat().st_size}
+    record = {"id": region_id, "name": name, "geofabrik": source, "bounds": meta.get("bounds"),
+              "package_bytes": size, "tiles": tiles, "pbf_bytes": pbf.stat().st_size}
+    # The world's extracts are not kept: they come to about 11 GB and Geofabrik serves them again.
+    # Both parts of a split region read one extract, so it stays until no later part needs it.
+    if not keep_source:
+        pbf.unlink(missing_ok=True)
+    return record
 
 
 def main() -> None:
+    # Region names such as Jihočeský; Windows consoles and redirected output default to a code page.
+    sys.stdout.reconfigure(encoding="utf-8")
     out = Path(sys.argv[1])
     out.mkdir(parents=True, exist_ok=True)
     with PLANETILER.open("rb") as f:
         if hashlib.file_digest(f, "sha256").hexdigest() != PLANETILER_SHA256:
             raise RuntimeError("planetiler.jar does not match the pinned checksum")
-    ids = sys.argv[2:] or list(REGIONS)
+    args = sys.argv[2:]
+    if args[:1] == ["--world"]:
+        entries = json.loads(Path(args[1]).read_text(encoding="utf-8"))
+        wanted = set(args[2:])
+        listing_path = out / "built-world.json"
+        listing = json.loads(listing_path.read_text(encoding="utf-8")) if listing_path.exists() else {}
+        chosen = [e for e in entries if not wanted or e["catalog_id"] in wanted]
+        for i, e in enumerate(chosen):
+            later = any(f["geofabrik"] == e["geofabrik"] for f in chosen[i + 1:])
+            listing[e["catalog_id"]] = build_from(
+                e["catalog_id"], e["name"], e["url_base"] + "-latest.osm.pbf", e["clip"], out, e["geofabrik"],
+                keep_source=later)
+            listing_path.write_text(json.dumps(listing, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+        log("done")
+        return
+    ids = args or list(REGIONS)
     listing_path = out / "built.json"
     listing = json.loads(listing_path.read_text(encoding="utf-8")) if listing_path.exists() else {}
     for region_id in ids:

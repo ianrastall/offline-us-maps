@@ -341,6 +341,17 @@ Completed 9 November 2026. The labels with missing letters were public-land name
 
 Verified: at zoom 12 over Evanston, "Lighthouse Landing", "Leahy Park", "Maple Park", "Philbrick Park" and "Lunt Park" draw whole where 0.7.0 cut them, in the development build and in the installed 0.7.1 started from Start. Released as [v0.7.1](https://github.com/ianrastall/offline-north-american-maps/releases/tag/v0.7.1), built from 8748bff; the installer's SHA-256 (06906734…e6d0581) matches GitHub's digest, and Settings > Apps lists 0.7.1.
 
+## 0.14.0: Regions built for the rest of the world
+
+Completed 14 November 2026: the second part of stage W2 of the [worldwide plan](worldwide.md).
+
+- **154 regions built.** `tools/world-regions.py` now also lists the regions to build: Geofabrik regions with no package (140 after leaving out groupings: `dach`, `alps`, `britain-and-ireland`, `great-britain`, `sea`, regions mostly covered by smaller ones; a region with an enclave, such as Guangdong with Hong Kong and Macau, is not a grouping; South Africa is left out since South Africa and Lesotho, offered since 0.13.0, holds it) and the six crossing the 180th meridian, split there into a part west of 180° and one east of it (Fiji, Kiribati, New Zealand, American Oceania, Russia's Far Eastern Federal District; Tuvalu west only, its eastern part being open sea). Antarctica is left out. `tools/regions-build/build_shortbread.py --world` built them as Canada's were, from 10.8 GB of Geofabrik extracts of 13–14 November: 12.1 GB of maps, the largest Russia's Far East west of 180° (1.3 GB). They are in the `regions` release (233 files); every upload's SHA-256 matches GitHub's digest. 540 regions in all, in 193 countries and territories; 80 carry the script note.
+- **IDs** are assigned once, in `tools/world-regions.py`, offered regions first, so the 286 IDs of 0.13.0 are unchanged (checked: every earlier catalog entry is identical). Parts add `-w` or `-e` (`fj-w`, `fj-e`).
+- **Package checks for small regions.** Downloading a sample through the core (`offline-maps-dev download --region <id>`, new) refused Macau ("no tiles at declared zoom level 0": Planetiler leaves out zooms where a region has no features) and Rutland ("vector layer boundaries is missing": no national or state border runs through it). A package now needs tiles from some zoom up to its maximum without gaps, rather than at every declared zoom, and must declare at least one of Shortbread's layers rather than all six (another schema, such as OpenMapTiles, is still refused). Then all 154 built maps downloaded, verified, activated and had their search index built through the core.
+- **Build fixes.** Region names such as Jihočeský stopped the first batch (Windows' code page for redirected output); the script writes UTF-8. Drive D: filled during the second batch (2 GB free; the extracts and maps had taken 11 GB); the script now deletes each extract after its last build, and the built maps were removed locally once uploaded and checked.
+- **Overview.** 540 outlines, 15.6 MB.
+- **Tests.** 77 core (new: a package starting above its minimum zoom is accepted, a gap is not; a reef's layers are accepted, OpenMapTiles' are not), 2 HTTP, 7 ABI and 9 interop tests.
+
 ## 0.13.0: Regions worldwide, and indexes built off the map drive
 
 Completed 14 November 2026: the first part of stage W2 of the [worldwide plan](worldwide.md).

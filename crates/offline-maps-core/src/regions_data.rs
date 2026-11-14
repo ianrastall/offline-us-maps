@@ -255,6 +255,62 @@ pub const FR_ALSACE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const AMERICAN_OCEANIA_E: Region = Region {
+    id: "american-oceania-e",
+    name: "American Oceania east of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/american-oceania-e-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/american-oceania-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -18.144,
+        east: 170.371,
+        north: 25.988,
+    },
+    required_points: &[
+        (-170.140, -5.728),
+        (-178.028, -15.261),
+        (-162.252, -15.261),
+        (-178.028, 3.804),
+        (-162.252, 3.804),
+    ],
+    country: "American Oceania",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 23740416,
+    extras_bytes: 5389288,
+    terrain_bytes: 6992088,
+    overlay_bytes: 0,
+};
+
+pub const AMERICAN_OCEANIA_W: Region = Region {
+    id: "american-oceania-w",
+    name: "American Oceania west of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/american-oceania-w-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/american-oceania-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -18.144,
+        east: 180.000,
+        north: 25.988,
+    },
+    required_points: &[
+        (160.818, 15.964),
+        (145.472, 11.116),
+        (176.164, 11.116),
+        (145.472, 20.813),
+        (176.164, 20.813),
+    ],
+    country: "American Oceania",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 26517504,
+    extras_bytes: 5389288,
+    terrain_bytes: 2367090,
+    overlay_bytes: 0,
+};
+
 pub const ES_ANDALUCIA: Region = Region {
     id: "es-andalucia",
     name: "Andalucía",
@@ -336,6 +392,34 @@ pub const AO: Region = Region {
     package_bytes: 234561536,
     extras_bytes: 85496037,
     terrain_bytes: 2204077374,
+    overlay_bytes: 0,
+};
+
+pub const CN_ANHUI: Region = Region {
+    id: "cn-anhui",
+    name: "Anhui",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-anhui-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/anhui-latest.osm.pbf",
+    outer: Bounds {
+        west: 114.369,
+        south: 28.888,
+        east: 120.157,
+        north: 35.155,
+    },
+    required_points: &[
+        (117.263, 32.022),
+        (115.348, 29.915),
+        (119.178, 29.915),
+        (115.348, 34.128),
+        (119.178, 34.128),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 84299776,
+    extras_bytes: 43847389,
+    terrain_bytes: 439834624,
     overlay_bytes: 0,
 };
 
@@ -507,6 +591,34 @@ pub const AM: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const AU_ASHMORE_CARTIER: Region = Region {
+    id: "au-ashmore-cartier",
+    name: "Ashmore and Cartier Islands",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-ashmore-cartier-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/ashmore-cartier-latest.osm.pbf",
+    outer: Bounds {
+        west: 122.067,
+        south: -13.348,
+        east: 124.542,
+        north: -11.393,
+    },
+    required_points: &[
+        (123.305, -12.370),
+        (122.715, -12.753),
+        (123.894, -12.753),
+        (122.715, -11.988),
+        (123.894, -11.988),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 167936,
+    extras_bytes: 22623,
+    terrain_bytes: 664960,
+    overlay_bytes: 0,
+};
+
 pub const ES_ASTURIAS: Region = Region {
     id: "es-asturias",
     name: "Asturias",
@@ -532,6 +644,34 @@ pub const ES_ASTURIAS: Region = Region {
     package_bytes: 46845952,
     extras_bytes: 36757191,
     terrain_bytes: 62194360,
+    overlay_bytes: 0,
+};
+
+pub const AU_ACT: Region = Region {
+    id: "au-act",
+    name: "Australian Capital Territory",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-act-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/act-latest.osm.pbf",
+    outer: Bounds {
+        west: 148.258,
+        south: -36.425,
+        east: 149.902,
+        north: -34.621,
+    },
+    required_points: &[
+        (149.080, -35.523),
+        (148.823, -35.845),
+        (149.337, -35.845),
+        (148.823, -35.201),
+        (149.337, -35.201),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 9883648,
+    extras_bytes: 19399088,
+    terrain_bytes: 15813672,
     overlay_bytes: 0,
 };
 
@@ -647,6 +787,34 @@ pub const AZORES: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const BS: Region = Region {
+    id: "bs",
+    name: "Bahamas",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/bs-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/bahamas-latest.osm.pbf",
+    outer: Bounds {
+        west: -82.019,
+        south: 19.773,
+        east: -71.367,
+        north: 28.756,
+    },
+    required_points: &[
+        (-76.693, 24.124),
+        (-80.553, 21.043),
+        (-72.832, 21.043),
+        (-80.553, 27.205),
+        (-72.832, 27.205),
+    ],
+    country: "Bahamas",
+    continent: "Central America",
+    note: "",
+    package_bytes: 23031808,
+    extras_bytes: 14327258,
+    terrain_bytes: 116700132,
+    overlay_bytes: 0,
+};
+
 pub const MX_BCN: Region = Region {
     id: "mx-bcn",
     name: "Baja California",
@@ -759,6 +927,62 @@ pub const FR_BASSE_NORMANDIE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_BEDFORDSHIRE: Region = Region {
+    id: "gb-bedfordshire",
+    name: "Bedfordshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-bedfordshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/bedfordshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.204,
+        south: 51.304,
+        east: 0.358,
+        north: 52.825,
+    },
+    required_points: &[
+        (-0.423, 52.064),
+        (-0.648, 51.856),
+        (-0.198, 51.856),
+        (-0.648, 52.273),
+        (-0.198, 52.273),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 9957376,
+    extras_bytes: 15207657,
+    terrain_bytes: 8739190,
+    overlay_bytes: 0,
+};
+
+pub const CN_BEIJING: Region = Region {
+    id: "cn-beijing",
+    name: "Beijing",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-beijing-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/beijing-latest.osm.pbf",
+    outer: Bounds {
+        west: 114.915,
+        south: 38.941,
+        east: 118.010,
+        north: 41.564,
+    },
+    required_points: &[
+        (116.463, 40.252),
+        (115.625, 39.603),
+        (117.300, 39.603),
+        (115.625, 40.902),
+        (117.300, 40.902),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 40386560,
+    extras_bytes: 37081749,
+    terrain_bytes: 88941070,
+    overlay_bytes: 0,
+};
+
 pub const BY: Region = Region {
     id: "by",
     name: "Belarus",
@@ -815,6 +1039,34 @@ pub const BE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const BZ: Region = Region {
+    id: "bz",
+    name: "Belize",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/bz-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/belize-latest.osm.pbf",
+    outer: Bounds {
+        west: -89.729,
+        south: 15.383,
+        east: -86.359,
+        north: 19.001,
+    },
+    required_points: &[
+        (-88.044, 17.191),
+        (-88.992, 16.145),
+        (-87.097, 16.145),
+        (-88.992, 18.237),
+        (-87.097, 18.237),
+    ],
+    country: "Belize",
+    continent: "Central America",
+    note: "",
+    package_bytes: 28860416,
+    extras_bytes: 18291835,
+    terrain_bytes: 47080964,
+    overlay_bytes: 0,
+};
+
 pub const BJ: Region = Region {
     id: "bj",
     name: "Benin",
@@ -843,6 +1095,34 @@ pub const BJ: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_BERKSHIRE: Region = Region {
+    id: "gb-berkshire",
+    name: "Berkshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-berkshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/berkshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.089,
+        south: 50.828,
+        east: 0.011,
+        north: 52.079,
+    },
+    required_points: &[
+        (-1.039, 51.453),
+        (-1.479, 51.353),
+        (-0.599, 51.353),
+        (-1.479, 51.554),
+        (-0.599, 51.554),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 14188544,
+    extras_bytes: 22677561,
+    terrain_bytes: 8603564,
+    overlay_bytes: 0,
+};
+
 pub const DE_BERLIN: Region = Region {
     id: "de-berlin",
     name: "Berlin",
@@ -868,6 +1148,34 @@ pub const DE_BERLIN: Region = Region {
     package_bytes: 49258496,
     extras_bytes: 100139743,
     terrain_bytes: 6610704,
+    overlay_bytes: 0,
+};
+
+pub const GB_BERMUDA: Region = Region {
+    id: "gb-bermuda",
+    name: "Bermuda",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-bermuda-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/bermuda-latest.osm.pbf",
+    outer: Bounds {
+        west: -65.701,
+        south: 31.522,
+        east: -63.894,
+        north: 33.123,
+    },
+    required_points: &[
+        (-64.797, 32.322),
+        (-65.120, 32.082),
+        (-64.475, 32.082),
+        (-65.120, 32.563),
+        (-64.475, 32.563),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 1523712,
+    extras_bytes: 2050799,
+    terrain_bytes: 490950,
     overlay_bytes: 0,
 };
 
@@ -1095,6 +1403,34 @@ pub const FR_BRETAGNE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_BRISTOL: Region = Region {
+    id: "gb-bristol",
+    name: "Bristol",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-bristol-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/bristol-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.235,
+        south: 50.896,
+        east: -2.010,
+        north: 52.046,
+    },
+    required_points: &[
+        (-2.622, 51.471),
+        (-2.712, 51.411),
+        (-2.532, 51.411),
+        (-2.712, 51.531),
+        (-2.532, 51.531),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 7204864,
+    extras_bytes: 13385081,
+    terrain_bytes: 2565804,
+    overlay_bytes: 0,
+};
+
 pub const CA_BC: Region = Region {
     id: "ca-bc",
     name: "British Columbia",
@@ -1120,6 +1456,34 @@ pub const CA_BC: Region = Region {
     package_bytes: 953622528,
     extras_bytes: 1249178632,
     terrain_bytes: 5949592526,
+    overlay_bytes: 0,
+};
+
+pub const GB_BUCKINGHAMSHIRE: Region = Region {
+    id: "gb-buckinghamshire",
+    name: "Buckinghamshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-buckinghamshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/buckinghamshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.641,
+        south: 50.986,
+        east: 0.017,
+        north: 52.696,
+    },
+    required_points: &[
+        (-0.812, 51.841),
+        (-1.075, 51.557),
+        (-0.549, 51.557),
+        (-1.075, 52.125),
+        (-0.549, 52.125),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 15601664,
+    extras_bytes: 22813117,
+    terrain_bytes: 11398564,
     overlay_bytes: 0,
 };
 
@@ -1260,6 +1624,34 @@ pub const KH: Region = Region {
     package_bytes: 140066816,
     extras_bytes: 41261833,
     terrain_bytes: 345532168,
+    overlay_bytes: 0,
+};
+
+pub const GB_CAMBRIDGESHIRE: Region = Region {
+    id: "gb-cambridgeshire",
+    name: "Cambridgeshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-cambridgeshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/cambridgeshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.002,
+        south: 51.505,
+        east: 1.016,
+        north: 53.242,
+    },
+    required_points: &[
+        (0.007, 52.373),
+        (-0.400, 52.079),
+        (0.414, 52.079),
+        (-0.400, 52.668),
+        (0.414, 52.668),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 23941120,
+    extras_bytes: 34978149,
+    terrain_bytes: 13978084,
     overlay_bytes: 0,
 };
 
@@ -1739,6 +2131,34 @@ pub const FR_CHAMPAGNE_ARDENNE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_CHESHIRE: Region = Region {
+    id: "gb-cheshire",
+    name: "Cheshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-cheshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/cheshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.630,
+        south: 52.446,
+        east: -1.473,
+        north: 53.983,
+    },
+    required_points: &[
+        (-2.551, 53.214),
+        (-3.014, 52.999),
+        (-2.089, 52.999),
+        (-3.014, 53.429),
+        (-2.089, 53.429),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 26279936,
+    extras_bytes: 38747188,
+    terrain_bytes: 15684546,
+    overlay_bytes: 0,
+};
+
 pub const MX_CHP: Region = Region {
     id: "mx-chp",
     name: "Chiapas",
@@ -1823,6 +2243,62 @@ pub const CL: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CN_CHONGQING: Region = Region {
+    id: "cn-chongqing",
+    name: "Chongqing",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-chongqing-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/chongqing-latest.osm.pbf",
+    outer: Bounds {
+        west: 104.783,
+        south: 27.651,
+        east: 110.700,
+        north: 32.706,
+    },
+    required_points: &[
+        (107.742, 30.179),
+        (105.775, 28.557),
+        (109.709, 28.557),
+        (105.775, 31.801),
+        (109.709, 31.801),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 53121024,
+    extras_bytes: 31632201,
+    terrain_bytes: 553847166,
+    overlay_bytes: 0,
+};
+
+pub const AU_CHRISTMAS_ISLAND: Region = Region {
+    id: "au-christmas-island",
+    name: "Christmas Island",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-christmas-island-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/christmas-island-latest.osm.pbf",
+    outer: Bounds {
+        west: 104.799,
+        south: -11.327,
+        east: 106.495,
+        north: -9.671,
+    },
+    required_points: &[
+        (105.647, -10.499),
+        (105.369, -10.761),
+        (105.925, -10.761),
+        (105.369, -10.237),
+        (105.925, -10.237),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 294912,
+    extras_bytes: 222776,
+    terrain_bytes: 663778,
+    overlay_bytes: 0,
+};
+
 pub const JP_CHUBU: Region = Region {
     id: "jp-chubu",
     name: "Chūbu region",
@@ -1904,6 +2380,34 @@ pub const MX_COA: Region = Region {
     package_bytes: 22462464,
     extras_bytes: 14811580,
     terrain_bytes: 360582062,
+    overlay_bytes: 0,
+};
+
+pub const AU_COCOS_ISLANDS: Region = Region {
+    id: "au-cocos-islands",
+    name: "Cocos (Keeling) Islands",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-cocos-islands-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/cocos-islands-latest.osm.pbf",
+    outer: Bounds {
+        west: 95.953,
+        south: -13.053,
+        east: 97.748,
+        north: -11.047,
+    },
+    required_points: &[
+        (96.851, -12.050),
+        (96.533, -12.452),
+        (97.169, -12.452),
+        (96.533, -11.647),
+        (97.169, -11.647),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 319488,
+    extras_bytes: 265172,
+    terrain_bytes: 367522,
     overlay_bytes: 0,
 };
 
@@ -2131,6 +2635,62 @@ pub const CK: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const AU_CORAL_SEA_ISLANDS: Region = Region {
+    id: "au-coral-sea-islands",
+    name: "Coral Sea Islands",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-coral-sea-islands-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/coral-sea-islands-latest.osm.pbf",
+    outer: Bounds {
+        west: 146.365,
+        south: -31.078,
+        east: 160.922,
+        north: -14.463,
+    },
+    required_points: &[
+        (153.643, -22.780),
+        (148.221, -29.019),
+        (159.066, -29.019),
+        (148.221, -16.541),
+        (159.066, -16.541),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 10539008,
+    extras_bytes: 182483,
+    terrain_bytes: 735209948,
+    overlay_bytes: 0,
+};
+
+pub const GB_CORNWALL: Region = Region {
+    id: "gb-cornwall",
+    name: "Cornwall",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-cornwall-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/cornwall-latest.osm.pbf",
+    outer: Bounds {
+        west: -7.353,
+        south: 48.916,
+        east: -3.647,
+        north: 51.432,
+    },
+    required_points: &[
+        (-5.484, 50.255),
+        (-6.553, 49.713),
+        (-4.414, 49.713),
+        (-6.553, 50.797),
+        (-4.414, 50.797),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 26615808,
+    extras_bytes: 34995164,
+    terrain_bytes: 15426560,
+    overlay_bytes: 0,
+};
+
 pub const FR_CORSE: Region = Region {
     id: "fr-corse",
     name: "Corse",
@@ -2156,6 +2716,34 @@ pub const FR_CORSE: Region = Region {
     package_bytes: 28368896,
     extras_bytes: 34538868,
     terrain_bytes: 31978584,
+    overlay_bytes: 0,
+};
+
+pub const CR: Region = Region {
+    id: "cr",
+    name: "Costa Rica",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cr-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/costa-rica-latest.osm.pbf",
+    outer: Bounds {
+        west: -88.325,
+        south: 4.438,
+        east: -81.850,
+        north: 11.724,
+    },
+    required_points: &[
+        (-85.087, 8.081),
+        (-87.277, 5.566),
+        (-82.897, 5.566),
+        (-87.277, 10.595),
+        (-82.897, 10.595),
+    ],
+    country: "Costa Rica",
+    continent: "Central America",
+    note: "",
+    package_bytes: 49909760,
+    extras_bytes: 39189613,
+    terrain_bytes: 113734772,
     overlay_bytes: 0,
 };
 
@@ -2212,6 +2800,62 @@ pub const HR: Region = Region {
     package_bytes: 785375232,
     extras_bytes: 201731082,
     terrain_bytes: 457940840,
+    overlay_bytes: 0,
+};
+
+pub const CU: Region = Region {
+    id: "cu",
+    name: "Cuba",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cu-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/cuba-latest.osm.pbf",
+    outer: Bounds {
+        west: -85.924,
+        south: 18.753,
+        east: -73.208,
+        north: 24.104,
+    },
+    required_points: &[
+        (-79.566, 21.429),
+        (-84.253, 19.688),
+        (-74.880, 19.688),
+        (-84.253, 23.169),
+        (-74.880, 23.169),
+    ],
+    country: "Cuba",
+    continent: "Central America",
+    note: "",
+    package_bytes: 80064512,
+    extras_bytes: 63241244,
+    terrain_bytes: 133431584,
+    overlay_bytes: 0,
+};
+
+pub const GB_CUMBRIA: Region = Region {
+    id: "gb-cumbria",
+    name: "Cumbria",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-cumbria-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/cumbria-latest.osm.pbf",
+    outer: Bounds {
+        west: -4.407,
+        south: 53.401,
+        east: -1.660,
+        north: 55.689,
+    },
+    required_points: &[
+        (-3.034, 54.545),
+        (-3.733, 54.029),
+        (-2.334, 54.029),
+        (-3.733, 55.060),
+        (-2.334, 55.060),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 33882112,
+    extras_bytes: 45899124,
+    terrain_bytes: 48817204,
     overlay_bytes: 0,
 };
 
@@ -2299,6 +2943,62 @@ pub const DK: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_DERBYSHIRE: Region = Region {
+    id: "gb-derbyshire",
+    name: "Derbyshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-derbyshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/derbyshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.536,
+        south: 52.196,
+        east: -0.665,
+        north: 54.042,
+    },
+    required_points: &[
+        (-1.600, 53.119),
+        (-1.949, 52.780),
+        (-1.252, 52.780),
+        (-1.949, 53.457),
+        (-1.252, 53.457),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 24690688,
+    extras_bytes: 44171916,
+    terrain_bytes: 22319276,
+    overlay_bytes: 0,
+};
+
+pub const GB_DEVON: Region = Region {
+    id: "gb-devon",
+    name: "Devon",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-devon-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/devon-latest.osm.pbf",
+    outer: Bounds {
+        west: -5.252,
+        south: 49.611,
+        east: -2.382,
+        north: 51.809,
+    },
+    required_points: &[
+        (-3.817, 50.710),
+        (-4.565, 50.231),
+        (-3.069, 50.231),
+        (-4.565, 51.189),
+        (-3.069, 51.189),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 41168896,
+    extras_bytes: 58485900,
+    terrain_bytes: 32375608,
+    overlay_bytes: 0,
+};
+
 pub const US_DC: Region = Region {
     id: "us-dc",
     name: "District of Columbia",
@@ -2352,6 +3052,34 @@ pub const DJ: Region = Region {
     package_bytes: 7860224,
     extras_bytes: 7031578,
     terrain_bytes: 50485980,
+    overlay_bytes: 0,
+};
+
+pub const GB_DORSET: Region = Region {
+    id: "gb-dorset",
+    name: "Dorset",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-dorset-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/dorset-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.463,
+        south: 49.998,
+        east: -1.180,
+        north: 51.583,
+    },
+    required_points: &[
+        (-2.322, 50.790),
+        (-2.835, 50.557),
+        (-1.808, 50.557),
+        (-2.835, 51.024),
+        (-1.808, 51.024),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 19435520,
+    extras_bytes: 30283397,
+    terrain_bytes: 13707242,
     overlay_bytes: 0,
 };
 
@@ -2411,6 +3139,62 @@ pub const MX_DUR: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_DURHAM: Region = Region {
+    id: "gb-durham",
+    name: "Durham",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-durham-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/durham-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.857,
+        south: 53.950,
+        east: -0.602,
+        north: 55.420,
+    },
+    required_points: &[
+        (-1.729, 54.685),
+        (-2.231, 54.497),
+        (-1.227, 54.497),
+        (-2.231, 54.873),
+        (-1.227, 54.873),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 16879616,
+    extras_bytes: 23886061,
+    terrain_bytes: 15404680,
+    overlay_bytes: 0,
+};
+
+pub const GB_EAST_SUSSEX: Region = Region {
+    id: "gb-east-sussex",
+    name: "East Sussex",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-east-sussex-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/east-sussex-latest.osm.pbf",
+    outer: Bounds {
+        west: -0.637,
+        south: 50.200,
+        east: 1.369,
+        north: 51.648,
+    },
+    required_points: &[
+        (0.366, 50.924),
+        (-0.036, 50.745),
+        (0.769, 50.745),
+        (-0.036, 51.103),
+        (0.769, 51.103),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 15159296,
+    extras_bytes: 22212083,
+    terrain_bytes: 9825196,
+    overlay_bytes: 0,
+};
+
 pub const TL: Region = Region {
     id: "tl",
     name: "East Timor",
@@ -2436,6 +3220,34 @@ pub const TL: Region = Region {
     package_bytes: 23486464,
     extras_bytes: 17796579,
     terrain_bytes: 44927562,
+    overlay_bytes: 0,
+};
+
+pub const GB_EAST_YORKSHIRE_WITH_HULL: Region = Region {
+    id: "gb-east-yorkshire-with-hull",
+    name: "East Yorkshire with Hull",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-east-yorkshire-with-hull-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/east-yorkshire-with-hull-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.605,
+        south: 53.054,
+        east: 0.989,
+        north: 54.710,
+    },
+    required_points: &[
+        (-0.308, 53.882),
+        (-0.946, 53.620),
+        (0.330, 53.620),
+        (-0.946, 54.145),
+        (0.330, 54.145),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 15380480,
+    extras_bytes: 19439221,
+    terrain_bytes: 12786038,
     overlay_bytes: 0,
 };
 
@@ -2523,6 +3335,34 @@ pub const EG: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const SV: Region = Region {
+    id: "sv",
+    name: "El Salvador",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/sv-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/el-salvador-latest.osm.pbf",
+    outer: Bounds {
+        west: -91.001,
+        south: 11.536,
+        east: -87.084,
+        north: 14.958,
+    },
+    required_points: &[
+        (-89.043, 13.247),
+        (-90.209, 12.278),
+        (-87.876, 12.278),
+        (-90.209, 14.215),
+        (-87.876, 14.215),
+    ],
+    country: "El Salvador",
+    continent: "Central America",
+    note: "",
+    package_bytes: 31576064,
+    extras_bytes: 35235275,
+    terrain_bytes: 72917874,
+    overlay_bytes: 0,
+};
+
 pub const GQ: Region = Region {
     id: "gq",
     name: "Equatorial Guinea",
@@ -2576,6 +3416,34 @@ pub const ER: Region = Region {
     package_bytes: 74563584,
     extras_bytes: 32136245,
     terrain_bytes: 516199706,
+    overlay_bytes: 0,
+};
+
+pub const GB_ESSEX: Region = Region {
+    id: "gb-essex",
+    name: "Essex",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-essex-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/essex-latest.osm.pbf",
+    outer: Bounds {
+        west: -0.520,
+        south: 50.950,
+        east: 1.807,
+        north: 52.595,
+    },
+    required_points: &[
+        (0.644, 51.772),
+        (0.113, 51.515),
+        (1.175, 51.515),
+        (0.113, 52.030),
+        (1.175, 52.030),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 32747520,
+    extras_bytes: 50213178,
+    terrain_bytes: 16385430,
     overlay_bytes: 0,
 };
 
@@ -2663,6 +3531,90 @@ pub const ES_EXTREMADURA: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_FALKLANDS: Region = Region {
+    id: "gb-falklands",
+    name: "Falkland Islands",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-falklands-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/falklands-latest.osm.pbf",
+    outer: Bounds {
+        west: -62.701,
+        south: -53.906,
+        east: -55.945,
+        north: -50.174,
+    },
+    required_points: &[
+        (-59.323, -52.040),
+        (-61.626, -53.133),
+        (-57.020, -53.133),
+        (-61.626, -50.947),
+        (-57.020, -50.947),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 9498624,
+    extras_bytes: 5541387,
+    terrain_bytes: 29288212,
+    overlay_bytes: 0,
+};
+
+pub const FAR_EASTERN_FED_DISTRICT_E: Region = Region {
+    id: "far-eastern-fed-district-e",
+    name: "Far Eastern Federal District east of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/far-eastern-fed-district-e-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/russia/far-eastern-fed-district-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: 36.847,
+        east: 180.000,
+        north: 82.500,
+    },
+    required_points: &[
+        (-174.342, 67.250),
+        (-178.868, 63.259),
+        (-169.816, 63.259),
+        (-178.868, 71.242),
+        (-169.816, 71.242),
+    ],
+    country: "Russia",
+    continent: "Europe",
+    note: "",
+    package_bytes: 70942720,
+    extras_bytes: 398884854,
+    terrain_bytes: 545433346,
+    overlay_bytes: 0,
+};
+
+pub const FAR_EASTERN_FED_DISTRICT_W: Region = Region {
+    id: "far-eastern-fed-district-w",
+    name: "Far Eastern Federal District west of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/far-eastern-fed-district-w-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/russia/far-eastern-fed-district-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: 36.847,
+        east: 180.000,
+        north: 82.500,
+    },
+    required_points: &[
+        (142.711, 59.673),
+        (112.880, 41.812),
+        (172.542, 41.812),
+        (112.880, 77.535),
+        (172.542, 77.535),
+    ],
+    country: "Russia",
+    continent: "Europe",
+    note: "",
+    package_bytes: 1301278720,
+    extras_bytes: 398884854,
+    terrain_bytes: 33880992698,
+    overlay_bytes: 0,
+};
+
 pub const FO: Region = Region {
     id: "fo",
     name: "Faroe Islands",
@@ -2688,6 +3640,62 @@ pub const FO: Region = Region {
     package_bytes: 12181504,
     extras_bytes: 7739137,
     terrain_bytes: 9217826,
+    overlay_bytes: 0,
+};
+
+pub const FJ_E: Region = Region {
+    id: "fj-e",
+    name: "Fiji east of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/fj-e-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/fiji-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -25.581,
+        east: 180.000,
+        north: -9.283,
+    },
+    required_points: &[
+        (-178.134, -19.145),
+        (-179.627, -23.335),
+        (-176.641, -23.335),
+        (-179.627, -14.956),
+        (-176.641, -14.956),
+    ],
+    country: "Fiji",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 3112960,
+    extras_bytes: 17257226,
+    terrain_bytes: 2068224,
+    overlay_bytes: 0,
+};
+
+pub const FJ_W: Region = Region {
+    id: "fj-w",
+    name: "Fiji west of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/fj-w-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/fiji-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -25.581,
+        east: 180.000,
+        north: -9.283,
+    },
+    required_points: &[
+        (176.382, -17.432),
+        (173.488, -23.551),
+        (179.276, -23.551),
+        (173.488, -11.313),
+        (179.276, -11.313),
+    ],
+    country: "Fiji",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 20647936,
+    extras_bytes: 17257226,
+    terrain_bytes: 34430576,
     overlay_bytes: 0,
 };
 
@@ -2831,6 +3839,34 @@ pub const NL_FRIESLAND: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CN_FUJIAN: Region = Region {
+    id: "cn-fujian",
+    name: "Fujian",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-fujian-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/fujian-latest.osm.pbf",
+    outer: Bounds {
+        west: 115.341,
+        south: 22.467,
+        east: 122.128,
+        north: 28.822,
+    },
+    required_points: &[
+        (118.734, 25.752),
+        (116.420, 23.697),
+        (121.049, 23.697),
+        (116.420, 27.808),
+        (121.049, 27.808),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 72871936,
+    extras_bytes: 42447905,
+    terrain_bytes: 522935760,
+    overlay_bytes: 0,
+};
+
 pub const GCC_STATES: Region = Region {
     id: "gcc-states",
     name: "GCC States",
@@ -2912,6 +3948,34 @@ pub const ES_GALICIA: Region = Region {
     package_bytes: 121499648,
     extras_bytes: 112359825,
     terrain_bytes: 106358814,
+    overlay_bytes: 0,
+};
+
+pub const CN_GANSU: Region = Region {
+    id: "cn-gansu",
+    name: "Gansu",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-gansu-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/gansu-latest.osm.pbf",
+    outer: Bounds {
+        west: 91.799,
+        south: 32.084,
+        east: 109.219,
+        north: 43.314,
+    },
+    required_points: &[
+        (100.509, 37.699),
+        (93.941, 33.607),
+        (107.077, 33.607),
+        (93.941, 41.791),
+        (107.077, 41.791),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 116035584,
+    extras_bytes: 63385662,
+    terrain_bytes: 3101582008,
     overlay_bytes: 0,
 };
 
@@ -3024,6 +4088,90 @@ pub const GH: Region = Region {
     package_bytes: 148803584,
     extras_bytes: 117101134,
     terrain_bytes: 409462412,
+    overlay_bytes: 0,
+};
+
+pub const GB_GLOUCESTERSHIRE: Region = Region {
+    id: "gb-gloucestershire",
+    name: "Gloucestershire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-gloucestershire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/gloucestershire-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.212,
+        south: 50.915,
+        east: -1.113,
+        north: 52.616,
+    },
+    required_points: &[
+        (-2.162, 51.765),
+        (-2.602, 51.485),
+        (-1.723, 51.485),
+        (-2.602, 52.045),
+        (-1.723, 52.045),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 27295744,
+    extras_bytes: 41589149,
+    terrain_bytes: 17722900,
+    overlay_bytes: 0,
+};
+
+pub const GB_GREATER_LONDON: Region = Region {
+    id: "gb-greater-london",
+    name: "Greater London",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-greater-london-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/greater-london-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.011,
+        south: 50.786,
+        east: 0.835,
+        north: 52.193,
+    },
+    required_points: &[
+        (-0.088, 51.489),
+        (-0.427, 51.326),
+        (0.251, 51.326),
+        (-0.427, 51.653),
+        (0.251, 51.653),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 60329984,
+    extras_bytes: 130274945,
+    terrain_bytes: 10515944,
+    overlay_bytes: 0,
+};
+
+pub const GB_GREATER_MANCHESTER: Region = Region {
+    id: "gb-greater-manchester",
+    name: "Greater Manchester",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-greater-manchester-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/greater-manchester-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.232,
+        south: 52.826,
+        east: -1.408,
+        north: 54.187,
+    },
+    required_points: &[
+        (-2.320, 53.507),
+        (-2.650, 53.362),
+        (-1.990, 53.362),
+        (-2.650, 53.651),
+        (-1.990, 53.651),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 31424512,
+    extras_bytes: 51885218,
+    terrain_bytes: 10927526,
     overlay_bytes: 0,
 };
 
@@ -3167,6 +4315,90 @@ pub const MX_GUA: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CN_GUANGDONG: Region = Region {
+    id: "cn-guangdong",
+    name: "Guangdong (with Hong Kong and Macau)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-guangdong-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/guangdong-latest.osm.pbf",
+    outer: Bounds {
+        west: 108.856,
+        south: 19.559,
+        east: 119.292,
+        north: 26.024,
+    },
+    required_points: &[
+        (113.511, 22.791),
+        (110.187, 20.605),
+        (116.834, 20.605),
+        (110.187, 24.978),
+        (116.834, 24.978),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 192634880,
+    extras_bytes: 175254245,
+    terrain_bytes: 673063456,
+    overlay_bytes: 0,
+};
+
+pub const CN_GUANGXI: Region = Region {
+    id: "cn-guangxi",
+    name: "Guangxi",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-guangxi-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/guangxi-latest.osm.pbf",
+    outer: Bounds {
+        west: 103.942,
+        south: 20.190,
+        east: 112.565,
+        north: 26.896,
+    },
+    required_points: &[
+        (108.254, 23.569),
+        (105.204, 21.308),
+        (111.303, 21.308),
+        (105.204, 25.831),
+        (111.303, 25.831),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 100499456,
+    extras_bytes: 55836282,
+    terrain_bytes: 1018492954,
+    overlay_bytes: 0,
+};
+
+pub const GT: Region = Region {
+    id: "gt",
+    name: "Guatemala",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gt-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/guatemala-latest.osm.pbf",
+    outer: Bounds {
+        west: -93.233,
+        south: 12.242,
+        east: -87.452,
+        north: 18.724,
+    },
+    required_points: &[
+        (-90.342, 15.289),
+        (-92.255, 13.251),
+        (-88.430, 13.251),
+        (-92.255, 17.326),
+        (-88.430, 17.326),
+    ],
+    country: "Guatemala",
+    continent: "Central America",
+    note: "",
+    package_bytes: 113061888,
+    extras_bytes: 131416989,
+    terrain_bytes: 381677944,
+    overlay_bytes: 0,
+};
+
 pub const GUERNSEY_JERSEY: Region = Region {
     id: "guernsey-jersey",
     name: "Guernsey and Jersey",
@@ -3279,6 +4511,34 @@ pub const GW: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CN_GUIZHOU: Region = Region {
+    id: "cn-guizhou",
+    name: "Guizhou",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-guizhou-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/guizhou-latest.osm.pbf",
+    outer: Bounds {
+        west: 103.098,
+        south: 24.117,
+        east: 110.059,
+        north: 29.732,
+    },
+    required_points: &[
+        (106.579, 26.925),
+        (104.194, 25.079),
+        (108.963, 25.079),
+        (104.194, 28.771),
+        (108.963, 28.771),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 64598016,
+    extras_bytes: 29139868,
+    terrain_bytes: 770383030,
+    overlay_bytes: 0,
+};
+
 pub const GY: Region = Region {
     id: "gy",
     name: "Guyana",
@@ -3335,6 +4595,62 @@ pub const FR_GF: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CN_HAINAN: Region = Region {
+    id: "cn-hainan",
+    name: "Hainan",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-hainan-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/hainan-latest.osm.pbf",
+    outer: Bounds {
+        west: 107.079,
+        south: 11.485,
+        east: 119.284,
+        north: 20.904,
+    },
+    required_points: &[
+        (113.376, 17.351),
+        (109.327, 14.908),
+        (117.425, 14.908),
+        (109.327, 19.793),
+        (117.425, 19.793),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 23195648,
+    extras_bytes: 9916026,
+    terrain_bytes: 78323256,
+    overlay_bytes: 0,
+};
+
+pub const HAITI_AND_DOMREP: Region = Region {
+    id: "haiti-and-domrep",
+    name: "Haiti and Dominican Republic",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/haiti-and-domrep-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/haiti-and-domrep-latest.osm.pbf",
+    outer: Bounds {
+        west: -75.325,
+        south: 16.499,
+        east: -67.555,
+        north: 21.953,
+    },
+    required_points: &[
+        (-71.440, 19.226),
+        (-74.148, 17.444),
+        (-68.732, 17.444),
+        (-74.148, 21.008),
+        (-68.732, 21.008),
+    ],
+    country: "Haiti and Dominican Republic",
+    continent: "Central America",
+    note: "",
+    package_bytes: 73089024,
+    extras_bytes: 88816014,
+    terrain_bytes: 136936296,
+    overlay_bytes: 0,
+};
+
 pub const DE_HAMBURG: Region = Region {
     id: "de-hamburg",
     name: "Hamburg",
@@ -3360,6 +4676,34 @@ pub const DE_HAMBURG: Region = Region {
     package_bytes: 87146496,
     extras_bytes: 54163711,
     terrain_bytes: 19902046,
+    overlay_bytes: 0,
+};
+
+pub const GB_HAMPSHIRE: Region = Region {
+    id: "gb-hampshire",
+    name: "Hampshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-hampshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/hampshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.459,
+        south: 50.190,
+        east: -0.226,
+        north: 51.887,
+    },
+    required_points: &[
+        (-1.343, 51.039),
+        (-1.836, 50.760),
+        (-0.850, 50.760),
+        (-1.836, 51.317),
+        (-0.850, 51.317),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 41447424,
+    extras_bytes: 62533755,
+    terrain_bytes: 17392854,
     overlay_bytes: 0,
 };
 
@@ -3417,6 +4761,174 @@ pub const US_HI: Region = Region {
     extras_bytes: 27653711,
     terrain_bytes: 31292542,
     overlay_bytes: 7802880,
+};
+
+pub const AU_HEARD_MCDONALD: Region = Region {
+    id: "au-heard-mcdonald",
+    name: "Heard Island and McDonald Islands",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-heard-mcdonald-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/heard-mcdonald-latest.osm.pbf",
+    outer: Bounds {
+        west: 71.499,
+        south: -54.045,
+        east: 74.953,
+        north: -52.163,
+    },
+    required_points: &[
+        (73.226, -53.104),
+        (72.245, -53.457),
+        (74.208, -53.457),
+        (72.245, -52.751),
+        (74.208, -52.751),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 544768,
+    extras_bytes: 99003,
+    terrain_bytes: 1551454,
+    overlay_bytes: 0,
+};
+
+pub const CN_HEBEI: Region = Region {
+    id: "cn-hebei",
+    name: "Hebei (with Beijing and Tianjin)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-hebei-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/hebei-latest.osm.pbf",
+    outer: Bounds {
+        west: 112.951,
+        south: 35.543,
+        east: 120.498,
+        north: 43.125,
+    },
+    required_points: &[
+        (116.725, 39.334),
+        (114.106, 36.701),
+        (119.343, 36.701),
+        (114.106, 41.967),
+        (119.343, 41.967),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 178880512,
+    extras_bytes: 108721240,
+    terrain_bytes: 741564742,
+    overlay_bytes: 0,
+};
+
+pub const CN_HEILONGJIANG: Region = Region {
+    id: "cn-heilongjiang",
+    name: "Heilongjiang",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-heilongjiang-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/heilongjiang-latest.osm.pbf",
+    outer: Bounds {
+        west: 120.650,
+        south: 42.911,
+        east: 137.653,
+        north: 54.970,
+    },
+    required_points: &[
+        (127.977, 48.533),
+        (122.515, 44.435),
+        (133.438, 44.435),
+        (122.515, 52.631),
+        (133.438, 52.631),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 108437504,
+    extras_bytes: 37185827,
+    terrain_bytes: 2550862686,
+    overlay_bytes: 0,
+};
+
+pub const CN_HENAN: Region = Region {
+    id: "cn-henan",
+    name: "Henan",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-henan-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/henan-latest.osm.pbf",
+    outer: Bounds {
+        west: 109.846,
+        south: 30.878,
+        east: 117.147,
+        north: 36.868,
+    },
+    required_points: &[
+        (113.496, 33.873),
+        (110.976, 31.877),
+        (116.017, 31.877),
+        (110.976, 35.869),
+        (116.017, 35.869),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 96743424,
+    extras_bytes: 51626227,
+    terrain_bytes: 596959272,
+    overlay_bytes: 0,
+};
+
+pub const GB_HEREFORDSHIRE: Region = Region {
+    id: "gb-herefordshire",
+    name: "Herefordshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-herefordshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/herefordshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.643,
+        south: 51.326,
+        east: -1.838,
+        north: 52.895,
+    },
+    required_points: &[
+        (-2.741, 52.111),
+        (-3.062, 51.883),
+        (-2.419, 51.883),
+        (-3.062, 52.338),
+        (-2.419, 52.338),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 11563008,
+    extras_bytes: 11273614,
+    terrain_bytes: 14588508,
+    overlay_bytes: 0,
+};
+
+pub const GB_HERTFORDSHIRE: Region = Region {
+    id: "gb-hertfordshire",
+    name: "Hertfordshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-hertfordshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/hertfordshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.247,
+        south: 51.098,
+        east: 0.697,
+        north: 52.582,
+    },
+    required_points: &[
+        (-0.275, 51.840),
+        (-0.652, 51.646),
+        (0.103, 51.646),
+        (-0.652, 52.034),
+        (0.103, 52.034),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 24555520,
+    extras_bytes: 39521037,
+    terrain_bytes: 13978684,
+    overlay_bytes: 0,
 };
 
 pub const DE_HESSEN: Region = Region {
@@ -3500,6 +5012,118 @@ pub const JP_HOKKAIDO: Region = Region {
     package_bytes: 171708416,
     extras_bytes: 190112174,
     terrain_bytes: 260795442,
+    overlay_bytes: 0,
+};
+
+pub const HN: Region = Region {
+    id: "hn",
+    name: "Honduras",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/hn-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/honduras-latest.osm.pbf",
+    outer: Bounds {
+        west: -89.860,
+        south: 12.469,
+        east: -81.161,
+        north: 18.432,
+    },
+    required_points: &[
+        (-85.511, 15.451),
+        (-88.590, 13.466),
+        (-82.431, 13.466),
+        (-88.590, 17.435),
+        (-82.431, 17.435),
+    ],
+    country: "Honduras",
+    continent: "Central America",
+    note: "",
+    package_bytes: 76926976,
+    extras_bytes: 74382024,
+    terrain_bytes: 377876226,
+    overlay_bytes: 0,
+};
+
+pub const CN_HONG_KONG: Region = Region {
+    id: "cn-hong-kong",
+    name: "Hong Kong",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-hong-kong-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/hong-kong-latest.osm.pbf",
+    outer: Bounds {
+        west: 113.313,
+        south: 21.630,
+        east: 115.006,
+        north: 23.069,
+    },
+    required_points: &[
+        (114.160, 22.350),
+        (113.882, 22.174),
+        (114.437, 22.174),
+        (113.882, 22.525),
+        (114.437, 22.525),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 16441344,
+    extras_bytes: 37896703,
+    terrain_bytes: 4696418,
+    overlay_bytes: 0,
+};
+
+pub const CN_HUBEI: Region = Region {
+    id: "cn-hubei",
+    name: "Hubei",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-hubei-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/hubei-latest.osm.pbf",
+    outer: Bounds {
+        west: 107.860,
+        south: 28.530,
+        east: 116.636,
+        north: 33.773,
+    },
+    required_points: &[
+        (112.248, 31.152),
+        (109.137, 29.454),
+        (115.358, 29.454),
+        (109.137, 32.849),
+        (115.358, 32.849),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 97148928,
+    extras_bytes: 56423995,
+    terrain_bytes: 739138548,
+    overlay_bytes: 0,
+};
+
+pub const CN_HUNAN: Region = Region {
+    id: "cn-hunan",
+    name: "Hunan",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-hunan-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/hunan-latest.osm.pbf",
+    outer: Bounds {
+        west: 108.279,
+        south: 24.133,
+        east: 114.758,
+        north: 30.638,
+    },
+    required_points: &[
+        (111.519, 27.385),
+        (109.327, 25.183),
+        (113.711, 25.183),
+        (109.327, 29.587),
+        (113.711, 29.587),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 92106752,
+    extras_bytes: 51393686,
+    terrain_bytes: 769771310,
     overlay_bytes: 0,
 };
 
@@ -3641,6 +5265,34 @@ pub const US_IN: Region = Region {
     extras_bytes: 201808545,
     terrain_bytes: 216766770,
     overlay_bytes: 50683904,
+};
+
+pub const CN_INNER_MONGOLIA: Region = Region {
+    id: "cn-inner-mongolia",
+    name: "Inner Mongolia",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-inner-mongolia-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/inner-mongolia-latest.osm.pbf",
+    outer: Bounds {
+        west: 94.294,
+        south: 36.900,
+        east: 126.577,
+        north: 54.866,
+    },
+    required_points: &[
+        (111.610, 45.422),
+        (100.037, 39.004),
+        (123.183, 39.004),
+        (100.037, 51.841),
+        (123.183, 51.841),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 134946816,
+    extras_bytes: 42662604,
+    terrain_bytes: 7927560100,
+    overlay_bytes: 0,
 };
 
 pub const US_IA: Region = Region {
@@ -3811,6 +5463,34 @@ pub const ISLE_OF_MAN: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_ISLE_OF_WIGHT: Region = Region {
+    id: "gb-isle-of-wight",
+    name: "Isle of Wight",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-isle-of-wight-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/isle-of-wight-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.159,
+        south: 50.006,
+        east: -0.531,
+        north: 51.301,
+    },
+    required_points: &[
+        (-1.345, 50.653),
+        (-1.596, 50.535),
+        (-1.094, 50.535),
+        (-1.596, 50.771),
+        (-1.094, 50.771),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 5521408,
+    extras_bytes: 9096461,
+    terrain_bytes: 3427344,
+    overlay_bytes: 0,
+};
+
 pub const IT_ISOLE: Region = Region {
     id: "it-isole",
     name: "Isole",
@@ -3923,6 +5603,34 @@ pub const MX_JAL: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const JM: Region = Region {
+    id: "jm",
+    name: "Jamaica",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/jm-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/jamaica-latest.osm.pbf",
+    outer: Bounds {
+        west: -79.350,
+        south: 15.850,
+        east: -75.010,
+        north: 19.660,
+    },
+    required_points: &[
+        (-77.180, 17.755),
+        (-78.516, 16.631),
+        (-75.844, 16.631),
+        (-78.516, 18.879),
+        (-75.844, 18.879),
+    ],
+    country: "Jamaica",
+    continent: "Central America",
+    note: "",
+    package_bytes: 29208576,
+    extras_bytes: 38659552,
+    terrain_bytes: 20942916,
+    overlay_bytes: 0,
+};
+
 pub const ID_JAVA: Region = Region {
     id: "id-java",
     name: "Java",
@@ -3948,6 +5656,146 @@ pub const ID_JAVA: Region = Region {
     package_bytes: 584376320,
     extras_bytes: 899527895,
     terrain_bytes: 264231720,
+    overlay_bytes: 0,
+};
+
+pub const CN_JIANGSU: Region = Region {
+    id: "cn-jiangsu",
+    name: "Jiangsu",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-jiangsu-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/jiangsu-latest.osm.pbf",
+    outer: Bounds {
+        west: 115.854,
+        south: 30.259,
+        east: 123.445,
+        north: 36.055,
+    },
+    required_points: &[
+        (119.650, 33.157),
+        (117.013, 31.239),
+        (122.286, 31.239),
+        (117.013, 35.075),
+        (122.286, 35.075),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 112521216,
+    extras_bytes: 80574165,
+    terrain_bytes: 285394840,
+    overlay_bytes: 0,
+};
+
+pub const CN_JIANGXI: Region = Region {
+    id: "cn-jiangxi",
+    name: "Jiangxi",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-jiangxi-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/jiangxi-latest.osm.pbf",
+    outer: Bounds {
+        west: 113.069,
+        south: 23.978,
+        east: 118.987,
+        north: 30.588,
+    },
+    required_points: &[
+        (116.028, 27.283),
+        (114.061, 25.039),
+        (117.995, 25.039),
+        (114.061, 29.527),
+        (117.995, 29.527),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 92532736,
+    extras_bytes: 50183051,
+    terrain_bytes: 699609038,
+    overlay_bytes: 0,
+};
+
+pub const CZ_JIHOMORAVSKY: Region = Region {
+    id: "cz-jihomoravsky",
+    name: "Jihomoravský kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-jihomoravsky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/jihomoravsky-latest.osm.pbf",
+    outer: Bounds {
+        west: 15.040,
+        south: 48.059,
+        east: 18.154,
+        north: 50.135,
+    },
+    required_points: &[
+        (16.595, 49.122),
+        (15.751, 48.713),
+        (17.439, 48.713),
+        (15.751, 49.532),
+        (17.439, 49.532),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 55918592,
+    extras_bytes: 91995752,
+    terrain_bytes: 52037814,
+    overlay_bytes: 0,
+};
+
+pub const CZ_JIHOCESKY: Region = Region {
+    id: "cz-jihocesky",
+    name: "Jihočeský kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-jihocesky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/jihocesky-latest.osm.pbf",
+    outer: Bounds {
+        west: 13.034,
+        south: 47.979,
+        east: 16.106,
+        north: 50.121,
+    },
+    required_points: &[
+        (14.570, 49.082),
+        (13.741, 48.651),
+        (15.399, 48.651),
+        (13.741, 49.513),
+        (15.399, 49.513),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 70770688,
+    extras_bytes: 97219497,
+    terrain_bytes: 56620856,
+    overlay_bytes: 0,
+};
+
+pub const CN_JILIN: Region = Region {
+    id: "cn-jilin",
+    name: "Jilin",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-jilin-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/jilin-latest.osm.pbf",
+    outer: Bounds {
+        west: 121.128,
+        south: 39.829,
+        east: 132.287,
+        north: 46.815,
+    },
+    required_points: &[
+        (126.490, 43.552),
+        (122.600, 41.342),
+        (130.379, 41.342),
+        (122.600, 45.762),
+        (130.379, 45.762),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 71032832,
+    extras_bytes: 28413820,
+    terrain_bytes: 949518758,
     overlay_bytes: 0,
 };
 
@@ -4119,6 +5967,34 @@ pub const JP_KANTO: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CZ_KARLOVARSKY: Region = Region {
+    id: "cz-karlovarsky",
+    name: "Karlovarský kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-karlovarsky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/karlovarsky-latest.osm.pbf",
+    outer: Bounds {
+        west: 11.494,
+        south: 49.390,
+        east: 13.802,
+        north: 51.004,
+    },
+    required_points: &[
+        (12.694, 50.182),
+        (12.207, 49.948),
+        (13.181, 49.948),
+        (12.207, 50.415),
+        (13.181, 50.415),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 22421504,
+    extras_bytes: 30864194,
+    terrain_bytes: 21060736,
+    overlay_bytes: 0,
+};
+
 pub const KZ: Region = Region {
     id: "kz",
     name: "Kazakhstan",
@@ -4144,6 +6020,34 @@ pub const KZ: Region = Region {
     package_bytes: 1558921216,
     extras_bytes: 226292505,
     terrain_bytes: 8062588882,
+    overlay_bytes: 0,
+};
+
+pub const GB_KENT: Region = Region {
+    id: "gb-kent",
+    name: "Kent",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-kent-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/kent-latest.osm.pbf",
+    outer: Bounds {
+        west: -0.469,
+        south: 50.310,
+        east: 2.021,
+        north: 51.997,
+    },
+    required_points: &[
+        (0.776, 51.153),
+        (0.180, 50.879),
+        (1.372, 50.879),
+        (0.180, 51.428),
+        (1.372, 51.428),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 37146624,
+    extras_bytes: 54378606,
+    terrain_bytes: 15452936,
     overlay_bytes: 0,
 };
 
@@ -4203,6 +6107,62 @@ pub const KE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const KI_E: Region = Region {
+    id: "ki-e",
+    name: "Kiribati east of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/ki-e-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/kiribati-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -14.338,
+        east: 180.000,
+        north: 8.379,
+    },
+    required_points: &[
+        (-163.517, -3.683),
+        (-176.703, -11.807),
+        (-150.330, -11.807),
+        (-176.703, 4.441),
+        (-150.330, 4.441),
+    ],
+    country: "Kiribati",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 33046528,
+    extras_bytes: 2453951,
+    terrain_bytes: 4600484,
+    overlay_bytes: 0,
+};
+
+pub const KI_W: Region = Region {
+    id: "ki-w",
+    name: "Kiribati west of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/ki-w-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/kiribati-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -14.338,
+        east: 180.000,
+        north: 8.379,
+    },
+    required_points: &[
+        (173.934, 0.923),
+        (169.082, -2.832),
+        (178.787, -2.832),
+        (169.082, 4.678),
+        (178.787, 4.678),
+    ],
+    country: "Kiribati",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 7315456,
+    extras_bytes: 2453951,
+    terrain_bytes: 1197242,
+    overlay_bytes: 0,
+};
+
 pub const RS_KM: Region = Region {
     id: "rs-km",
     name: "Kosovo",
@@ -4228,6 +6188,62 @@ pub const RS_KM: Region = Region {
     package_bytes: 55275520,
     extras_bytes: 30860353,
     terrain_bytes: 68707806,
+    overlay_bytes: 0,
+};
+
+pub const CZ_VYSOCINA: Region = Region {
+    id: "cz-vysocina",
+    name: "Kraj Vysočina",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-vysocina-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/vysocina-latest.osm.pbf",
+    outer: Bounds {
+        west: 14.387,
+        south: 48.436,
+        east: 16.920,
+        north: 50.361,
+    },
+    required_points: &[
+        (15.653, 49.399),
+        (15.040, 49.029),
+        (16.266, 49.029),
+        (15.040, 49.769),
+        (16.266, 49.769),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 51601408,
+    extras_bytes: 73603338,
+    terrain_bytes: 34060518,
+    overlay_bytes: 0,
+};
+
+pub const CZ_KRALOVEHRADECKY: Region = Region {
+    id: "cz-kralovehradecky",
+    name: "Královéhradecký kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-kralovehradecky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/kralovehradecky-latest.osm.pbf",
+    outer: Bounds {
+        west: 14.603,
+        south: 49.537,
+        east: 17.399,
+        north: 51.516,
+    },
+    required_points: &[
+        (15.851, 50.412),
+        (15.252, 50.112),
+        (16.450, 50.112),
+        (15.252, 50.712),
+        (16.450, 50.712),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 39542784,
+    extras_bytes: 60311352,
+    terrain_bytes: 30511260,
     overlay_bytes: 0,
 };
 
@@ -4312,6 +6328,34 @@ pub const ES_LA_RIOJA: Region = Region {
     package_bytes: 27418624,
     extras_bytes: 14581079,
     terrain_bytes: 32205944,
+    overlay_bytes: 0,
+};
+
+pub const GB_LANCASHIRE: Region = Region {
+    id: "gb-lancashire",
+    name: "Lancashire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-lancashire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/lancashire-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.592,
+        south: 52.975,
+        east: -1.539,
+        north: 54.746,
+    },
+    required_points: &[
+        (-2.566, 53.861),
+        (-2.987, 53.552),
+        (-2.145, 53.552),
+        (-2.987, 54.169),
+        (-2.145, 54.169),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 28483584,
+    extras_bytes: 42462899,
+    terrain_bytes: 21400178,
     overlay_bytes: 0,
 };
 
@@ -4427,6 +6471,34 @@ pub const LB: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_LEICESTERSHIRE: Region = Region {
+    id: "gb-leicestershire",
+    name: "Leicestershire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-leicestershire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/leicestershire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.096,
+        south: 51.894,
+        east: -0.164,
+        north: 53.478,
+    },
+    required_points: &[
+        (-1.130, 52.686),
+        (-1.503, 52.452),
+        (-0.757, 52.452),
+        (-1.503, 52.919),
+        (-0.757, 52.919),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 14417920,
+    extras_bytes: 20624165,
+    terrain_bytes: 14661914,
+    overlay_bytes: 0,
+};
+
 pub const LS: Region = Region {
     id: "ls",
     name: "Lesotho",
@@ -4452,6 +6524,62 @@ pub const LS: Region = Region {
     package_bytes: 98287616,
     extras_bytes: 127453240,
     terrain_bytes: 114524814,
+    overlay_bytes: 0,
+};
+
+pub const CN_LIAONING: Region = Region {
+    id: "cn-liaoning",
+    name: "Liaoning",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-liaoning-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/liaoning-latest.osm.pbf",
+    outer: Bounds {
+        west: 118.331,
+        south: 37.762,
+        east: 126.791,
+        north: 43.993,
+    },
+    required_points: &[
+        (122.313, 40.877),
+        (119.527, 38.785),
+        (125.099, 38.785),
+        (119.527, 42.970),
+        (125.099, 42.970),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 65765376,
+    extras_bytes: 28739942,
+    terrain_bytes: 520289218,
+    overlay_bytes: 0,
+};
+
+pub const CZ_LIBERECKY: Region = Region {
+    id: "cz-liberecky",
+    name: "Liberecký kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-liberecky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/liberecky-latest.osm.pbf",
+    outer: Bounds {
+        west: 13.842,
+        south: 49.971,
+        east: 16.139,
+        north: 51.627,
+    },
+    required_points: &[
+        (14.988, 50.751),
+        (14.471, 50.527),
+        (15.505, 50.527),
+        (14.471, 50.976),
+        (15.505, 50.976),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 30048256,
+    extras_bytes: 47102059,
+    terrain_bytes: 22623772,
     overlay_bytes: 0,
 };
 
@@ -4595,6 +6723,34 @@ pub const FR_LIMOUSIN: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_LINCOLNSHIRE: Region = Region {
+    id: "gb-lincolnshire",
+    name: "Lincolnshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-lincolnshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/lincolnshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.451,
+        south: 52.140,
+        east: 0.994,
+        north: 54.230,
+    },
+    required_points: &[
+        (-0.228, 53.185),
+        (-0.806, 52.749),
+        (0.350, 52.749),
+        (-0.806, 53.621),
+        (0.350, 53.621),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 32354304,
+    extras_bytes: 43348866,
+    terrain_bytes: 21355836,
+    overlay_bytes: 0,
+};
+
 pub const LT: Region = Region {
     id: "lt",
     name: "Lithuania",
@@ -4704,6 +6860,34 @@ pub const LU: Region = Region {
     package_bytes: 59121664,
     extras_bytes: 47956387,
     terrain_bytes: 19339408,
+    overlay_bytes: 0,
+};
+
+pub const CN_MACAU: Region = Region {
+    id: "cn-macau",
+    name: "Macau",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-macau-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/macau-latest.osm.pbf",
+    outer: Bounds {
+        west: 113.027,
+        south: 21.575,
+        east: 114.132,
+        north: 22.717,
+    },
+    required_points: &[
+        (113.580, 22.146),
+        (113.538, 22.090),
+        (113.622, 22.090),
+        (113.538, 22.203),
+        (113.622, 22.203),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 1282048,
+    extras_bytes: 2962947,
+    terrain_bytes: 1895444,
     overlay_bytes: 0,
 };
 
@@ -5267,6 +7451,34 @@ pub const ES_MELILLA: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_MERSEYSIDE: Region = Region {
+    id: "gb-merseyside",
+    name: "Merseyside",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-merseyside-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/merseyside-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.843,
+        south: 52.785,
+        east: -2.076,
+        north: 54.205,
+    },
+    required_points: &[
+        (-2.959, 53.495),
+        (-3.266, 53.327),
+        (-2.652, 53.327),
+        (-3.266, 53.663),
+        (-2.652, 53.663),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 15581184,
+    extras_bytes: 25504142,
+    terrain_bytes: 6778456,
+    overlay_bytes: 0,
+};
+
 pub const MX_CMX: Region = Region {
     id: "mx-cmx",
     name: "Mexico City",
@@ -5491,6 +7703,34 @@ pub const US_MO: Region = Region {
     overlay_bytes: 169132032,
 };
 
+pub const DE_MITTELFRANKEN: Region = Region {
+    id: "de-mittelfranken",
+    name: "Mittelfranken",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-mittelfranken-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/bayern/mittelfranken-latest.osm.pbf",
+    outer: Bounds {
+        west: 9.432,
+        south: 48.353,
+        east: 12.106,
+        north: 50.291,
+    },
+    required_points: &[
+        (10.836, 49.322),
+        (10.220, 48.947),
+        (11.452, 48.947),
+        (10.220, 49.697),
+        (11.452, 49.697),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 62435328,
+    extras_bytes: 96191177,
+    terrain_bytes: 38604038,
+    overlay_bytes: 0,
+};
+
 pub const MD: Region = Region {
     id: "md",
     name: "Moldova",
@@ -5628,6 +7868,34 @@ pub const ME: Region = Region {
     package_bytes: 76738560,
     extras_bytes: 34724199,
     terrain_bytes: 92637548,
+    overlay_bytes: 0,
+};
+
+pub const CZ_MORAVSKOSLEZKY: Region = Region {
+    id: "cz-moravskoslezky",
+    name: "Moravskoslezský kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-moravskoslezky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/moravskoslezky-latest.osm.pbf",
+    outer: Bounds {
+        west: 16.645,
+        south: 48.837,
+        east: 19.400,
+        north: 50.876,
+    },
+    required_points: &[
+        (18.004, 49.851),
+        (17.317, 49.467),
+        (18.691, 49.467),
+        (17.317, 50.234),
+        (18.691, 50.234),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 50532352,
+    extras_bytes: 80583949,
+    terrain_bytes: 41913196,
     overlay_bytes: 0,
 };
 
@@ -6107,6 +8375,34 @@ pub const US_NM: Region = Region {
     overlay_bytes: 56475648,
 };
 
+pub const AU_NEW_SOUTH_WALES: Region = Region {
+    id: "au-new-south-wales",
+    name: "New South Wales (with ACT and JBT)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-new-south-wales-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/new-south-wales-latest.osm.pbf",
+    outer: Bounds {
+        west: 140.495,
+        south: -38.260,
+        east: 160.575,
+        north: -27.639,
+    },
+    required_points: &[
+        (150.535, -32.949),
+        (142.903, -36.798),
+        (158.167, -36.798),
+        (142.903, -29.101),
+        (158.167, -29.101),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 271749120,
+    extras_bytes: 271072940,
+    terrain_bytes: 1343863850,
+    overlay_bytes: 0,
+};
+
 pub const US_NY: Region = Region {
     id: "us-ny",
     name: "New York",
@@ -6135,6 +8431,62 @@ pub const US_NY: Region = Region {
     overlay_bytes: 151199744,
 };
 
+pub const NZ_E: Region = Region {
+    id: "nz-e",
+    name: "New Zealand east of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/nz-e-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/new-zealand-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -57.253,
+        east: 180.000,
+        north: -27.988,
+    },
+    required_points: &[
+        (-176.792, -37.036),
+        (-179.358, -43.874),
+        (-174.226, -43.874),
+        (-179.358, -30.198),
+        (-174.226, -30.198),
+    ],
+    country: "New Zealand",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 7979008,
+    extras_bytes: 406149964,
+    terrain_bytes: 2016432,
+    overlay_bytes: 0,
+};
+
+pub const NZ_W: Region = Region {
+    id: "nz-w",
+    name: "New Zealand west of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/nz-w-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/new-zealand-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -57.253,
+        east: 180.000,
+        north: -27.988,
+    },
+    required_points: &[
+        (171.048, -44.710),
+        (163.886, -54.344),
+        (178.210, -54.344),
+        (163.886, -35.076),
+        (178.210, -35.076),
+    ],
+    country: "New Zealand",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 413851648,
+    extras_bytes: 406149964,
+    terrain_bytes: 846850900,
+    overlay_bytes: 0,
+};
+
 pub const CA_NL: Region = Region {
     id: "ca-nl",
     name: "Newfoundland and Labrador",
@@ -6160,6 +8512,62 @@ pub const CA_NL: Region = Region {
     package_bytes: 519311360,
     extras_bytes: 259415804,
     terrain_bytes: 2280188344,
+    overlay_bytes: 0,
+};
+
+pub const NI: Region = Region {
+    id: "ni",
+    name: "Nicaragua",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/ni-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/nicaragua-latest.osm.pbf",
+    outer: Bounds {
+        west: -88.477,
+        south: 10.202,
+        east: -81.879,
+        north: 15.612,
+    },
+    required_points: &[
+        (-85.178, 12.907),
+        (-87.418, 11.143),
+        (-82.939, 11.143),
+        (-87.418, 14.671),
+        (-82.939, 14.671),
+    ],
+    country: "Nicaragua",
+    continent: "Central America",
+    note: "",
+    package_bytes: 74272768,
+    extras_bytes: 62152811,
+    terrain_bytes: 300810798,
+    overlay_bytes: 0,
+};
+
+pub const DE_NIEDERBAYERN: Region = Region {
+    id: "de-niederbayern",
+    name: "Niederbayern",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-niederbayern-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/bayern/niederbayern-latest.osm.pbf",
+    outer: Bounds {
+        west: 11.093,
+        south: 47.290,
+        east: 14.572,
+        north: 49.873,
+    },
+    required_points: &[
+        (12.721, 48.689),
+        (11.819, 48.299),
+        (13.624, 48.299),
+        (11.819, 49.079),
+        (13.624, 49.079),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 74272768,
+    extras_bytes: 95570540,
+    terrain_bytes: 56330374,
     overlay_bytes: 0,
 };
 
@@ -6244,6 +8652,34 @@ pub const NG: Region = Region {
     package_bytes: 809963520,
     extras_bytes: 715170840,
     terrain_bytes: 1597717186,
+    overlay_bytes: 0,
+};
+
+pub const CN_NINGXIA: Region = Region {
+    id: "cn-ningxia",
+    name: "Ningxia",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-ningxia-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/ningxia-latest.osm.pbf",
+    outer: Bounds {
+        west: 103.775,
+        south: 34.733,
+        east: 108.157,
+        north: 39.886,
+    },
+    required_points: &[
+        (105.966, 37.309),
+        (104.613, 35.648),
+        (107.319, 35.648),
+        (104.613, 38.971),
+        (107.319, 38.971),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 17821696,
+    extras_bytes: 8414847,
+    terrain_bytes: 301604130,
     overlay_bytes: 0,
 };
 
@@ -6359,6 +8795,34 @@ pub const IT_NORD_EST: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const NO_NORD_NORGE: Region = Region {
+    id: "no-nord-norge",
+    name: "Nord-Norge<br />(Northern Norway)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-nord-norge-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/norway/nord-norge-latest.osm.pbf",
+    outer: Bounds {
+        west: 7.340,
+        south: 64.439,
+        east: 40.567,
+        north: 72.906,
+    },
+    required_points: &[
+        (20.740, 68.672),
+        (10.420, 65.686),
+        (31.060, 65.686),
+        (10.420, 71.659),
+        (31.060, 71.659),
+    ],
+    country: "Norway",
+    continent: "Europe",
+    note: "",
+    package_bytes: 614998016,
+    extras_bytes: 407273707,
+    terrain_bytes: 2741338134,
+    overlay_bytes: 0,
+};
+
 pub const IT_NORD_OVEST: Region = Region {
     id: "it-nord-ovest",
     name: "Nord-Ovest",
@@ -6440,6 +8904,62 @@ pub const BR_NORDESTE: Region = Region {
     package_bytes: 752594944,
     extras_bytes: 445428124,
     terrain_bytes: 2812197590,
+    overlay_bytes: 0,
+};
+
+pub const GB_NORFOLK: Region = Region {
+    id: "gb-norfolk",
+    name: "Norfolk",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-norfolk-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/norfolk-latest.osm.pbf",
+    outer: Bounds {
+        west: -0.346,
+        south: 51.855,
+        east: 2.493,
+        north: 53.856,
+    },
+    required_points: &[
+        (1.074, 52.855),
+        (0.338, 52.455),
+        (1.809, 52.455),
+        (0.338, 53.256),
+        (1.809, 53.256),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 33800192,
+    extras_bytes: 47266778,
+    terrain_bytes: 16385110,
+    overlay_bytes: 0,
+};
+
+pub const AU_NORFOLK_ISLAND: Region = Region {
+    id: "au-norfolk-island",
+    name: "Norfolk Island",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-norfolk-island-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/norfolk-island-latest.osm.pbf",
+    outer: Bounds {
+        west: 167.125,
+        south: -29.961,
+        east: 168.846,
+        north: -28.258,
+    },
+    required_points: &[
+        (167.985, -29.109),
+        (167.697, -29.390),
+        (168.273, -29.390),
+        (167.697, -28.828),
+        (168.273, -28.828),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 315392,
+    extras_bytes: 336556,
+    terrain_bytes: 428952,
     overlay_bytes: 0,
 };
 
@@ -6583,6 +9103,34 @@ pub const KP: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_NORTH_YORKSHIRE: Region = Region {
+    id: "gb-north-yorkshire",
+    name: "North Yorkshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-north-yorkshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/north-yorkshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.067,
+        south: 53.120,
+        east: 0.459,
+        north: 55.202,
+    },
+    required_points: &[
+        (-1.304, 54.161),
+        (-2.315, 53.728),
+        (-0.293, 53.728),
+        (-2.315, 54.594),
+        (-0.293, 54.594),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 42110976,
+    extras_bytes: 61958533,
+    terrain_bytes: 54929734,
+    overlay_bytes: 0,
+};
+
 pub const IN_NORTH_EASTERN_ZONE: Region = Region {
     id: "in-north-eastern-zone",
     name: "North-Eastern Zone",
@@ -6611,6 +9159,62 @@ pub const IN_NORTH_EASTERN_ZONE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_NORTHAMPTONSHIRE: Region = Region {
+    id: "gb-northamptonshire",
+    name: "Northamptonshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-northamptonshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/northamptonshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.834,
+        south: 51.477,
+        east: 0.159,
+        north: 53.145,
+    },
+    required_points: &[
+        (-0.837, 52.311),
+        (-1.235, 52.043),
+        (-0.440, 52.043),
+        (-1.235, 52.578),
+        (-0.440, 52.578),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 15130624,
+    extras_bytes: 23030920,
+    terrain_bytes: 16498386,
+    overlay_bytes: 0,
+};
+
+pub const AU_NORTHERN_TERRITORY: Region = Region {
+    id: "au-northern-territory",
+    name: "Northern Territory",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-northern-territory-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/northern-territory-latest.osm.pbf",
+    outer: Bounds {
+        west: 128.171,
+        south: -26.501,
+        east: 140.924,
+        north: -9.195,
+    },
+    required_points: &[
+        (134.547, -17.986),
+        (129.846, -24.398),
+        (139.249, -24.398),
+        (129.846, -11.575),
+        (139.249, -11.575),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 38531072,
+    extras_bytes: 17820340,
+    terrain_bytes: 1398209320,
+    overlay_bytes: 0,
+};
+
 pub const IN_NORTHERN_ZONE: Region = Region {
     id: "in-northern-zone",
     name: "Northern Zone",
@@ -6636,6 +9240,34 @@ pub const IN_NORTHERN_ZONE: Region = Region {
     package_bytes: 607117312,
     extras_bytes: 224986954,
     terrain_bytes: 2043158966,
+    overlay_bytes: 0,
+};
+
+pub const GB_NORTHUMBERLAND: Region = Region {
+    id: "gb-northumberland",
+    name: "Northumberland",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-northumberland-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/northumberland-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.191,
+        south: 54.282,
+        east: -0.723,
+        north: 56.349,
+    },
+    required_points: &[
+        (-1.957, 55.315),
+        (-2.544, 54.888),
+        (-1.370, 54.888),
+        (-2.544, 55.742),
+        (-1.370, 55.742),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 23986176,
+    extras_bytes: 26304186,
+    terrain_bytes: 29773620,
     overlay_bytes: 0,
 };
 
@@ -6692,6 +9324,34 @@ pub const NORTHWESTERN_FED_DISTRICT: Region = Region {
     package_bytes: 6465642496,
     extras_bytes: 657659840,
     terrain_bytes: 16150025962,
+    overlay_bytes: 0,
+};
+
+pub const GB_NOTTINGHAMSHIRE: Region = Region {
+    id: "gb-nottinghamshire",
+    name: "Nottinghamshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-nottinghamshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/nottinghamshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.844,
+        south: 52.282,
+        east: -0.167,
+        north: 54.003,
+    },
+    required_points: &[
+        (-1.006, 53.142),
+        (-1.277, 52.854),
+        (-0.734, 52.854),
+        (-1.277, 53.431),
+        (-0.734, 53.431),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 22913024,
+    extras_bytes: 38821740,
+    terrain_bytes: 12140284,
     overlay_bytes: 0,
 };
 
@@ -6863,6 +9523,90 @@ pub const MX_OAX: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const DE_OBERBAYERN: Region = Region {
+    id: "de-oberbayern",
+    name: "Oberbayern",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-oberbayern-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/bayern/oberbayern-latest.osm.pbf",
+    outer: Bounds {
+        west: 10.105,
+        south: 46.664,
+        east: 14.161,
+        north: 49.591,
+    },
+    required_points: &[
+        (11.911, 48.241),
+        (10.952, 47.561),
+        (12.870, 47.561),
+        (10.952, 48.921),
+        (12.870, 48.921),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 162873344,
+    extras_bytes: 260252589,
+    terrain_bytes: 109443542,
+    overlay_bytes: 0,
+};
+
+pub const DE_OBERFRANKEN: Region = Region {
+    id: "de-oberfranken",
+    name: "Oberfranken",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-oberfranken-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/bayern/oberfranken-latest.osm.pbf",
+    outer: Bounds {
+        west: 9.853,
+        south: 49.085,
+        east: 12.943,
+        north: 51.405,
+    },
+    required_points: &[
+        (11.356, 50.056),
+        (10.622, 49.679),
+        (12.090, 49.679),
+        (10.622, 50.432),
+        (12.090, 50.432),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 63823872,
+    extras_bytes: 94911487,
+    terrain_bytes: 47611720,
+    overlay_bytes: 0,
+};
+
+pub const DE_OBERPFALZ: Region = Region {
+    id: "de-oberpfalz",
+    name: "Oberpfalz",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-oberpfalz-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/bayern/oberpfalz-latest.osm.pbf",
+    outer: Bounds {
+        west: 10.682,
+        south: 48.262,
+        east: 13.828,
+        north: 50.663,
+    },
+    required_points: &[
+        (12.179, 49.423),
+        (11.382, 48.895),
+        (12.977, 48.895),
+        (11.382, 49.951),
+        (12.977, 49.951),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 66695168,
+    extras_bytes: 85749564,
+    terrain_bytes: 64708942,
+    overlay_bytes: 0,
+};
+
 pub const US_OH: Region = Region {
     id: "us-oh",
     name: "Ohio",
@@ -6917,6 +9661,34 @@ pub const US_OK: Region = Region {
     extras_bytes: 170236729,
     terrain_bytes: 433271974,
     overlay_bytes: 90591232,
+};
+
+pub const CZ_OLOMOUCKY: Region = Region {
+    id: "cz-olomoucky",
+    name: "Olomoucký kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-olomoucky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/olomoucky-latest.osm.pbf",
+    outer: Bounds {
+        west: 16.209,
+        south: 48.767,
+        east: 18.420,
+        north: 51.014,
+    },
+    required_points: &[
+        (17.315, 49.860),
+        (16.830, 49.386),
+        (17.799, 49.386),
+        (16.830, 50.334),
+        (17.799, 50.334),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 37900288,
+    extras_bytes: 58389313,
+    terrain_bytes: 35386420,
+    overlay_bytes: 0,
 };
 
 pub const CA_ON: Region = Region {
@@ -7003,6 +9775,34 @@ pub const NL_OVERIJSSEL: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_OXFORDSHIRE: Region = Region {
+    id: "gb-oxfordshire",
+    name: "Oxfordshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-oxfordshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/oxfordshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.220,
+        south: 50.961,
+        east: -0.370,
+        north: 52.668,
+    },
+    required_points: &[
+        (-1.295, 51.814),
+        (-1.635, 51.531),
+        (-0.955, 51.531),
+        (-1.635, 52.097),
+        (-0.955, 52.097),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 18755584,
+    extras_bytes: 28214356,
+    terrain_bytes: 14492152,
+    overlay_bytes: 0,
+};
+
 pub const PK: Region = Region {
     id: "pk",
     name: "Pakistan",
@@ -7056,6 +9856,34 @@ pub const PW: Region = Region {
     package_bytes: 22151168,
     extras_bytes: 822880,
     terrain_bytes: 1499690,
+    overlay_bytes: 0,
+};
+
+pub const PA: Region = Region {
+    id: "pa",
+    name: "Panama",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/pa-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/central-america/panama-latest.osm.pbf",
+    outer: Bounds {
+        west: -83.965,
+        south: 6.144,
+        east: -75.753,
+        north: 11.707,
+    },
+    required_points: &[
+        (-80.273, 8.926),
+        (-82.826, 7.100),
+        (-77.720, 7.100),
+        (-82.826, 10.751),
+        (-77.720, 10.751),
+    ],
+    country: "Panama",
+    continent: "Central America",
+    note: "",
+    package_bytes: 43745280,
+    extras_bytes: 36702934,
+    terrain_bytes: 172520024,
     overlay_bytes: 0,
 };
 
@@ -7140,6 +9968,34 @@ pub const PY: Region = Region {
     package_bytes: 205594624,
     extras_bytes: 154663787,
     terrain_bytes: 808176408,
+    overlay_bytes: 0,
+};
+
+pub const CZ_PARDUBICKY: Region = Region {
+    id: "cz-pardubicky",
+    name: "Pardubický kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-pardubicky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/pardubicky-latest.osm.pbf",
+    outer: Bounds {
+        west: 14.863,
+        south: 49.072,
+        east: 17.368,
+        north: 50.714,
+    },
+    required_points: &[
+        (16.115, 49.892),
+        (15.513, 49.636),
+        (16.717, 49.636),
+        (15.513, 50.149),
+        (16.717, 50.149),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 35524608,
+    extras_bytes: 55311686,
+    terrain_bytes: 24132308,
     overlay_bytes: 0,
 };
 
@@ -7339,6 +10195,34 @@ pub const PN: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CZ_PLZENSKY: Region = Region {
+    id: "cz-plzensky",
+    name: "Plzeňský kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-plzensky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/plzensky-latest.osm.pbf",
+    outer: Bounds {
+        west: 11.763,
+        south: 48.408,
+        east: 14.342,
+        north: 50.606,
+    },
+    required_points: &[
+        (13.116, 49.520),
+        (12.534, 49.051),
+        (13.697, 49.051),
+        (12.534, 49.988),
+        (13.697, 49.988),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 51249152,
+    extras_bytes: 71852707,
+    terrain_bytes: 42211920,
+    overlay_bytes: 0,
+};
+
 pub const FR_POITOU_CHARENTES: Region = Region {
     id: "fr-poitou-charentes",
     name: "Poitou-Charentes",
@@ -7420,6 +10304,34 @@ pub const PT: Region = Region {
     package_bytes: 607186944,
     extras_bytes: 428382903,
     terrain_bytes: 570681238,
+    overlay_bytes: 0,
+};
+
+pub const CZ_PRAHA: Region = Region {
+    id: "cz-praha",
+    name: "Praha",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-praha-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/praha-latest.osm.pbf",
+    outer: Bounds {
+        west: 13.724,
+        south: 49.442,
+        east: 15.207,
+        north: 50.678,
+    },
+    required_points: &[
+        (14.465, 50.060),
+        (14.272, 49.965),
+        (14.659, 49.965),
+        (14.272, 50.154),
+        (14.659, 50.154),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 17416192,
+    extras_bytes: 45125769,
+    terrain_bytes: 6018152,
     overlay_bytes: 0,
 };
 
@@ -7535,6 +10447,34 @@ pub const US_PR: Region = Region {
     overlay_bytes: 5345280,
 };
 
+pub const CN_QINGHAI: Region = Region {
+    id: "cn-qinghai",
+    name: "Qinghai",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-qinghai-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/qinghai-latest.osm.pbf",
+    outer: Bounds {
+        west: 88.890,
+        south: 31.087,
+        east: 103.573,
+        north: 39.722,
+    },
+    required_points: &[
+        (96.231, 35.404),
+        (90.758, 32.350),
+        (101.704, 32.350),
+        (90.758, 38.458),
+        (101.704, 38.458),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 53301248,
+    extras_bytes: 33537250,
+    terrain_bytes: 1989712908,
+    overlay_bytes: 0,
+};
+
 pub const CA_QC: Region = Region {
     id: "ca-qc",
     name: "Quebec",
@@ -7560,6 +10500,34 @@ pub const CA_QC: Region = Region {
     package_bytes: 1715466240,
     extras_bytes: 1166570375,
     terrain_bytes: 5405428404,
+    overlay_bytes: 0,
+};
+
+pub const AU_QUEENSLAND: Region = Region {
+    id: "au-queensland",
+    name: "Queensland",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-queensland-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/queensland-latest.osm.pbf",
+    outer: Bounds {
+        west: 137.490,
+        south: -29.683,
+        east: 154.701,
+        north: -8.342,
+    },
+    required_points: &[
+        (146.095, -19.012),
+        (139.611, -27.149),
+        (152.579, -27.149),
+        (139.611, -10.876),
+        (152.579, -10.876),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 224419840,
+    extras_bytes: 199855028,
+    terrain_bytes: 1968948882,
     overlay_bytes: 0,
 };
 
@@ -7616,6 +10584,258 @@ pub const MX_ROO: Region = Region {
     package_bytes: 14745600,
     extras_bytes: 11309825,
     terrain_bytes: 91371818,
+    overlay_bytes: 0,
+};
+
+pub const DE_ARNSBERG_REGBEZ: Region = Region {
+    id: "de-arnsberg-regbez",
+    name: "Regierungsbezirk Arnsberg",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-arnsberg-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/nordrhein-westfalen/arnsberg-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 6.600,
+        south: 50.109,
+        east: 9.711,
+        north: 52.247,
+    },
+    required_points: &[
+        (8.036, 51.213),
+        (7.287, 50.786),
+        (8.785, 50.786),
+        (7.287, 51.640),
+        (8.785, 51.640),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 110055424,
+    extras_bytes: 195274508,
+    terrain_bytes: 57219680,
+    overlay_bytes: 0,
+};
+
+pub const DE_DETMOLD_REGBEZ: Region = Region {
+    id: "de-detmold-regbez",
+    name: "Regierungsbezirk Detmold",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-detmold-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/nordrhein-westfalen/detmold-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 7.572,
+        south: 50.787,
+        east: 10.325,
+        north: 53.083,
+    },
+    required_points: &[
+        (8.771, 51.985),
+        (8.213, 51.547),
+        (9.329, 51.547),
+        (8.213, 52.424),
+        (9.329, 52.424),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 87310336,
+    extras_bytes: 137347608,
+    terrain_bytes: 33215462,
+    overlay_bytes: 0,
+};
+
+pub const DE_DUESSELDORF_REGBEZ: Region = Region {
+    id: "de-duesseldorf-regbez",
+    name: "Regierungsbezirk Düsseldorf",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-duesseldorf-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/nordrhein-westfalen/duesseldorf-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 5.090,
+        south: 50.514,
+        east: 7.814,
+        north: 52.450,
+    },
+    required_points: &[
+        (6.628, 51.461),
+        (6.079, 51.104),
+        (7.177, 51.104),
+        (6.079, 51.818),
+        (7.177, 51.818),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 115154944,
+    extras_bytes: 217377603,
+    terrain_bytes: 24637824,
+    overlay_bytes: 0,
+};
+
+pub const DE_FREIBURG_REGBEZ: Region = Region {
+    id: "de-freiburg-regbez",
+    name: "Regierungsbezirk Freiburg",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-freiburg-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/baden-wuerttemberg/freiburg-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 6.753,
+        south: 46.799,
+        east: 9.747,
+        north: 49.252,
+    },
+    required_points: &[
+        (8.377, 48.127),
+        (7.681, 47.650),
+        (9.073, 47.650),
+        (7.681, 48.604),
+        (9.073, 48.604),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 105566208,
+    extras_bytes: 160533205,
+    terrain_bytes: 53779350,
+    overlay_bytes: 0,
+};
+
+pub const DE_KARLSRUHE_REGBEZ: Region = Region {
+    id: "de-karlsruhe-regbez",
+    name: "Regierungsbezirk Karlsruhe",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-karlsruhe-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/baden-wuerttemberg/karlsruhe-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 7.371,
+        south: 47.798,
+        east: 10.106,
+        north: 50.307,
+    },
+    required_points: &[
+        (8.778, 49.017),
+        (8.116, 48.442),
+        (9.440, 48.442),
+        (8.116, 49.592),
+        (9.440, 49.592),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 89464832,
+    extras_bytes: 155344132,
+    terrain_bytes: 60830710,
+    overlay_bytes: 0,
+};
+
+pub const DE_KOELN_REGBEZ: Region = Region {
+    id: "de-koeln-regbez",
+    name: "Regierungsbezirk Köln",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-koeln-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/nordrhein-westfalen/koeln-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 5.021,
+        south: 49.726,
+        east: 8.294,
+        north: 51.753,
+    },
+    required_points: &[
+        (6.829, 50.787),
+        (6.057, 50.414),
+        (7.601, 50.414),
+        (6.057, 51.160),
+        (7.601, 51.160),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 126263296,
+    extras_bytes: 225361835,
+    terrain_bytes: 46602276,
+    overlay_bytes: 0,
+};
+
+pub const DE_MUENSTER_REGBEZ: Region = Region {
+    id: "de-muenster-regbez",
+    name: "Regierungsbezirk Münster",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-muenster-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/nordrhein-westfalen/muenster-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 5.886,
+        south: 50.980,
+        east: 8.821,
+        north: 53.052,
+    },
+    required_points: &[
+        (7.354, 51.978),
+        (6.579, 51.579),
+        (8.128, 51.579),
+        (6.579, 52.377),
+        (8.128, 52.377),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 93511680,
+    extras_bytes: 141023606,
+    terrain_bytes: 33135502,
+    overlay_bytes: 0,
+};
+
+pub const DE_STUTTGART_REGBEZ: Region = Region {
+    id: "de-stuttgart-regbez",
+    name: "Regierungsbezirk Stuttgart",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-stuttgart-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/baden-wuerttemberg/stuttgart-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 8.241,
+        south: 47.932,
+        east: 11.095,
+        north: 50.400,
+    },
+    required_points: &[
+        (9.628, 49.144),
+        (8.919, 48.624),
+        (10.338, 48.624),
+        (8.919, 49.664),
+        (10.338, 49.664),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 134512640,
+    extras_bytes: 212524055,
+    terrain_bytes: 57016260,
+    overlay_bytes: 0,
+};
+
+pub const DE_TUEBINGEN_REGBEZ: Region = Region {
+    id: "de-tuebingen-regbez",
+    name: "Regierungsbezirk Tübingen",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-tuebingen-regbez-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/baden-wuerttemberg/tuebingen-regbez-latest.osm.pbf",
+    outer: Bounds {
+        west: 8.146,
+        south: 46.883,
+        east: 11.121,
+        north: 49.135,
+    },
+    required_points: &[
+        (9.459, 48.084),
+        (8.808, 47.643),
+        (10.110, 47.643),
+        (8.808, 48.525),
+        (10.110, 48.525),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 85360640,
+    extras_bytes: 128608728,
+    terrain_bytes: 43316508,
     overlay_bytes: 0,
 };
 
@@ -7756,6 +10976,34 @@ pub const RO: Region = Region {
     package_bytes: 700928000,
     extras_bytes: 333401480,
     terrain_bytes: 809070244,
+    overlay_bytes: 0,
+};
+
+pub const GB_RUTLAND: Region = Region {
+    id: "gb-rutland",
+    name: "Rutland",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-rutland-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/rutland-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.323,
+        south: 52.024,
+        east: 0.072,
+        north: 53.261,
+    },
+    required_points: &[
+        (-0.625, 52.642),
+        (-0.783, 52.547),
+        (-0.467, 52.547),
+        (-0.783, 52.737),
+        (-0.467, 52.737),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 1581056,
+    extras_bytes: 1951021,
+    terrain_bytes: 3962266,
     overlay_bytes: 0,
 };
 
@@ -8039,6 +11287,34 @@ pub const DE_SCHLESWIG_HOLSTEIN: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const DE_SCHWABEN: Region = Region {
+    id: "de-schwaben",
+    name: "Schwaben",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-schwaben-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/bayern/schwaben-latest.osm.pbf",
+    outer: Bounds {
+        west: 8.897,
+        south: 46.615,
+        east: 11.813,
+        north: 49.537,
+    },
+    required_points: &[
+        (10.413, 48.151),
+        (9.693, 47.443),
+        (11.133, 47.443),
+        (9.693, 48.859),
+        (11.133, 48.859),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 86454272,
+    extras_bytes: 128619823,
+    terrain_bytes: 84038290,
+    overlay_bytes: 0,
+};
+
 pub const GB_SCOTLAND: Region = Region {
     id: "gb-scotland",
     name: "Scotland",
@@ -8151,6 +11427,118 @@ pub const SC: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CN_SHAANXI: Region = Region {
+    id: "cn-shaanxi",
+    name: "Shaanxi",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-shaanxi-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/shaanxi-latest.osm.pbf",
+    outer: Bounds {
+        west: 104.980,
+        south: 31.195,
+        east: 111.748,
+        north: 40.089,
+    },
+    required_points: &[
+        (108.364, 35.642),
+        (106.057, 32.484),
+        (110.671, 32.484),
+        (106.057, 38.800),
+        (110.671, 38.800),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 170835968,
+    extras_bytes: 102094853,
+    terrain_bytes: 1124277346,
+    overlay_bytes: 0,
+};
+
+pub const CN_SHANDONG: Region = Region {
+    id: "cn-shandong",
+    name: "Shandong",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-shandong-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/shandong-latest.osm.pbf",
+    outer: Bounds {
+        west: 114.313,
+        south: 33.876,
+        east: 124.063,
+        north: 38.940,
+    },
+    required_points: &[
+        (119.188, 36.408),
+        (115.688, 34.782),
+        (122.688, 34.782),
+        (115.688, 38.034),
+        (122.688, 38.034),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 122609664,
+    extras_bytes: 72124059,
+    terrain_bytes: 287950390,
+    overlay_bytes: 0,
+};
+
+pub const CN_SHANGHAI: Region = Region {
+    id: "cn-shanghai",
+    name: "Shanghai",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-shanghai-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/shanghai-latest.osm.pbf",
+    outer: Bounds {
+        west: 120.347,
+        south: 30.139,
+        east: 124.179,
+        north: 32.385,
+    },
+    required_points: &[
+        (122.263, 31.262),
+        (121.130, 30.764),
+        (123.396, 30.764),
+        (121.130, 31.760),
+        (123.396, 31.760),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 24158208,
+    extras_bytes: 26101690,
+    terrain_bytes: 17792686,
+    overlay_bytes: 0,
+};
+
+pub const CN_SHANXI: Region = Region {
+    id: "cn-shanxi",
+    name: "Shanxi",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-shanxi-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/shanxi-latest.osm.pbf",
+    outer: Bounds {
+        west: 109.700,
+        south: 34.079,
+        east: 115.070,
+        north: 41.251,
+    },
+    required_points: &[
+        (112.385, 37.665),
+        (110.637, 35.196),
+        (114.133, 35.196),
+        (110.637, 40.134),
+        (114.133, 40.134),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 65474560,
+    extras_bytes: 32143776,
+    terrain_bytes: 651824316,
+    overlay_bytes: 0,
+};
+
 pub const JP_SHIKOKU: Region = Region {
     id: "jp-shikoku",
     name: "Shikoku",
@@ -8179,6 +11567,34 @@ pub const JP_SHIKOKU: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_SHROPSHIRE: Region = Region {
+    id: "gb-shropshire",
+    name: "Shropshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-shropshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/shropshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.736,
+        south: 51.806,
+        east: -1.734,
+        north: 53.497,
+    },
+    required_points: &[
+        (-2.735, 52.652),
+        (-3.135, 52.375),
+        (-2.334, 52.375),
+        (-3.135, 52.928),
+        (-2.334, 52.928),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 22482944,
+    extras_bytes: 25277115,
+    terrain_bytes: 19901644,
+    overlay_bytes: 0,
+};
+
 pub const SIBERIAN_FED_DISTRICT: Region = Region {
     id: "siberian-fed-district",
     name: "Siberian Federal District",
@@ -8204,6 +11620,34 @@ pub const SIBERIAN_FED_DISTRICT: Region = Region {
     package_bytes: 3291357184,
     extras_bytes: 590195258,
     terrain_bytes: 37866270836,
+    overlay_bytes: 0,
+};
+
+pub const CN_SICHUAN: Region = Region {
+    id: "cn-sichuan",
+    name: "Sichuan",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-sichuan-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/sichuan-latest.osm.pbf",
+    outer: Bounds {
+        west: 96.813,
+        south: 25.546,
+        east: 109.051,
+        north: 34.832,
+    },
+    required_points: &[
+        (102.932, 30.189),
+        (98.437, 26.875),
+        (107.427, 26.875),
+        (98.437, 33.503),
+        (107.427, 33.503),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 196427776,
+    extras_bytes: 108480658,
+    terrain_bytes: 2433110056,
     overlay_bytes: 0,
 };
 
@@ -8375,6 +11819,34 @@ pub const SO: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_SOMERSET: Region = Region {
+    id: "gb-somerset",
+    name: "Somerset",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-somerset-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/somerset-latest.osm.pbf",
+    outer: Bounds {
+        west: -4.341,
+        south: 50.320,
+        east: -1.743,
+        north: 52.004,
+    },
+    required_points: &[
+        (-3.042, 51.162),
+        (-3.681, 50.888),
+        (-2.403, 50.888),
+        (-3.681, 51.436),
+        (-2.403, 51.436),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 33075200,
+    extras_bytes: 50224027,
+    terrain_bytes: 21759522,
+    overlay_bytes: 0,
+};
+
 pub const MX_SON: Region = Region {
     id: "mx-son",
     name: "Sonora",
@@ -8428,6 +11900,34 @@ pub const SOUTH_AFRICA_AND_LESOTHO: Region = Region {
     package_bytes: 777961472,
     extras_bytes: 549973606,
     terrain_bytes: 2316401466,
+    overlay_bytes: 0,
+};
+
+pub const AU_SOUTH_AUSTRALIA: Region = Region {
+    id: "au-south-australia",
+    name: "South Australia",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-south-australia-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/south-australia-latest.osm.pbf",
+    outer: Bounds {
+        west: 128.499,
+        south: -40.332,
+        east: 141.507,
+        north: -25.493,
+    },
+    required_points: &[
+        (135.003, -32.912),
+        (130.200, -38.448),
+        (139.806, -38.448),
+        (130.200, -27.377),
+        (139.806, -27.377),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 95444992,
+    extras_bytes: 68482443,
+    terrain_bytes: 997900794,
     overlay_bytes: 0,
 };
 
@@ -8571,6 +12071,34 @@ pub const SS: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_SOUTH_YORKSHIRE: Region = Region {
+    id: "gb-south-yorkshire",
+    name: "South Yorkshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-south-yorkshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/south-yorkshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.326,
+        south: 52.799,
+        east: -0.353,
+        north: 54.163,
+    },
+    required_points: &[
+        (-1.339, 53.481),
+        (-1.729, 53.335),
+        (-0.950, 53.335),
+        (-1.729, 53.627),
+        (-0.950, 53.627),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 19181568,
+    extras_bytes: 31206411,
+    terrain_bytes: 11142772,
+    overlay_bytes: 0,
+};
+
 pub const IN_SOUTHERN_ZONE: Region = Region {
     id: "in-southern-zone",
     name: "Southern Zone",
@@ -8627,6 +12155,34 @@ pub const LK: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_STAFFORDSHIRE: Region = Region {
+    id: "gb-staffordshire",
+    name: "Staffordshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-staffordshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/staffordshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.972,
+        south: 51.922,
+        east: -1.084,
+        north: 53.727,
+    },
+    required_points: &[
+        (-2.028, 52.825),
+        (-2.383, 52.503),
+        (-1.673, 52.503),
+        (-2.383, 53.147),
+        (-1.673, 53.147),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 21315584,
+    extras_bytes: 31054604,
+    terrain_bytes: 20248428,
+    overlay_bytes: 0,
+};
+
 pub const MX_MEX: Region = Region {
     id: "mx-mex",
     name: "State of Mexico",
@@ -8652,6 +12208,34 @@ pub const MX_MEX: Region = Region {
     package_bytes: 44953600,
     extras_bytes: 50123751,
     terrain_bytes: 87328176,
+    overlay_bytes: 0,
+};
+
+pub const CZ_STREDOCESKY: Region = Region {
+    id: "cz-stredocesky",
+    name: "Středočeský kraj (with Praha)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-stredocesky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/stredocesky-latest.osm.pbf",
+    outer: Bounds {
+        west: 12.896,
+        south: 49.001,
+        east: 16.036,
+        north: 51.119,
+    },
+    required_points: &[
+        (14.466, 50.060),
+        (13.610, 49.613),
+        (15.322, 49.613),
+        (13.610, 50.507),
+        (15.322, 50.507),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 104316928,
+    extras_bytes: 182008336,
+    terrain_bytes: 52517484,
     overlay_bytes: 0,
 };
 
@@ -8736,6 +12320,34 @@ pub const BR_SUDESTE: Region = Region {
     package_bytes: 1163558912,
     extras_bytes: 863652351,
     terrain_bytes: 2253787368,
+    overlay_bytes: 0,
+};
+
+pub const GB_SUFFOLK: Region = Region {
+    id: "gb-suffolk",
+    name: "Suffolk",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-suffolk-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/suffolk-latest.osm.pbf",
+    outer: Bounds {
+        west: -0.160,
+        south: 51.433,
+        east: 2.264,
+        north: 53.050,
+    },
+    required_points: &[
+        (1.052, 52.241),
+        (0.482, 51.995),
+        (1.621, 51.995),
+        (0.482, 52.488),
+        (1.621, 52.488),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 25284608,
+    extras_bytes: 33604336,
+    terrain_bytes: 15990466,
     overlay_bytes: 0,
 };
 
@@ -8851,6 +12463,62 @@ pub const SR: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_SURREY: Region = Region {
+    id: "gb-surrey",
+    name: "Surrey",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-surrey-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/surrey-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.351,
+        south: 50.572,
+        east: 0.560,
+        north: 51.973,
+    },
+    required_points: &[
+        (-0.395, 51.272),
+        (-0.760, 51.112),
+        (-0.031, 51.112),
+        (-0.760, 51.433),
+        (-0.031, 51.433),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 25468928,
+    extras_bytes: 43436123,
+    terrain_bytes: 10766876,
+    overlay_bytes: 0,
+};
+
+pub const NO_SVALBARD_JANMAYEN: Region = Region {
+    id: "no-svalbard-janmayen",
+    name: "Svalbard and Jan Mayen",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-svalbard-janmayen-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/norway/svalbard-janmayen-latest.osm.pbf",
+    outer: Bounds {
+        west: -11.868,
+        south: 69.654,
+        east: 35.851,
+        north: 81.613,
+    },
+    required_points: &[
+        (12.423, 75.657),
+        (-5.912, 71.340),
+        (30.757, 71.340),
+        (-5.912, 79.973),
+        (30.757, 79.973),
+    ],
+    country: "Norway",
+    continent: "Europe",
+    note: "",
+    package_bytes: 126611456,
+    extras_bytes: 3107890,
+    terrain_bytes: 1000225070,
+    overlay_bytes: 0,
+};
+
 pub const SZ: Region = Region {
     id: "sz",
     name: "Swaziland",
@@ -8960,6 +12628,34 @@ pub const SY: Region = Region {
     package_bytes: 186261504,
     extras_bytes: 82705840,
     terrain_bytes: 435984302,
+    overlay_bytes: 0,
+};
+
+pub const NO_SORLANDET: Region = Region {
+    id: "no-sorlandet",
+    name: "Sørlandet<br />(Southern Norway)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-sorlandet-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/norway/sorlandet-latest.osm.pbf",
+    outer: Bounds {
+        west: 5.199,
+        south: 57.084,
+        east: 11.093,
+        north: 60.175,
+    },
+    required_points: &[
+        (7.902, 58.630),
+        (6.139, 57.793),
+        (9.664, 57.793),
+        (6.139, 59.466),
+        (9.664, 59.466),
+    ],
+    country: "Norway",
+    continent: "Europe",
+    note: "",
+    package_bytes: 113139712,
+    extras_bytes: 77154816,
+    terrain_bytes: 221803610,
     overlay_bytes: 0,
 };
 
@@ -9103,6 +12799,34 @@ pub const TZ: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const AU_TASMANIA: Region = Region {
+    id: "au-tasmania",
+    name: "Tasmania",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-tasmania-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/tasmania-latest.osm.pbf",
+    outer: Bounds {
+        west: 142.970,
+        south: -58.412,
+        east: 162.171,
+        north: -38.697,
+    },
+    required_points: &[
+        (152.571, -48.030),
+        (145.290, -55.096),
+        (159.851, -55.096),
+        (145.290, -40.963),
+        (159.851, -40.963),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 88047616,
+    extras_bytes: 54215572,
+    terrain_bytes: 165803316,
+    overlay_bytes: 0,
+};
+
 pub const US_TN: Region = Region {
     id: "us-tn",
     name: "Tennessee",
@@ -9212,6 +12936,62 @@ pub const DE_THUERINGEN: Region = Region {
     package_bytes: 247418880,
     extras_bytes: 160464972,
     terrain_bytes: 95986240,
+    overlay_bytes: 0,
+};
+
+pub const CN_TIANJIN: Region = Region {
+    id: "cn-tianjin",
+    name: "Tianjin",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-tianjin-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/tianjin-latest.osm.pbf",
+    outer: Bounds {
+        west: 116.194,
+        south: 38.053,
+        east: 118.563,
+        north: 40.753,
+    },
+    required_points: &[
+        (117.379, 39.403),
+        (116.831, 38.723),
+        (117.926, 38.723),
+        (116.831, 40.083),
+        (117.926, 40.083),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 19652608,
+    extras_bytes: 15095378,
+    terrain_bytes: 31807288,
+    overlay_bytes: 0,
+};
+
+pub const CN_TIBET: Region = Region {
+    id: "cn-tibet",
+    name: "Tibet",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-tibet-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/tibet-latest.osm.pbf",
+    outer: Bounds {
+        west: 77.332,
+        south: 26.028,
+        east: 99.626,
+        north: 37.030,
+    },
+    required_points: &[
+        (88.710, 31.865),
+        (80.377, 28.133),
+        (97.042, 28.133),
+        (80.377, 35.597),
+        (97.042, 35.597),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 125550592,
+    extras_bytes: 50757470,
+    terrain_bytes: 3905903324,
     overlay_bytes: 0,
 };
 
@@ -9327,6 +13107,34 @@ pub const TO: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const NO_TRONDELAG: Region = Region {
+    id: "no-trondelag",
+    name: "Trøndelag<br />(Central Norway)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-trondelag-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/norway/trondelag-latest.osm.pbf",
+    outer: Bounds {
+        west: 5.291,
+        south: 61.755,
+        east: 14.904,
+        north: 66.450,
+    },
+    required_points: &[
+        (10.063, 64.102),
+        (6.645, 62.625),
+        (13.481, 62.625),
+        (6.645, 65.580),
+        (13.481, 65.580),
+    ],
+    country: "Norway",
+    continent: "Europe",
+    note: "",
+    package_bytes: 292712448,
+    extras_bytes: 183340366,
+    terrain_bytes: 597738696,
+    overlay_bytes: 0,
+};
+
 pub const TN: Region = Region {
     id: "tn",
     name: "Tunisia",
@@ -9408,6 +13216,62 @@ pub const TM: Region = Region {
     package_bytes: 160034816,
     extras_bytes: 25068891,
     terrain_bytes: 1597618404,
+    overlay_bytes: 0,
+};
+
+pub const TV_W: Region = Region {
+    id: "tv-w",
+    name: "Tuvalu west of 180°",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/tv-w-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/tuvalu-latest.osm.pbf",
+    outer: Bounds {
+        west: -180.000,
+        south: -13.740,
+        east: 180.000,
+        north: -3.562,
+    },
+    required_points: &[
+        (176.498, -8.651),
+        (173.696, -12.323),
+        (179.300, -12.323),
+        (173.696, -4.979),
+        (179.300, -4.979),
+    ],
+    country: "Tuvalu",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 3563520,
+    extras_bytes: 369907,
+    terrain_bytes: 510016,
+    overlay_bytes: 0,
+};
+
+pub const GB_TYNE_AND_WEAR: Region = Region {
+    id: "gb-tyne-and-wear",
+    name: "Tyne and Wear",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-tyne-and-wear-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/tyne-and-wear-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.354,
+        south: 54.298,
+        east: -0.763,
+        north: 55.609,
+    },
+    required_points: &[
+        (-1.558, 54.954),
+        (-1.795, 54.829),
+        (-1.322, 54.829),
+        (-1.795, 55.078),
+        (-1.322, 55.078),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 11968512,
+    extras_bytes: 19602640,
+    terrain_bytes: 5454842,
     overlay_bytes: 0,
 };
 
@@ -9520,6 +13384,34 @@ pub const UA: Region = Region {
     package_bytes: 2060386304,
     extras_bytes: 884538653,
     terrain_bytes: 2244901974,
+    overlay_bytes: 0,
+};
+
+pub const DE_UNTERFRANKEN: Region = Region {
+    id: "de-unterfranken",
+    name: "Unterfranken",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/de-unterfranken-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/germany/bayern/unterfranken-latest.osm.pbf",
+    outer: Bounds {
+        west: 8.138,
+        south: 48.751,
+        east: 11.387,
+        north: 51.124,
+    },
+    required_points: &[
+        (9.931, 50.023),
+        (9.166, 49.588),
+        (10.696, 49.588),
+        (9.166, 50.458),
+        (10.696, 50.458),
+    ],
+    country: "Germany",
+    continent: "Europe",
+    note: "",
+    package_bytes: 72585216,
+    extras_bytes: 104684373,
+    terrain_bytes: 49656944,
     overlay_bytes: 0,
 };
 
@@ -9803,6 +13695,62 @@ pub const US_VT: Region = Region {
     overlay_bytes: 20140032,
 };
 
+pub const NO_VESTLANDET: Region = Region {
+    id: "no-vestlandet",
+    name: "Vestlandet<br />(Western Norway)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-vestlandet-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/norway/vestlandet-latest.osm.pbf",
+    outer: Bounds {
+        west: 1.829,
+        south: 55.885,
+        east: 9.875,
+        north: 65.624,
+    },
+    required_points: &[
+        (5.852, 61.377),
+        (3.034, 58.380),
+        (8.670, 58.380),
+        (3.034, 64.374),
+        (8.670, 64.374),
+    ],
+    country: "Norway",
+    continent: "Europe",
+    note: "",
+    package_bytes: 317652992,
+    extras_bytes: 257863330,
+    terrain_bytes: 709957114,
+    overlay_bytes: 0,
+};
+
+pub const AU_VICTORIA: Region = Region {
+    id: "au-victoria",
+    name: "Victoria",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-victoria-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/victoria-latest.osm.pbf",
+    outer: Bounds {
+        west: 140.457,
+        south: -39.732,
+        east: 150.968,
+        north: -33.479,
+    },
+    required_points: &[
+        (145.713, -36.606),
+        (141.908, -38.707),
+        (149.517, -38.707),
+        (141.908, -34.505),
+        (149.517, -34.505),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 232943616,
+    extras_bytes: 244088588,
+    terrain_bytes: 593982514,
+    overlay_bytes: 0,
+};
+
 pub const VN: Region = Region {
     id: "vn",
     name: "Vietnam",
@@ -9943,6 +13891,34 @@ pub const WF: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_WARWICKSHIRE: Region = Region {
+    id: "gb-warwickshire",
+    name: "Warwickshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-warwickshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/warwickshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.463,
+        south: 51.455,
+        east: -0.671,
+        north: 53.188,
+    },
+    required_points: &[
+        (-1.567, 52.321),
+        (-1.884, 52.028),
+        (-1.250, 52.028),
+        (-1.884, 52.615),
+        (-1.250, 52.615),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 17080320,
+    extras_bytes: 24464580,
+    terrain_bytes: 14207688,
+    overlay_bytes: 0,
+};
+
 pub const US_WA: Region = Region {
     id: "us-wa",
     name: "Washington",
@@ -9969,6 +13945,62 @@ pub const US_WA: Region = Region {
     extras_bytes: 365725774,
     terrain_bytes: 672683452,
     overlay_bytes: 61579264,
+};
+
+pub const GB_WEST_MIDLANDS: Region = Region {
+    id: "gb-west-midlands",
+    name: "West Midlands",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-west-midlands-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/west-midlands-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.708,
+        south: 51.846,
+        east: -0.923,
+        north: 53.164,
+    },
+    required_points: &[
+        (-1.815, 52.505),
+        (-2.130, 52.378),
+        (-1.501, 52.378),
+        (-2.130, 52.632),
+        (-1.501, 52.632),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 31563776,
+    extras_bytes: 59869984,
+    terrain_bytes: 7973226,
+    overlay_bytes: 0,
+};
+
+pub const GB_WEST_SUSSEX: Region = Region {
+    id: "gb-west-sussex",
+    name: "West Sussex",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-west-sussex-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/west-sussex-latest.osm.pbf",
+    outer: Bounds {
+        west: -1.456,
+        south: 50.207,
+        east: 0.541,
+        north: 51.669,
+    },
+    required_points: &[
+        (-0.457, 50.938),
+        (-0.856, 50.753),
+        (-0.058, 50.753),
+        (-0.856, 51.123),
+        (-0.058, 51.123),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 27205632,
+    extras_bytes: 50052414,
+    terrain_bytes: 10487920,
+    overlay_bytes: 0,
 };
 
 pub const US_WV: Region = Region {
@@ -9999,6 +14031,62 @@ pub const US_WV: Region = Region {
     overlay_bytes: 47296512,
 };
 
+pub const GB_WEST_YORKSHIRE: Region = Region {
+    id: "gb-west-yorkshire",
+    name: "West Yorkshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-west-yorkshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/west-yorkshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.676,
+        south: 53.018,
+        east: -0.696,
+        north: 54.465,
+    },
+    required_points: &[
+        (-1.686, 53.742),
+        (-2.078, 53.563),
+        (-1.294, 53.563),
+        (-2.078, 53.920),
+        (-1.294, 53.920),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 33419264,
+    extras_bytes: 54501836,
+    terrain_bytes: 14776374,
+    overlay_bytes: 0,
+};
+
+pub const AU_WESTERN_AUSTRALIA: Region = Region {
+    id: "au-western-australia",
+    name: "Western Australia",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/au-western-australia-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/australia-oceania/australia/western-australia-latest.osm.pbf",
+    outer: Bounds {
+        west: 109.428,
+        south: -41.664,
+        east: 130.820,
+        north: -12.331,
+    },
+    required_points: &[
+        (120.124, -26.998),
+        (111.967, -38.331),
+        (128.281, -38.331),
+        (111.967, -15.664),
+        (128.281, -15.664),
+    ],
+    country: "Australia",
+    continent: "Australia and Oceania",
+    note: "",
+    package_bytes: 184299520,
+    extras_bytes: 116104966,
+    terrain_bytes: 2567168490,
+    overlay_bytes: 0,
+};
+
 pub const IN_WESTERN_ZONE: Region = Region {
     id: "in-western-zone",
     name: "Western Zone",
@@ -10024,6 +14112,34 @@ pub const IN_WESTERN_ZONE: Region = Region {
     package_bytes: 521281536,
     extras_bytes: 222226880,
     terrain_bytes: 1215820882,
+    overlay_bytes: 0,
+};
+
+pub const GB_WILTSHIRE: Region = Region {
+    id: "gb-wiltshire",
+    name: "Wiltshire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-wiltshire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/wiltshire-latest.osm.pbf",
+    outer: Bounds {
+        west: -2.863,
+        south: 50.447,
+        east: -0.989,
+        north: 52.206,
+    },
+    required_points: &[
+        (-1.926, 51.326),
+        (-2.276, 51.022),
+        (-1.576, 51.022),
+        (-2.276, 51.630),
+        (-1.576, 51.630),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 24330240,
+    extras_bytes: 34700325,
+    terrain_bytes: 16201978,
     overlay_bytes: 0,
 };
 
@@ -10503,6 +14619,34 @@ pub const PL_SWIETOKRZYSKIE: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const GB_WORCESTERSHIRE: Region = Region {
+    id: "gb-worcestershire",
+    name: "Worcestershire",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/gb-worcestershire-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/united-kingdom/england/worcestershire-latest.osm.pbf",
+    outer: Bounds {
+        west: -3.164,
+        south: 51.465,
+        east: -1.256,
+        north: 52.956,
+    },
+    required_points: &[
+        (-2.210, 52.211),
+        (-2.573, 52.015),
+        (-1.847, 52.015),
+        (-2.573, 52.407),
+        (-1.847, 52.407),
+    ],
+    country: "United Kingdom",
+    continent: "Europe",
+    note: "",
+    package_bytes: 15851520,
+    extras_bytes: 20385410,
+    terrain_bytes: 12888222,
+    overlay_bytes: 0,
+};
+
 pub const US_WY: Region = Region {
     id: "us-wy",
     name: "Wyoming",
@@ -10529,6 +14673,34 @@ pub const US_WY: Region = Region {
     extras_bytes: 95481412,
     terrain_bytes: 658405504,
     overlay_bytes: 61960192,
+};
+
+pub const CN_XINJIANG: Region = Region {
+    id: "cn-xinjiang",
+    name: "Xinjiang",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-xinjiang-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/xinjiang-latest.osm.pbf",
+    outer: Bounds {
+        west: 69.078,
+        south: 32.719,
+        east: 96.930,
+        north: 51.502,
+    },
+    required_points: &[
+        (84.924, 41.765),
+        (75.719, 35.767),
+        (94.129, 35.767),
+        (75.719, 47.763),
+        (94.129, 47.763),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 134574080,
+    extras_bytes: 49094333,
+    terrain_bytes: 6188256168,
+    overlay_bytes: 0,
 };
 
 pub const YE: Region = Region {
@@ -10612,6 +14784,34 @@ pub const CA_YT: Region = Region {
     package_bytes: 145244160,
     extras_bytes: 70994368,
     terrain_bytes: 4118445570,
+    overlay_bytes: 0,
+};
+
+pub const CN_YUNNAN: Region = Region {
+    id: "cn-yunnan",
+    name: "Yunnan",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-yunnan-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/yunnan-latest.osm.pbf",
+    outer: Bounds {
+        west: 94.642,
+        south: 18.512,
+        east: 106.715,
+        north: 29.735,
+    },
+    required_points: &[
+        (101.822, 25.140),
+        (98.307, 21.864),
+        (105.336, 21.864),
+        (98.307, 28.416),
+        (105.336, 28.416),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 154853376,
+    extras_bytes: 94380464,
+    terrain_bytes: 1908755478,
     overlay_bytes: 0,
 };
 
@@ -10699,6 +14899,34 @@ pub const NL_ZEELAND: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const CN_ZHEJIANG: Region = Region {
+    id: "cn-zhejiang",
+    name: "Zhejiang",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cn-zhejiang-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/asia/china/zhejiang-latest.osm.pbf",
+    outer: Bounds {
+        west: 117.521,
+        south: 26.192,
+        east: 124.338,
+        north: 31.691,
+    },
+    required_points: &[
+        (120.929, 28.941),
+        (118.602, 27.142),
+        (123.256, 27.142),
+        (118.602, 30.741),
+        (123.256, 30.741),
+    ],
+    country: "China",
+    continent: "Asia",
+    note: "Street names written in this country's script are not shown yet; towns and countries show their English names where OpenStreetMap has them.",
+    package_bytes: 135839744,
+    extras_bytes: 91317475,
+    terrain_bytes: 370896620,
+    overlay_bytes: 0,
+};
+
 pub const ZW: Region = Region {
     id: "zw",
     name: "Zimbabwe",
@@ -10724,6 +14952,34 @@ pub const ZW: Region = Region {
     package_bytes: 189161472,
     extras_bytes: 181229761,
     terrain_bytes: 712236180,
+    overlay_bytes: 0,
+};
+
+pub const CZ_ZLINSKY: Region = Region {
+    id: "cz-zlinsky",
+    name: "Zlínský kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-zlinsky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/zlinsky-latest.osm.pbf",
+    outer: Bounds {
+        west: 16.608,
+        south: 48.162,
+        east: 19.184,
+        north: 50.041,
+    },
+    required_points: &[
+        (17.779, 49.189),
+        (17.242, 48.908),
+        (18.316, 48.908),
+        (17.242, 49.471),
+        (18.316, 49.471),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 34369536,
+    extras_bytes: 53028447,
+    terrain_bytes: 27949570,
     overlay_bytes: 0,
 };
 
@@ -10783,8 +15039,64 @@ pub const PF_ILE_DE_CLIPPERTON: Region = Region {
     overlay_bytes: 0,
 };
 
+pub const NO_OSTLANDET: Region = Region {
+    id: "no-ostlandet",
+    name: "Østlandet<br />(Eastern Norway)",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/no-ostlandet-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/norway/ostlandet-latest.osm.pbf",
+    outer: Bounds {
+        west: 6.595,
+        south: 58.097,
+        east: 14.901,
+        north: 63.197,
+    },
+    required_points: &[
+        (9.988, 60.647),
+        (7.674, 59.007),
+        (12.302, 59.007),
+        (7.674, 62.287),
+        (12.302, 62.287),
+    ],
+    country: "Norway",
+    continent: "Europe",
+    note: "",
+    package_bytes: 535912448,
+    extras_bytes: 456074585,
+    terrain_bytes: 742707622,
+    overlay_bytes: 0,
+};
+
+pub const CZ_USTECKY: Region = Region {
+    id: "cz-ustecky",
+    name: "Ústecký kraj",
+    source_page: "https://github.com/ianrastall/offline-maps/releases/tag/regions",
+    package_url: "https://github.com/ianrastall/offline-maps/releases/download/regions/cz-ustecky-shortbread-1.0.mbtiles",
+    extras_url: "https://download.geofabrik.de/europe/czech-republic/ustecky-latest.osm.pbf",
+    outer: Bounds {
+        west: 12.437,
+        south: 49.576,
+        east: 16.139,
+        north: 51.627,
+    },
+    required_points: &[
+        (13.802, 50.570),
+        (13.110, 50.174),
+        (14.493, 50.174),
+        (13.110, 50.965),
+        (14.493, 50.965),
+    ],
+    country: "Czech Republic",
+    continent: "Europe",
+    note: "",
+    package_bytes: 72372224,
+    extras_bytes: 112341196,
+    terrain_bytes: 41939738,
+    overlay_bytes: 0,
+};
+
 /// Every region that can be downloaded, by name.
-pub static ALL: [Region; 386] = [
+pub static ALL: [Region; 540] = [
     AF,
     MX_AGU,
     US_AL,
@@ -10794,28 +15106,39 @@ pub static ALL: [Region; 386] = [
     DZ,
     MX,
     FR_ALSACE,
+    AMERICAN_OCEANIA_E,
+    AMERICAN_OCEANIA_W,
     ES_ANDALUCIA,
     AD,
     AO,
+    CN_ANHUI,
     FR_AQUITAINE,
     ES_ARAGON,
     AR,
     US_AZ,
     US_AR,
     AM,
+    AU_ASHMORE_CARTIER,
     ES_ASTURIAS,
+    AU_ACT,
     AT,
     FR_AUVERGNE,
     AZ,
     AZORES,
+    BS,
     MX_BCN,
     MX_BCS,
     BD,
     FR_BASSE_NORMANDIE,
+    GB_BEDFORDSHIRE,
+    CN_BEIJING,
     BY,
     BE,
+    BZ,
     BJ,
+    GB_BERKSHIRE,
     DE_BERLIN,
+    GB_BERMUDA,
     BT,
     BO,
     BA,
@@ -10824,12 +15147,15 @@ pub static ALL: [Region; 386] = [
     DE_BRANDENBURG,
     DE_BREMEN,
     FR_BRETAGNE,
+    GB_BRISTOL,
     CA_BC,
+    GB_BUCKINGHAMSHIRE,
     BG,
     BF,
     BI,
     US_CA,
     KH,
+    GB_CAMBRIDGESHIRE,
     CM,
     MX_CAM,
     CANARY_ISLANDS,
@@ -10847,12 +15173,16 @@ pub static ALL: [Region; 386] = [
     ES_CEUTA,
     TD,
     FR_CHAMPAGNE_ARDENNE,
+    GB_CHESHIRE,
     MX_CHP,
     MX_CHH,
     CL,
+    CN_CHONGQING,
+    AU_CHRISTMAS_ISLAND,
     JP_CHUBU,
     JP_CHUGOKU,
     MX_COA,
+    AU_COCOS_ISLANDS,
     MX_COL,
     CO,
     US_CO,
@@ -10861,99 +15191,159 @@ pub static ALL: [Region; 386] = [
     CG,
     US_CT,
     CK,
+    AU_CORAL_SEA_ISLANDS,
+    GB_CORNWALL,
     FR_CORSE,
+    CR,
     UA_43,
     HR,
+    CU,
+    GB_CUMBRIA,
     CY,
     US_DE,
     DK,
+    GB_DERBYSHIRE,
+    GB_DEVON,
     US_DC,
     DJ,
+    GB_DORSET,
     NL_DRENTHE,
     MX_DUR,
+    GB_DURHAM,
+    GB_EAST_SUSSEX,
     TL,
+    GB_EAST_YORKSHIRE_WITH_HULL,
     IN_EASTERN_ZONE,
     EC,
     EG,
+    SV,
     GQ,
     ER,
+    GB_ESSEX,
     EE,
     ET,
     ES_EXTREMADURA,
+    GB_FALKLANDS,
+    FAR_EASTERN_FED_DISTRICT_E,
+    FAR_EASTERN_FED_DISTRICT_W,
     FO,
+    FJ_E,
+    FJ_W,
     FI,
     NL_FLEVOLAND,
     US_FL,
     FR_FRANCHE_COMTE,
     NL_FRIESLAND,
+    CN_FUJIAN,
     GCC_STATES,
     GA,
     ES_GALICIA,
+    CN_GANSU,
     NL_GELDERLAND,
     US_GA,
     GE,
     GH,
+    GB_GLOUCESTERSHIRE,
+    GB_GREATER_LONDON,
+    GB_GREATER_MANCHESTER,
     GR,
     GL,
     NL_GRONINGEN,
     FR_GUADELOUPE,
     MX_GUA,
+    CN_GUANGDONG,
+    CN_GUANGXI,
+    GT,
     GUERNSEY_JERSEY,
     MX_GRO,
     GN,
     GW,
+    CN_GUIZHOU,
     GY,
     FR_GF,
+    CN_HAINAN,
+    HAITI_AND_DOMREP,
     DE_HAMBURG,
+    GB_HAMPSHIRE,
     FR_HAUTE_NORMANDIE,
     US_HI,
+    AU_HEARD_MCDONALD,
+    CN_HEBEI,
+    CN_HEILONGJIANG,
+    CN_HENAN,
+    GB_HEREFORDSHIRE,
+    GB_HERTFORDSHIRE,
     DE_HESSEN,
     MX_HID,
     JP_HOKKAIDO,
+    HN,
+    CN_HONG_KONG,
+    CN_HUBEI,
+    CN_HUNAN,
     HU,
     IS,
     US_ID,
     FR_ILE_DE_FRANCE,
     crate::package::ILLINOIS,
     US_IN,
+    CN_INNER_MONGOLIA,
     US_IA,
     IR,
     IQ,
     IE,
     ES_ISLAS_BALEARES,
     ISLE_OF_MAN,
+    GB_ISLE_OF_WIGHT,
     IT_ISOLE,
     ISRAEL_AND_PALESTINE,
     CI,
     MX_JAL,
+    JM,
     ID_JAVA,
+    CN_JIANGSU,
+    CN_JIANGXI,
+    CZ_JIHOMORAVSKY,
+    CZ_JIHOCESKY,
+    CN_JILIN,
     JO,
     ID_KALIMANTAN,
     KALININGRAD,
     JP_KANSAI,
     US_KS,
     JP_KANTO,
+    CZ_KARLOVARSKY,
     KZ,
+    GB_KENT,
     US_KY,
     KE,
+    KI_E,
+    KI_W,
     RS_KM,
+    CZ_VYSOCINA,
+    CZ_KRALOVEHRADECKY,
     KG,
     JP_KYUSHU,
     ES_LA_RIOJA,
+    GB_LANCASHIRE,
     FR_LANGUEDOC_ROUSSILLON,
     LA,
     LV,
     LB,
+    GB_LEICESTERSHIRE,
     LS,
+    CN_LIAONING,
+    CZ_LIBERECKY,
     LR,
     LY,
     LI,
     NL_LIMBURG,
     FR_LIMOUSIN,
+    GB_LINCOLNSHIRE,
     LT,
     FR_LORRAINE,
     US_LA,
     LU,
+    CN_MACAU,
     MK,
     MG,
     ES_MADRID,
@@ -10974,6 +15364,7 @@ pub static ALL: [Region; 386] = [
     FR_MAYOTTE,
     DE_MECKLENBURG_VORPOMMERN,
     ES_MELILLA,
+    GB_MERSEYSIDE,
     MX_CMX,
     US_MI,
     MX_MIC,
@@ -10982,11 +15373,13 @@ pub static ALL: [Region; 386] = [
     US_MN,
     US_MS,
     US_MO,
+    DE_MITTELFRANKEN,
     MD,
     MC,
     MN,
     US_MT,
     ME,
+    CZ_MORAVSKOSLEZKY,
     MX_MOR,
     MA,
     MZ,
@@ -11004,43 +15397,64 @@ pub static ALL: [Region; 386] = [
     US_NH,
     US_NJ,
     US_NM,
+    AU_NEW_SOUTH_WALES,
     US_NY,
+    NZ_E,
+    NZ_W,
     CA_NL,
+    NI,
+    DE_NIEDERBAYERN,
     DE_NIEDERSACHSEN,
     NE,
     NG,
+    CN_NINGXIA,
     NU,
     NL_NOORD_BRABANT,
     NL_NOORD_HOLLAND,
     IT_NORD_EST,
+    NO_NORD_NORGE,
     IT_NORD_OVEST,
     FR_NORD_PAS_DE_CALAIS,
     BR_NORDESTE,
+    GB_NORFOLK,
+    AU_NORFOLK_ISLAND,
     BR_NORTE,
     US_NC,
     NORTH_CAUCASUS_FED_DISTRICT,
     US_ND,
     KP,
+    GB_NORTH_YORKSHIRE,
     IN_NORTH_EASTERN_ZONE,
+    GB_NORTHAMPTONSHIRE,
+    AU_NORTHERN_TERRITORY,
     IN_NORTHERN_ZONE,
+    GB_NORTHUMBERLAND,
     CA_NT,
     NORTHWESTERN_FED_DISTRICT,
+    GB_NOTTINGHAMSHIRE,
     CA_NS,
     MX_NLE,
     CA_NU_E,
     CA_NU_W,
     ID_NUSA_TENGGARA,
     MX_OAX,
+    DE_OBERBAYERN,
+    DE_OBERFRANKEN,
+    DE_OBERPFALZ,
     US_OH,
     US_OK,
+    CZ_OLOMOUCKY,
     CA_ON,
     US_OR,
     NL_OVERIJSSEL,
+    GB_OXFORDSHIRE,
     PK,
     PW,
+    PA,
     ID_PAPUA,
     PG,
     PY,
+    CZ_PARDUBICKY,
     FR_PAYS_DE_LA_LOIRE,
     ES_PAIS_VASCO,
     US_PA,
@@ -11048,21 +15462,35 @@ pub static ALL: [Region; 386] = [
     PH,
     FR_PICARDIE,
     PN,
+    CZ_PLZENSKY,
     FR_POITOU_CHARENTES,
     PF,
     PT,
+    CZ_PRAHA,
     CA_PE,
     FR_PROVENCE_ALPES_COTE_D_AZUR,
     MX_PUE,
     US_PR,
+    CN_QINGHAI,
     CA_QC,
+    AU_QUEENSLAND,
     MX_QUE,
     MX_ROO,
+    DE_ARNSBERG_REGBEZ,
+    DE_DETMOLD_REGBEZ,
+    DE_DUESSELDORF_REGBEZ,
+    DE_FREIBURG_REGBEZ,
+    DE_KARLSRUHE_REGBEZ,
+    DE_KOELN_REGBEZ,
+    DE_MUENSTER_REGBEZ,
+    DE_STUTTGART_REGBEZ,
+    DE_TUEBINGEN_REGBEZ,
     FR_REUNION,
     DE_RHEINLAND_PFALZ,
     US_RI,
     FR_RHONE_ALPES,
     RO,
+    GB_RUTLAND,
     RW,
     DE_SAARLAND,
     DE_SACHSEN,
@@ -11073,59 +15501,82 @@ pub static ALL: [Region; 386] = [
     ST,
     CA_SK,
     DE_SCHLESWIG_HOLSTEIN,
+    DE_SCHWABEN,
     GB_SCOTLAND,
     SENEGAL_AND_GAMBIA,
     RS,
     SC,
+    CN_SHAANXI,
+    CN_SHANDONG,
+    CN_SHANGHAI,
+    CN_SHANXI,
     JP_SHIKOKU,
+    GB_SHROPSHIRE,
     SIBERIAN_FED_DISTRICT,
+    CN_SICHUAN,
     SL,
     MX_SIN,
     SK,
     SI,
     SB,
     SO,
+    GB_SOMERSET,
     MX_SON,
     SOUTH_AFRICA_AND_LESOTHO,
+    AU_SOUTH_AUSTRALIA,
     US_SC,
     US_SD,
     SOUTH_FED_DISTRICT,
     KR,
     SS,
+    GB_SOUTH_YORKSHIRE,
     IN_SOUTHERN_ZONE,
     LK,
+    GB_STAFFORDSHIRE,
     MX_MEX,
+    CZ_STREDOCESKY,
     IT_SUD,
     SD,
     BR_SUDESTE,
+    GB_SUFFOLK,
     BR_SUL,
     ID_SULAWESI,
     ID_SUMATRA,
     SR,
+    GB_SURREY,
+    NO_SVALBARD_JANMAYEN,
     SZ,
     SE,
     CH,
     SY,
+    NO_SORLANDET,
     MX_TAB,
     CN_TW,
     TJ,
     MX_TAM,
     TZ,
+    AU_TASMANIA,
     US_TN,
     US_TX,
     TH,
     DE_THUERINGEN,
+    CN_TIANJIN,
+    CN_TIBET,
     MX_TLA,
     TG,
     TK,
     TO,
+    NO_TRONDELAG,
     TN,
     TR,
     TM,
+    TV_W,
+    GB_TYNE_AND_WEAR,
     JP_TOHOKU,
     US_VI,
     UG,
     UA,
+    DE_UNTERFRANKEN,
     URAL_FED_DISTRICT,
     UY,
     US_UT,
@@ -11136,14 +15587,22 @@ pub static ALL: [Region; 386] = [
     VE,
     MX_VER,
     US_VT,
+    NO_VESTLANDET,
+    AU_VICTORIA,
     VN,
     US_VA,
     VOLGA_FED_DISTRICT,
     GB_WALES,
     WF,
+    GB_WARWICKSHIRE,
     US_WA,
+    GB_WEST_MIDLANDS,
+    GB_WEST_SUSSEX,
     US_WV,
+    GB_WEST_YORKSHIRE,
+    AU_WESTERN_AUSTRALIA,
     IN_WESTERN_ZONE,
+    GB_WILTSHIRE,
     US_WI,
     PL_DOLNOSLASKIE,
     PL_KUJAWSKO_POMORSKIE,
@@ -11161,14 +15620,21 @@ pub static ALL: [Region; 386] = [
     PL_LODZKIE,
     PL_SLASKIE,
     PL_SWIETOKRZYSKIE,
+    GB_WORCESTERSHIRE,
     US_WY,
+    CN_XINJIANG,
     YE,
     MX_YUC,
     CA_YT,
+    CN_YUNNAN,
     MX_ZAC,
     ZM,
     NL_ZEELAND,
+    CN_ZHEJIANG,
     ZW,
+    CZ_ZLINSKY,
     NL_ZUID_HOLLAND,
     PF_ILE_DE_CLIPPERTON,
+    NO_OSTLANDET,
+    CZ_USTECKY,
 ];

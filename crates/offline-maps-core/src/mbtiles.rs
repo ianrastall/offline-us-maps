@@ -252,7 +252,11 @@ impl TilePackage {
             tile_bytes += bytes as u64;
         }
         let (min, max) = (self.metadata.min_zoom, self.metadata.max_zoom);
-        if let Some(zoom) = (min..=max).find(|z| !tiles_per_zoom.contains_key(z)) {
+        // Tiles from some zoom up to the maximum, without gaps. A small region may start
+        // above the declared minimum: Macau and similar have no features at zoom 0-4, which
+        // Planetiler leaves out, but a gap or a missing maximum means a damaged file.
+        let first = tiles_per_zoom.keys().next().copied().unwrap_or(max);
+        if let Some(zoom) = (first.max(min)..=max).find(|z| !tiles_per_zoom.contains_key(z)) {
             return Err(invalid(format!("no tiles at declared zoom level {zoom}")));
         }
         if let Some(zoom) = tiles_per_zoom.keys().find(|z| **z < min || **z > max) {
@@ -485,6 +489,9 @@ pub(crate) mod tests {
     fn check_requires_tiles_across_declared_zooms() {
         let missing_zoom = build_package(&valid_metadata(), &[(0, 0, 0, b"t")]);
         assert!(TilePackage::open(&missing_zoom.0).unwrap().check().is_err());
+        // A small region may start above the declared minimum zoom.
+        let starts_later = build_package(&valid_metadata(), &[(1, 0, 0, b"t")]);
+        assert!(TilePackage::open(&starts_later.0).unwrap().check().is_ok());
         let extra_zoom = build_package(
             &valid_metadata(),
             &[(0, 0, 0, b"t"), (1, 0, 0, b"t"), (2, 0, 0, b"t")],

@@ -44,7 +44,9 @@ CATALOG = json.loads((ROOT / "tools" / "layers" / "regions.json").read_text(enco
 # North American regions take their outlines from Natural Earth; the others from Geofabrik's
 # index (data/catalog/world, written by tools/world-regions.py), by Geofabrik ID.
 REGIONS = {r["id"] for r in CATALOG if "geofabrik" not in r}
-WORLD = {r["geofabrik"]: r["id"] for r in CATALOG if "geofabrik" in r}
+# (catalog ID, Geofabrik ID, clip box or None): the parts of a region split at the 180th
+# meridian share Geofabrik's outline, each clipped to its side.
+WORLD = [(r["id"], r["geofabrik"], r.get("clip")) for r in CATALOG if "geofabrik" in r]
 GEOFABRIK_INDEX = ROOT / "data" / "catalog" / "world" / "index-v1.json"
 
 # West, south, east, north: the whole world, to the edges of the web map projection.
@@ -162,16 +164,17 @@ def frame(columns: dict, geometry) -> gpd.GeoDataFrame:
 def world_regions() -> gpd.GeoDataFrame:
     """Each catalog region outside North America, with its outline from Geofabrik's index
     (simplified to about 1 km, plenty for zoom 0-7)."""
-    index = json.loads(GEOFABRIK_INDEX.read_text(encoding="utf-8"))
-    rows = []
-    for feature in index["features"]:
-        gid = feature["properties"]["id"]
-        if gid in WORLD:
-            geometry = shapely.make_valid(shapely.geometry.shape(feature["geometry"])).simplify(0.01)
-            rows.append({"region": WORLD[gid], "name": feature["properties"]["name"], "geometry": geometry})
-    missing = set(WORLD) - {f["properties"]["id"] for f in index["features"]}
+    index = {f["properties"]["id"]: f for f in json.loads(GEOFABRIK_INDEX.read_text(encoding="utf-8"))["features"]}
+    missing = {gid for _, gid, _ in WORLD} - set(index)
     if missing:
         raise RuntimeError(f"no Geofabrik outline for {sorted(missing)}")
+    names = {r["id"]: r["name"] for r in CATALOG}
+    rows = []
+    for region, gid, clip in WORLD:
+        geometry = shapely.make_valid(shapely.geometry.shape(index[gid]["geometry"]))
+        if clip:
+            geometry = geometry.intersection(box(*clip))
+        rows.append({"region": region, "name": names[region], "geometry": geometry.simplify(0.01)})
     return gpd.GeoDataFrame(rows, geometry="geometry", crs=4326)
 
 

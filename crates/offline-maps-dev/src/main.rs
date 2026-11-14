@@ -4,7 +4,8 @@
 //!       [--last-modified L] [--downloaded-at T] [--record out.json]
 //!   offline-maps-dev serve <package.mbtiles> [--port 8765] [--extras extras.sqlite]
 //!       [--source-pbf file.osm.pbf]
-//!   offline-maps-dev download <store-dir> [--url U] [--stop-after BYTES]
+//!   offline-maps-dev download <store-dir> [--url U] [--region ID] [--stop-after BYTES]
+//!       (--region downloads a catalog region with its own checks, such as fj-e)
 //!   offline-maps-dev download-extras <store-dir> [--url U] [--stop-after BYTES]
 //!   offline-maps-dev probe [url]      (HEAD request only; downloads nothing)
 //!   offline-maps-dev index <package.mbtiles> <search.sqlite>
@@ -373,10 +374,14 @@ fn download(args: &[String], extras: bool) -> Result<(), String> {
     let url: Option<&'static str> = options
         .get("url")
         .map(|url| &*Box::leak(url.clone().into_boxed_str()));
+    let base = match options.get("region") {
+        Some(id) => *offline_maps_core::regions::find(id).ok_or(format!("no region {id:?}"))?,
+        None => ILLINOIS,
+    };
     let region = Region {
-        package_url: url.filter(|_| !extras).unwrap_or(ILLINOIS.package_url),
-        extras_url: url.filter(|_| extras).unwrap_or(ILLINOIS.extras_url),
-        ..ILLINOIS
+        package_url: url.filter(|_| !extras).unwrap_or(base.package_url),
+        extras_url: url.filter(|_| extras).unwrap_or(base.extras_url),
+        ..base
     };
     let stop_after: Option<u64> = options
         .get("stop-after")

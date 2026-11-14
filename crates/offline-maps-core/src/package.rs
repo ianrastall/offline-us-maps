@@ -12,14 +12,18 @@ use crate::{OSM_ATTRIBUTION, OSM_LICENSE};
 
 pub const RECORD_SCHEMA: u32 = 1;
 
-/// Vector layers the Offline Maps style depends on.
-pub const REQUIRED_LAYERS: [&str; 6] = [
+/// Shortbread's vector layers that the Offline Maps style draws. A package must declare at
+/// least one: other schemas name theirs differently (OpenMapTiles: transportation, water,
+/// place, boundary). Not all of them: a small region can lack whole kinds of features
+/// (Rutland has no national or state border, so no boundaries; reefs have no streets).
+pub const SHORTBREAD_LAYERS: [&str; 7] = [
     "streets",
     "street_labels",
     "place_labels",
     "water_polygons",
     "land",
     "boundaries",
+    "ocean",
 ];
 
 /// A downloadable region and the coverage its package must have.
@@ -170,13 +174,13 @@ pub fn verify_package(
     let package = TilePackage::open(path)?;
     let metadata = package.metadata().clone();
     check_coverage(&metadata, region)?;
-    if let Some(missing) = REQUIRED_LAYERS
+    if !SHORTBREAD_LAYERS
         .iter()
-        .find(|layer| !metadata.vector_layers.iter().any(|l| l == *layer))
+        .any(|layer| metadata.vector_layers.iter().any(|l| l == *layer))
     {
-        return Err(PackageError::Invalid(format!(
-            "vector layer {missing} is missing; this is not a Shortbread package"
-        )));
+        return Err(PackageError::Invalid(
+            "the package has none of Shortbread's layers; it is not a Shortbread package".into(),
+        ));
     }
     let check = package.check()?;
     Ok(PackageRecord {
@@ -230,13 +234,17 @@ pub(crate) mod tests {
             )
         };
         let file = build_package(
-            &metadata_with("json", SHORTBREAD_LAYERS),
+            &metadata_with("json", SHORTBREAD_JSON),
             &[(0, 0, 0, &place(10)), (1, 0, 1, &place(20))],
         );
         std::fs::read(&file.0).unwrap()
     }
 
-    const SHORTBREAD_LAYERS: &str = r#"{"vector_layers":[{"id":"streets"},{"id":"street_labels"},{"id":"place_labels"},{"id":"water_polygons"},{"id":"land"},{"id":"boundaries"}]}"#;
+    const SHORTBREAD_JSON: &str = r#"{"vector_layers":[{"id":"streets"},{"id":"street_labels"},{"id":"place_labels"},{"id":"water_polygons"},{"id":"land"},{"id":"boundaries"}]}"#;
+    /// A small region's package: no boundaries, no streets (a reef).
+    const REEF_JSON: &str = r#"{"vector_layers":[{"id":"ocean"},{"id":"water_polygons"}]}"#;
+    /// OpenMapTiles' layer names: another schema.
+    const OPENMAPTILES_JSON: &str = r#"{"vector_layers":[{"id":"transportation"},{"id":"water"},{"id":"place"},{"id":"boundary"}]}"#;
 
     fn metadata_with(key: &'static str, value: &'static str) -> Vec<(&'static str, &'static str)> {
         let mut m = valid_metadata();
@@ -277,7 +285,7 @@ pub(crate) mod tests {
     #[test]
     fn verifies_and_records_a_package() {
         let file = build_package(
-            &metadata_with("json", SHORTBREAD_LAYERS),
+            &metadata_with("json", SHORTBREAD_JSON),
             &[(0, 0, 0, b"a"), (1, 0, 1, b"b")],
         );
         let record = verify(&file).unwrap();
@@ -296,17 +304,24 @@ pub(crate) mod tests {
     #[test]
     fn rejects_wrong_region_layers_and_schema() {
         let tiles: &[(u8, u32, u32, &[u8])] = &[(0, 0, 0, b"a"), (1, 0, 1, b"b")];
-        // Missing Shortbread layers (valid_metadata declares only two).
-        assert!(verify(&build_package(&valid_metadata(), tiles)).is_err());
+        // Another schema's layers are refused; a small region's few Shortbread layers are not.
+        assert!(
+            verify(&build_package(
+                &metadata_with("json", OPENMAPTILES_JSON),
+                tiles
+            ))
+            .is_err()
+        );
+        assert!(verify(&build_package(&metadata_with("json", REEF_JSON), tiles)).is_ok());
         let mut chicago_only = metadata_with("bounds", "-88.0,41.6,-87.5,42.1");
-        chicago_only.push(("json", SHORTBREAD_LAYERS));
+        chicago_only.push(("json", SHORTBREAD_JSON));
         assert!(verify(&build_package(&chicago_only, tiles)).is_err());
         let mut whole_us = metadata_with("bounds", "-125,24,-66,49");
-        whole_us.push(("json", SHORTBREAD_LAYERS));
+        whole_us.push(("json", SHORTBREAD_JSON));
         assert!(verify(&build_package(&whole_us, tiles)).is_err());
 
         let record = verify(&build_package(
-            &metadata_with("json", SHORTBREAD_LAYERS),
+            &metadata_with("json", SHORTBREAD_JSON),
             tiles,
         ))
         .unwrap();
