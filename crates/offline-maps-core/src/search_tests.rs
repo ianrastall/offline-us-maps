@@ -469,3 +469,20 @@ fn scratch_files_are_unique_within_a_process() {
     // Either the temporary folder lacks the room (none) or every name differs.
     assert!(names.is_empty() || names.len() == 1000);
 }
+
+#[test]
+fn cjk_names_are_found_by_any_part() {
+    // The index holds overlapping pairs of a CJK name; a query is split the same way.
+    let terms = expand("北京市朝阳区");
+    for pair in ["北京", "京市", "朝阳", "阳区"] {
+        assert!(terms.split(' ').any(|t| t == pair), "{pair} not in {terms}");
+    }
+    assert_eq!(query_words("京市朝"), ["京市", "市朝"]);
+    assert_eq!(query_words("北京"), ["北京"]);
+    assert_eq!(query_words("新宿駅"), ["新宿", "宿駅"]);
+    // Hangul, with spaces between words already, still gains pairs for longer words.
+    assert!(expand("서울특별시").split(' ').any(|t| t == "특별"));
+    // Other scripts are left alone.
+    assert!(cjk_pairs("main").is_empty() && cjk_pairs("Москва").is_empty());
+    assert!(match_expression(&["京".to_owned()]).contains("\"京\"*"));
+}

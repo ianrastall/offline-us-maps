@@ -341,6 +341,23 @@ Completed 9 November 2026. The labels with missing letters were public-land name
 
 Verified: at zoom 12 over Evanston, "Lighthouse Landing", "Leahy Park", "Maple Park", "Philbrick Park" and "Lunt Park" draw whole where 0.7.0 cut them, in the development build and in the installed 0.7.1 started from Start. Released as [v0.7.1](https://github.com/ianrastall/offline-north-american-maps/releases/tag/v0.7.1), built from 8748bff; the installer's SHA-256 (06906734…e6d0581) matches GitHub's digest, and Settings > Apps lists 0.7.1.
 
+## 0.16.0: Labels and search in other scripts
+
+Completed 14 November 2026: stage W4 of the [worldwide plan](worldwide.md), started by Ian.
+
+- **Fonts.** All 256 glyph ranges of Noto Sans regular and bold are bundled (77.3 MB, from the VersaTiles font package already pinned), Ian's choice over downloading a script's fonts with its first region. The installer is 308.5 MB (was 291.6 MB).
+- **Right-to-left text.** mapbox-gl-rtl-text 0.3.0 (npm, pinned in `proof/renderer`'s lockfile; BSD-2-Clause, with code derived from ICU under the Unicode license) is bundled in `Web/rtl/` and given to MapLibre with `setRTLTextPlugin`, loaded when a label needs it. 1.0.0 was not usable: it is an ES module with a separate WASM file for Mapbox GL's newer loader. Both notices are in `THIRD-PARTY-NOTICES.txt`, which now also credits Noto's authors for every script and Adobe for Noto Sans CJK, and calls the overview the world's.
+- **CJK search.** The tokenizer treats a run of Chinese, Japanese or Korean letters as one word, so only a name's beginning was found. Names are now indexed as overlapping pairs of letters as well as whole, a query is split the same way, and one CJK letter searches as a prefix.
+- **English names.** Entries keep OpenStreetMap's English name (new `alt_name` and `match_alt` columns): a city searched in English ranks first ("jerusalem" found hotels named Jerusalem before), and a name without Latin letters is shown with it: "ירושלים (Jerusalem)".
+- **Region note.** Now on 15 regions only, in countries written in scripts MapLibre draws with broken letter shapes (India's zones, Nepal, Bangladesh, Sri Lanka, Bhutan, Thailand, Laos, Cambodia, Myanmar, the Maldives), saying so. Chinese, Japanese, Korean, Arabic, Hebrew, Georgian, Armenian and Ethiopic regions no longer carry it.
+- **Search format 4**: installed indexes are rebuilt at the next start.
+- **Corrections.** The 0.12.0 notes and a page comment called the bundled MapLibre 5; it is 6.16.0.
+- **Tests.** 83 core (new: CJK pairs and queries), 2 HTTP, 7 ABI (Georgia without the note, Thailand with it) and 9 interop tests.
+
+Checked with real data in a separate store (`offline-maps-dev download --region`, then the built app started with `--store` and `--settings` in scratch folders, Ian's data untouched):
+- Search: "尖沙咀" finds Tsim Sha Tsui, and "沙咀" (its end) Sha Tsui Road; "山市" finds 松山市 (Matsuyama) and 福山市 (Fukuyama); "ירושלים", "بيروت" and "Երևան" find their capitals; "jerusalem", "tel aviv", "beirut", "yerevan", "takamatsu" and "matsuyama" put the city first, shown as "ירושלים (Jerusalem)", "高松市 (Takamatsu)" and so on.
+- Labels: in Beirut, streets named only in Arabic ("شارع 62", "شارع 21") are drawn with their letters joined and in order; in Takamatsu, 大学通り (drawn vertically along the street), 丸亀町商店街 and 祇園通り. Jerusalem's Old City and central Yerevan show English names, which OpenStreetMap has for nearly every feature there.
+
 ## 0.15.0: Search for Latin-script Europe
 
 Completed 14 November 2026: stage W3 of the [worldwide plan](worldwide.md), chosen by Ian.
@@ -403,7 +420,7 @@ Completed 14 November 2026: stage W1 of the [worldwide plan](worldwide.md), star
 
 - **World overview.** `tools/overview/build_overview.py` now covers the whole world (`assets/overview/world-overview.mbtiles`, 13.5 MB; the North American one was 4.2 MB): country borders, Natural Earth's state and province lines outside the catalog countries, major and secondary highways (expressways drawn as motorways), cities, country names from Natural Earth's label points and zooms, ocean, lakes and rivers with the Europe supplements. Inside the catalog countries nothing changed. The installer deletes the old `Overview\us-overview.mbtiles`.
 - **Regions to fill in.** A new `regions` layer holds each catalog region's outline and name. Over a region with no map installed the pointer becomes a hand and the region is drawn in the accent color. A click, once it is clear it is not half of a double-click or a drag, shows a menu beside the pointer, never under it: "Download the <region> map (<size>)" and "Show <region> in Regions…", which opens the Regions window on that region.
-- **Map bounds.** With the overview the map has no bounds. MapLibre 5 throws ("Cannot read properties of null") while placing the view when bounds span all 360 degrees of longitude; found in the first installed build, where the map stayed blank.
+- **Map bounds.** With the overview the map has no bounds. MapLibre 6 throws ("Cannot read properties of null") while placing the view when bounds span all 360 degrees of longitude; found in the first installed build, where the map stayed blank.
 - **Name.** Offline Maps (Ian's choice, the app's first name) in windows, dialogs, the installer, Start, Settings > Apps, styles, notices and the setup file (`OfflineMaps-<version>-win-x64-setup.exe`). The repository is `ianrastall/offline-maps`; GitHub redirects the old addresses (checked: an overlay file under `offline-north-american-maps` answers 301 to `offline-maps`), so earlier versions keep downloading. The installer keeps the AppId, install folder, data folder, mutex and Start identity, and deletes "Offline North American Maps" shortcuts.
 - **Not done.** The Regions window's continent level, moved to W2 (all regions are still in North America).
 - **Tests.** 77 core, 2 HTTP and 7 ABI tests (Rust) and 9 interop tests; the app builds with no warnings.

@@ -82,13 +82,16 @@ fn empty_store_reports_no_map_and_refuses_search() {
     };
     assert_eq!(catalog.regions.len(), offline_maps_core::regions::ALL.len());
     assert!(catalog.regions.len() > 300);
-    // Georgia the country is listed apart from the US state, with the script note.
+    // Georgia the country is listed apart from the US state; Georgian is drawn, so no note.
     let georgia = catalog.regions.iter().find(|r| r.id == "ge").unwrap();
     assert_eq!(
         (georgia.country.as_str(), georgia.continent.as_str()),
         ("Georgia", "Europe")
     );
-    assert!(!georgia.note.is_empty());
+    assert!(georgia.note.is_empty());
+    // Thai is drawn with broken letter shapes, which the note says.
+    let thailand = catalog.regions.iter().find(|r| r.id == "th").unwrap();
+    assert!(!thailand.note.is_empty());
     let state = catalog.regions.iter().find(|r| r.id == "us-ga").unwrap();
     assert_eq!(state.country, "United States");
     assert!(state.note.is_empty() && state.package_url.contains("/us/georgia-"));

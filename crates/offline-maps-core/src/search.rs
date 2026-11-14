@@ -21,7 +21,7 @@ use crate::Coordinates;
 use crate::mbtiles::{PackageError, TilePackage};
 use crate::mvt::{Feature, decode_tile, tile_point_to_lon_lat};
 
-pub const SEARCH_SCHEMA: u32 = 3;
+pub const SEARCH_SCHEMA: u32 = 4;
 pub const SEARCH_FILE: &str = "search.sqlite";
 const LAYERS: [&str; 6] = [
     "place_labels",
@@ -503,7 +503,8 @@ pub(crate) const ENTRY_TABLES: &str = "
         id INTEGER PRIMARY KEY, name TEXT NOT NULL, kind TEXT NOT NULL,
         category TEXT NOT NULL, near TEXT, lon REAL NOT NULL, lat REAL NOT NULL,
         tier INTEGER NOT NULL, population INTEGER NOT NULL, reference TEXT,
-        match_name TEXT NOT NULL, match_ref TEXT NOT NULL, detail TEXT);
+        match_name TEXT NOT NULL, match_ref TEXT NOT NULL, detail TEXT,
+        alt_name TEXT, match_alt TEXT NOT NULL);
     CREATE INDEX entries_location ON entries (kind, lat, lon);
     CREATE VIRTUAL TABLE entries_fts USING fts5(
         terms, content = '', prefix = '2 3',
@@ -519,8 +520,8 @@ pub(crate) fn insert_entries(
 ) -> rusqlite::Result<()> {
     let mut insert = tx.prepare(
         "INSERT INTO entries (id, name, kind, category, near, lon, lat, tier, population,
-                              reference, match_name, match_ref, detail)
-         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13)",
+                              reference, match_name, match_ref, detail, alt_name, match_alt)
+         VALUES (?1, ?2, ?3, ?4, ?5, ?6, ?7, ?8, ?9, ?10, ?11, ?12, ?13, ?14, ?15)",
     )?;
     let mut insert_terms = tx.prepare("INSERT INTO entries_fts (rowid, terms) VALUES (?1, ?2)")?;
     for (id, e) in entries.iter().enumerate() {
@@ -556,6 +557,8 @@ pub(crate) fn insert_entries(
             canonical(&e.name),
             e.reference.as_deref().map(canonical).unwrap_or_default(),
             e.detail,
+            e.alt_name,
+            e.alt_name.as_deref().map(canonical).unwrap_or_default(),
         ])?;
         insert_terms.execute(params![id as i64, terms])?;
         *match e.kind {
@@ -842,6 +845,38 @@ fn alternatives(token: &str) -> Vec<&'static str> {
         .collect()
 }
 
+/// Chinese, Japanese and Korean letters (Han, kana, Hangul), written without spaces
+/// between words.
+pub(crate) fn is_cjk(c: char) -> bool {
+    matches!(c as u32,
+        0x1100..=0x11FF | 0x3040..=0x30FF | 0x3130..=0x318F | 0x3400..=0x4DBF
+        | 0x4E00..=0x9FFF | 0xAC00..=0xD7AF | 0xF900..=0xFAFF | 0x20000..=0x2FA1F)
+}
+
+/// Overlapping pairs of letters in a word with CJK letters of three or more letters
+/// ("北京市" -> "北京", "京市"), so that any part of a name finds it: the tokenizer
+/// treats a run of CJK letters as one word, as these scripts put no spaces between
+/// words. Empty for other words.
+pub(crate) fn cjk_pairs(token: &str) -> Vec<String> {
+    let chars: Vec<char> = token.chars().collect();
+    if chars.len() < 3 || !chars.iter().any(|c| is_cjk(*c)) {
+        return Vec::new();
+    }
+    chars.windows(2).map(|pair| pair.iter().collect()).collect()
+}
+
+/// Query words with CJK runs split into the pairs the index holds.
+pub(crate) fn query_words(query: &str) -> Vec<String> {
+    tokens(query)
+        .into_iter()
+        .flat_map(|word| {
+            let pairs = cjk_pairs(&word);
+            if pairs.is_empty() { vec![word] } else { pairs }
+        })
+        .take(16)
+        .collect()
+}
+
 /// Index text: every token plus its abbreviation partner, the spelling typed without
 /// the letter (München also as "muenchen") and a compound suffix's other form
 /// (Hauptstraße also as "hauptstr").
@@ -859,9 +894,11 @@ pub(crate) fn expand(text: &str) -> String {
             out.extend(suffix_variants(&t));
             out.push(t);
         }
+        let pairs = cjk_pairs(&token);
         out.push(token);
         out.extend(alts.into_iter().map(str::to_owned));
         out.extend(variants);
+        out.extend(pairs);
     }
     out.join(" ")
 }
@@ -1065,7 +1102,7 @@ pub fn search_all(
     limit: usize,
 ) -> Result<Vec<SearchResult>, PackageError> {
     let query = without_street_prefix(query);
-    let words: Vec<String> = tokens(query).into_iter().take(8).collect();
+    let words = query_words(query);
     if words.is_empty() {
         return Ok(Vec::new());
     }
@@ -1122,7 +1159,8 @@ pub(crate) fn match_expression(words: &[String]) -> String {
         .iter()
         .enumerate()
         .map(|(i, word)| {
-            let prefix = i == last && word.chars().count() >= 2;
+            // One CJK letter is a whole word's worth: "京" finds 北京.
+            let prefix = i == last && (word.chars().count() >= 2 || word.chars().all(is_cjk));
             let mut forms = vec![word.as_str()];
             forms.extend(alternatives(word));
             let terms: Vec<String> = forms
@@ -1153,7 +1191,7 @@ fn collect_candidates(
     let scale = lat0.to_radians().cos().powi(2);
     let mut statement = db.prepare_cached(
         "SELECT e.name, e.kind, e.category, e.near, e.lat, e.lon, e.tier, e.population,
-                e.reference, e.match_name, e.match_ref, e.detail
+                e.reference, e.match_name, e.match_ref, e.detail, e.alt_name, e.match_alt
          FROM entries_fts f JOIN entries e ON e.id = f.rowid
          WHERE entries_fts MATCH ?1
          ORDER BY CASE WHEN ?2 THEN (e.lat - ?3) * (e.lat - ?3) + (e.lon - ?4) * (e.lon - ?4) * ?5
@@ -1188,9 +1226,17 @@ fn collect_candidates(
         let typed_core = without_compass_words(&typed);
         let typed_matches =
             |f: &dyn Fn(&str) -> bool| !typed.is_empty() && (f(&typed) || f(typed_core));
+        // The English name, where OpenStreetMap has one: "jerusalem" finds ירושלים as
+        // strongly as its own name does.
+        let alt_name: Option<String> = row.get(12)?;
+        let match_alt: String = row.get(13)?;
+        let alt_core = without_compass_words(&match_alt);
+        let alt_matches =
+            |f: &dyn Fn(&str) -> bool| !match_alt.is_empty() && (f(&match_alt) || f(alt_core));
         let exact = match_name == query_canonical
             || core_name == query_canonical
-            || typed_matches(&|t| t == query_canonical);
+            || typed_matches(&|t| t == query_canonical)
+            || alt_matches(&|t| t == query_canonical);
         // "gas station" is a strong match for the category "fuel".
         let category_words = canonical(&category_words(&category));
         // A city with every word of the query is a strong match too: "queretaro"
@@ -1202,13 +1248,15 @@ fn collect_candidates(
             || core_name.starts_with(query_canonical)
             || typed_matches(&|t| t.starts_with(query_canonical))
             || (major_settlement && typed_matches(&|t| words_in(t)))
+            || alt_matches(&|t| t.starts_with(query_canonical))
+            || (major_settlement && alt_matches(&|t| words_in(t)))
             || (!match_ref.is_empty() && match_ref.starts_with(query_canonical))
             || (!category_words.is_empty()
                 && format!(" {category_words}").contains(&format!(" {query_canonical}")));
         let class = if strong {
             0
         } else if words_in(&format!(
-            "{match_name} {typed} {match_ref} {category_words}"
+            "{match_name} {typed} {match_alt} {match_ref} {category_words}"
         )) {
             1
         } else {
@@ -1236,10 +1284,19 @@ fn collect_candidates(
                 -population as f64,
             ),
         };
+        // A name in a script without Latin letters is shown with its English name, where
+        // OpenStreetMap has one: "ירושלים (Jerusalem)".
+        let name: String = row.get(0)?;
+        let name = match alt_name {
+            Some(alt) if !name.chars().any(|c| c.is_ascii_alphabetic()) && !alt.is_empty() => {
+                format!("{name} ({alt})")
+            }
+            _ => name,
+        };
         out.push((
             order,
             SearchResult {
-                name: row.get(0)?,
+                name,
                 kind,
                 category,
                 near: row.get(3)?,

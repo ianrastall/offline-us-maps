@@ -20,6 +20,10 @@
 import * as maplibregl from './maplibre/maplibre-gl.mjs';
 import mlcontour from './contour/maplibre-contour.mjs';
 
+// Arabic and Hebrew labels: mapbox-gl-rtl-text 0.3.0 (bundled) orders right-to-left
+// text and joins Arabic letters. Loaded only when a label needs it.
+maplibregl.setRTLTextPlugin(new URL('rtl/mapbox-gl-rtl-text.js', location.origin).href, true).catch(() => {});
+
 const host = window.chrome?.webview;
 const post = (message) => host?.postMessage(message);
 const origin = location.origin;
@@ -632,7 +636,7 @@ function reportView() {
 // these bounds, so a tight margin cut off a tall box in a wide window.
 function maxBounds() {
   // With the overview, the whole world is in reach: no bounds. (Bounds spanning
-  // all 360 degrees of longitude make MapLibre 5 throw while placing the view.)
+  // all 360 degrees of longitude make MapLibre 6 throw while placing the view.)
   if (metadata.overview) return null;
   const b = metadata.bounds;
   const cos = Math.cos((((b.south + b.north) / 2) * Math.PI) / 180);

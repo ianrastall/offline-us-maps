@@ -51,17 +51,16 @@ RELEASE = "https://github.com/ianrastall/offline-maps/releases/download/regions"
 RELEASE_PAGE = "https://github.com/ianrastall/offline-maps/releases/tag/regions"
 # Countries outside the US, by Geofabrik ID: (base URL, catalog ID, name).
 COUNTRIES = {"mexico": ("https://download.geofabrik.de/north-america", "mx", "All of Mexico")}
-# Countries (ISO 3166-1) whose names are mostly written in scripts the map cannot draw yet
-# (bundled glyphs are Latin, Greek and Cyrillic; Arabic and Hebrew need right-to-left text),
-# and Geofabrik's multi-country regions that are.
-NON_LATIN = {
-    "AE", "AF", "AM", "BD", "BH", "BT", "CN", "DZ", "EG", "ER", "ET", "GE", "HK", "IL", "IN",
-    "IQ", "IR", "JO", "JP", "KH", "KP", "KR", "KW", "LA", "LB", "LK", "LY", "MA", "MM", "MO",
-    "MR", "MV", "NP", "OM", "PK", "PS", "QA", "SA", "SD", "SY", "TH", "TN", "TW", "YE",
-}
-NON_LATIN_IDS = {"gcc-states", "israel-and-palestine"}
-NOTE = ("Street names written in this country's script are not shown yet; towns and countries "
-        "show their English names where OpenStreetMap has them.")
+# Countries (ISO 3166-1) whose names are mostly written in scripts the map draws with broken
+# letter shapes: MapLibre places each character as it is, so scripts whose letters must be
+# joined, reordered or stacked (Indic and other Brahmic scripts, Thai, Lao, Khmer, Myanmar,
+# Thaana) do not come out right. Latin, Greek, Cyrillic, Georgian, Armenian, Ethiopic, Chinese,
+# Japanese and Korean are drawn from the bundled glyphs, and Arabic and Hebrew with the
+# right-to-left plugin (since 0.16.0).
+COMPLEX_SCRIPTS = {"BD", "BT", "IN", "KH", "LA", "LK", "MM", "MV", "NP", "TH"}
+NOTE = ("Street and place names written in this country's script are drawn with broken letter "
+        "shapes, as the map cannot join their letters; towns and countries also show their English "
+        "names where OpenStreetMap has them.")
 # Geofabrik's top-level areas, as continents in the region list.
 CONTINENTS = {"Russian Federation": "Europe"}
 
@@ -172,8 +171,8 @@ def main():
             taken.add(code)
             continent = CONTINENTS.get(w["continent"], w["continent"])
             country = "Russia" if w["continent"] == "Russian Federation" else w["country"]
-            non_latin = w["country_iso"] in NON_LATIN or w["geofabrik"] in NON_LATIN_IDS
-            world[slug] = (country, continent, NOTE if non_latin else "")
+            complex_script = w["country_iso"] in COMPLEX_SCRIPTS
+            world[slug] = (country, continent, NOTE if complex_script else "")
             outline_source[slug] = {"geofabrik": w["geofabrik"], **({"clip": w["clip"]} if w["clip"] else {})}
             extract_boxes[slug] = geofabrik_boxes[w["geofabrik"]]
             regions.append((w["name"], slug, code, base, tuple(w["box"])))

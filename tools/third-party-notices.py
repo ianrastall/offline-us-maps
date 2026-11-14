@@ -115,6 +115,7 @@ def rust_crates() -> list[str]:
 def main() -> None:
     maplibre = (ROOT / "proof/renderer/node_modules/maplibre-gl/LICENSE.txt").read_text(encoding="utf-8")
     contour = (ROOT / "proof/renderer/node_modules/maplibre-contour/LICENSE").read_text(encoding="utf-8")
+    rtl = (ROOT / "proof/renderer/node_modules/@mapbox/mapbox-gl-rtl-text/LICENSE.md").read_text(encoding="utf-8")
     versatiles = (ROOT / "assets/styles/NOTICE.md").read_text(encoding="utf-8")
     versatiles = versatiles.replace("```text\n", "").replace("```", "")
     sections = [
@@ -130,15 +131,17 @@ def main() -> None:
         "COPERNICUS by the European Union and ESA; all rights reserved). Flood zones and public lands, "
         "when downloaded, are prepared from FEMA's National Flood Hazard Layer and the USGS Protected "
         "Areas Database of the United States (PAD-US), US Government works in the public domain. "
-        "The built-in overview of the United States and Mexico is made from Natural Earth (naturalearthdata.com), "
+        "The built-in world overview is made from Natural Earth (naturalearthdata.com), "
         "public domain.",
         "MapLibre GL JS 6.16.0 (map renderer)\n\n" + maplibre.strip(),
         "maplibre-contour 0.1.1 (contour lines from terrain)\n\n" + contour.strip(),
+        "mapbox-gl-rtl-text 0.3.0 (right-to-left and Arabic labels; contains code derived from ICU)\n\n" + rtl.strip(),
         versatiles.strip().lstrip("# "),
         "VersaTiles sprites (map icons), from versatiles-style 7.0.1 sprites.tar.gz: CC0 1.0 Universal "
         "(public domain dedication), https://creativecommons.org/publicdomain/zero/1.0/",
-        "Noto Sans (map label glyphs, as packaged by VersaTiles Fonts 3.0.0, MIT)\n"
-        "Copyright 2022 The Noto Project Authors (https://github.com/notofonts/latin-greek-cyrillic)\n\n" + OFL.strip(),
+        "Noto Sans (map label glyphs for every script it covers, as packaged by VersaTiles Fonts 3.0.0, MIT)\n"
+        "Copyright The Noto Project Authors (https://github.com/notofonts); Noto Sans CJK Copyright "
+        "2014-2021 Adobe (http://www.adobe.com/)\n\n" + OFL.strip(),
         "Rust crates in offline_maps_ffi.dll (licenses as declared by each crate; the MIT and "
         "Apache-2.0 texts are at https://opensource.org/license/mit and "
         "https://www.apache.org/licenses/LICENSE-2.0). SQLite is in the public domain.\n\n"

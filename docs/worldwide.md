@@ -101,6 +101,8 @@ Europe, Central and South America, Africa outside the Arabic-script countries, O
 - Add a search tokenizer for CJK text (SQLite's `trigram` tokenizer, or an ICU-based one).
 - Record that South and Southeast Asian scripts draw with broken letter forms until the map engine shapes them.
 
+**Done in 0.16.0 (14 November 2026).** All 256 glyph ranges of Noto Sans regular and bold are bundled (77.3 MB; the installer grew by 17 MB, to 308.5 MB, as the glyphs compress well), Ian's choice over per-script downloads. mapbox-gl-rtl-text 0.3.0 (BSD-2-Clause, with ICU code under the Unicode license; 1.0.0 is an ES module for Mapbox GL's newer loader, which MapLibre 6's `setRTLTextPlugin` cannot load) orders right-to-left text and joins Arabic letters. Chinese, Japanese and Korean names are indexed as overlapping pairs of letters as well as whole, and queries split the same way, so any part of a name finds it ("山市" finds 松山市); a single CJK letter searches as a prefix. Entries keep their English name: it ranks a city first when searched in English ("jerusalem" finds ירושלים) and is shown beside a name without Latin letters ("ירושלים (Jerusalem)"). The region note now marks only the 15 regions in countries written in scripts the map draws with broken letter shapes (India's zones, Nepal, Bangladesh, Sri Lanka, Bhutan, Thailand, Laos, Cambodia, Myanmar, the Maldives).
+
 ### W5. Terrain attribution by region
 
 Show each installed region's terrain sources and licences in Map information and the credits line, from Mapterhorn's `attribution.json`. Read Japan's terms before offering terrain there.
@@ -114,7 +116,7 @@ No separate work: the Android stages (6–9 of the North America plan) take regi
 1. The new name and repository name (W1): decided 14 November 2026, Offline Maps, repository `offline-maps`.
 2. Order: W1 before or after the Android foundation (stage 6 of the North America plan). W1 is independent of it; W2 depends on stage 5.
 3. The tile source for regions without a Geofabrik package: the VersaTiles planet, or builds from raw extracts (decided after measuring, W2): builds from raw extracts, the existing pipeline, once the regions to build proved to be 10.8 GB of extracts.
-4. Fonts: bundled in the installer, or downloaded per script (W4).
+4. Fonts: bundled in the installer, or downloaded per script (W4): decided 14 November 2026, bundled.
 5. Whether regions whose labels cannot draw properly (complex scripts) are offered with a note, or held back: decided 14 November 2026, offered with a note.
 6. Rebuild frequency for several hundred regions (stage 5 proposes monthly).
 
@@ -126,6 +128,6 @@ Nothing found blocks this plan; one terrain source needs its terms read.
 - **VersaTiles planet.** OpenStreetMap data under ODbL; VersaTiles' tools and style are MIT. Confirm both on their pages before relying on the planet file.
 - **Natural Earth.** Public domain.
 - **Noto Sans.** SIL OFL 1.1, already bundled in part.
-- **MapLibre RTL text plugin.** Check its licence before bundling.
+- **MapLibre RTL text plugin.** mapbox-gl-rtl-text 0.3.0: BSD-2-Clause, with code derived from ICU under the Unicode license; both notices are in the app's third-party notices (0.16.0).
 - **Terrain.** Each Mapterhorn source carries its own licence and credit. Most are CC BY 4.0, open government licences, CC0 or public domain, and Copernicus GLO-30 is under the Copernicus free and open licence, already credited. Japan's GSI terms are to be read before terrain is offered for Japan.
 - **Overlays outside the US.** Each source is checked one by one, as the North America plan already says.

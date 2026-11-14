@@ -1,6 +1,6 @@
 # Offline Maps
 
-A Windows app for downloading road maps before an emergency and using them without internet access. Regions: the US states, the District of Columbia, Puerto Rico and the US Virgin Islands; the Canadian provinces and territories; Mexico, as a whole or by state; and 440 regions in 190 other countries and territories across every continent but Antarctica: 286 from Geofabrik's map packages and 154 built from Geofabrik's data and published in this repository's [`regions` release](https://github.com/ianrastall/offline-maps/releases/tag/regions) (among them China's provinces, Central America and the Caribbean, Australia's states, England's counties, and Fiji, New Zealand and Russia's Far East split at the 180th meridian), in any combination. In countries written in scripts other than Latin, Greek and Cyrillic, towns and countries show their English names where OpenStreetMap has them, and street names are not shown yet. Everything runs on your computer; there is no account, server or tracking.
+A Windows app for downloading road maps before an emergency and using them without internet access. Regions: the US states, the District of Columbia, Puerto Rico and the US Virgin Islands; the Canadian provinces and territories; Mexico, as a whole or by state; and 440 regions in 190 other countries and territories across every continent but Antarctica: 286 from Geofabrik's map packages and 154 built from Geofabrik's data and published in this repository's [`regions` release](https://github.com/ianrastall/offline-maps/releases/tag/regions) (among them China's provinces, Central America and the Caribbean, Australia's states, England's counties, and Fiji, New Zealand and Russia's Far East split at the 180th meridian), in any combination. Labels are drawn in every script the bundled Noto Sans covers, Chinese, Japanese, Korean, Arabic and Hebrew included; towns and countries show their English names where OpenStreetMap has them. Scripts whose letters must be joined or reordered (the Indic scripts, Thai, Lao, Khmer, Myanmar, Thaana) are drawn with broken letter shapes, which those regions say in Map > Regions. Everything runs on your computer; there is no account, server or tracking.
 
 ## Install
 
@@ -29,7 +29,7 @@ The built-in overview is made from [Natural Earth](https://www.naturalearthdata.
 - Terrain: [Mapterhorn](https://mapterhorn.com/attribution) (USGS 3DEP, public domain; Copernicus GLO-30).
 - Flood zones: FEMA National Flood Hazard Layer; public lands: USGS PAD-US. Both are US Government works in the public domain. The flood data's effective date is shown in Map > Regions.
 
-Status (14 November 2026): version 0.15.0, with a built-in world overview and 540 regions: the US (Alaska included), Canada and Mexico by state, and 440 regions in 190 other countries and territories. All 52 US regions' flood zones and public lands are published. A WinUI 3/C# app over a Rust core. On 11 November 2026 the installed app passed the offline acceptance test: with no network, it showed the Illinois map and found places, addresses, stations, outdoor places and saved places ([validation](docs/validation.md#offline-acceptance-test)).
+Status (14 November 2026): version 0.16.0, with a built-in world overview and 540 regions: the US (Alaska included), Canada and Mexico by state, and 440 regions in 190 other countries and territories. All 52 US regions' flood zones and public lands are published. A WinUI 3/C# app over a Rust core. On 11 November 2026 the installed app passed the offline acceptance test: with no network, it showed the Illinois map and found places, addresses, stations, outdoor places and saved places ([validation](docs/validation.md#offline-acceptance-test)).
 
 Planned: region maps and processed stations and addresses published in this repository's releases (11 November 2026), and an Android app with GPS that receives maps from the desktop (10 November 2026). See the [North America and Android plan](docs/north-america-and-android.md). Proposed on 14 November 2026: regions for the whole world, filled in on demand over a world overview ([worldwide plan](docs/worldwide.md)).
 
@@ -70,7 +70,7 @@ cd offline-maps
 
 One-time prerequisites:
 
-- MapLibre, maplibre-contour, sprites and glyphs (Node 24; pinned hashes): `cd proof/renderer; npm ci; node fetch-assets.mjs`.
+- MapLibre, maplibre-contour, mapbox-gl-rtl-text, sprites and glyphs (Node 24; pinned hashes): `cd proof/renderer; npm ci; node fetch-assets.mjs`.
 - The signed WebView2 offline runtime installer at `third_party/webview2/MicrosoftEdgeWebView2RuntimeInstallerX64.exe` (the Evergreen Standalone x64 installer). It is not committed.
 
 Release (checks, Rust and interop tests, publish, installer to `dist/`):
