@@ -358,6 +358,10 @@ Checked with real data in a separate store (`offline-maps-dev download --region`
 - Search: "尖沙咀" finds Tsim Sha Tsui, and "沙咀" (its end) Sha Tsui Road; "山市" finds 松山市 (Matsuyama) and 福山市 (Fukuyama); "ירושלים", "بيروت" and "Երևան" find their capitals; "jerusalem", "tel aviv", "beirut", "yerevan", "takamatsu" and "matsuyama" put the city first, shown as "ירושלים (Jerusalem)", "高松市 (Takamatsu)" and so on.
 - Labels: in Beirut, streets named only in Arabic ("شارع 62", "شارع 21") are drawn with their letters joined and in order; in Takamatsu, 大学通り (drawn vertically along the street), 丸亀町商店街 and 祇園通り. Jerusalem's Old City and central Yerevan show English names, which OpenStreetMap has for nearly every feature there.
 
+Installed over 0.15.0 on Ian's machine and started from Start: `Web/rtl/` and all 256 glyph ranges in place, and the 11 installed regions' search rebuilt for format 4 in 173 seconds, with no error.
+
+Released 14 November 2026 as [v0.16.0](https://github.com/ianrastall/offline-maps/releases/tag/v0.16.0), built from 263cbb7; the installer's SHA-256 (1559df00…b3c6160c) matches GitHub's digest.
+
 ## 0.15.0: Search for Latin-script Europe
 
 Completed 14 November 2026: stage W3 of the [worldwide plan](worldwide.md), chosen by Ian.
